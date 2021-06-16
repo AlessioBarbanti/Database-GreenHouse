@@ -133,16 +133,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProvaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProvaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ProvaDataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProvaDataSet11.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FormGestoreStruttura.resx">
       <DependentUpon>FormGestoreStruttura.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,17 +196,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ProvaDataSet.xsc">
-      <DependentUpon>ProvaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProvaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProvaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProvaDataSet.xss">
-      <DependentUpon>ProvaDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -225,17 +204,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ProvaDataSet11.xsc">
-      <DependentUpon>ProvaDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="ProvaDataSet11.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProvaDataSet11.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProvaDataSet11.xss">
-      <DependentUpon>ProvaDataSet11.xsd</DependentUpon>
-    </None>
     <None Include="Resources\GestoreStruttura.png" />
   </ItemGroup>
   <ItemGroup>
