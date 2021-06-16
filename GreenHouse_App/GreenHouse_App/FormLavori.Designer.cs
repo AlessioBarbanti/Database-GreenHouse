@@ -29,24 +29,18 @@ namespace GreenHouse_App
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.IDGuida = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rICERCATORIBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.provaDataSet1 = new GreenHouse_App.ProvaDataSet1();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Annulla = new System.Windows.Forms.Button();
             this.Inserisci = new System.Windows.Forms.Button();
-            this.rICERCATORITableAdapter = new GreenHouse_App.ProvaDataSet1TableAdapters.RICERCATORITableAdapter();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.rICERCATORIBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provaDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // maskedTextBox1
@@ -102,16 +96,6 @@ namespace GreenHouse_App
             this.label2.TabIndex = 18;
             this.label2.Text = "ID Manovale:";
             // 
-            // rICERCATORIBindingSource
-            // 
-            this.rICERCATORIBindingSource.DataMember = "RICERCATORI";
-            this.rICERCATORIBindingSource.DataSource = this.provaDataSet1;
-            // 
-            // provaDataSet1
-            // 
-            this.provaDataSet1.DataSetName = "ProvaDataSet1";
-            this.provaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -165,20 +149,13 @@ namespace GreenHouse_App
             this.Inserisci.UseVisualStyleBackColor = true;
             this.Inserisci.Click += new System.EventHandler(this.Inserisci_Click);
             // 
-            // rICERCATORITableAdapter
-            // 
-            this.rICERCATORITableAdapter.ClearBeforeFill = true;
-            // 
             // comboBox3
             // 
-            this.comboBox3.DataSource = this.rICERCATORIBindingSource;
-            this.comboBox3.DisplayMember = "Nome";
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(226, 138);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 31;
-            this.comboBox3.ValueMember = "Nome";
             // 
             // FormLavori
             // 
@@ -202,8 +179,6 @@ namespace GreenHouse_App
             this.Name = "FormLavori";
             this.Text = "Inserisci Lavoro";
             this.Load += new System.EventHandler(this.FormLavori_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.rICERCATORIBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provaDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,9 +197,6 @@ namespace GreenHouse_App
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Annulla;
         private System.Windows.Forms.Button Inserisci;
-        private ProvaDataSet1 provaDataSet1;
-        private System.Windows.Forms.BindingSource rICERCATORIBindingSource;
-        private ProvaDataSet1TableAdapters.RICERCATORITableAdapter rICERCATORITableAdapter;
         private System.Windows.Forms.ComboBox comboBox3;
     }
 }

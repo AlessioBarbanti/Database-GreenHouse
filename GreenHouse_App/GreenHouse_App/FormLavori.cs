@@ -31,7 +31,7 @@ namespace GreenHouse_App
         private void FormLavori_Load(object sender, EventArgs e)
         {
             // TODO: questa riga di codice carica i dati nella tabella 'provaDataSet1.RICERCATORI'. È possibile spostarla o rimuoverla se necessario.
-            this.rICERCATORITableAdapter.Fill(this.provaDataSet1.RICERCATORI);
+            //this.rICERCATORITableAdapter.Fill(this.provaDataSet1.RICERCATORI);
             
 
         }
@@ -40,7 +40,7 @@ namespace GreenHouse_App
         {
             try
             {
-                this.rICERCATORITableAdapter.Fill(this.provaDataSet1.RICERCATORI);
+                //this.rICERCATORITableAdapter.Fill(this.provaDataSet1.RICERCATORI);
             }
             catch (System.Exception ex)
             {
