@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Applicazione GreenHouseDB", "Applicazione GreenHouseDB\Applicazione GreenHouseDB.csproj", "{C467E023-9E97-4877-8C72-9F0C7A562D72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C467E023-9E97-4877-8C72-9F0C7A562D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C467E023-9E97-4877-8C72-9F0C7A562D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C467E023-9E97-4877-8C72-9F0C7A562D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C467E023-9E97-4877-8C72-9F0C7A562D72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6533F9B2-8F03-42B5-B926-F8A341A5B1DE}
+	EndGlobalSection
+EndGlobal
