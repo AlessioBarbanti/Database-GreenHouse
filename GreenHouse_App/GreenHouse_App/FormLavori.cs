@@ -28,27 +28,40 @@ namespace GreenHouse_App
             Close();
         }
 
-        private void FormLavori_Load(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // TODO: questa riga di codice carica i dati nella tabella 'provaDataSet1.RICERCATORI'. È possibile spostarla o rimuoverla se necessario.
-            //this.rICERCATORITableAdapter.Fill(this.provaDataSet1.RICERCATORI);
-            
+            comboBox3.Enabled = true;
+            ProvaGreenHouseDataContext db = new ProvaGreenHouseDataContext();
+
+            if (comboBox2.SelectedItem.ToString() == "LAVORO TERRA")
+            {
+                var foo = from s in db.LAVORI where s.Categoria == "LAVORO TERRA" select s.Nome;
+                comboBox3.DataSource = foo;
+
+            }
+            if (comboBox2.SelectedItem.ToString() == "LAVORO PIANTA")
+            {
+                var foo = from s in db.LAVORI where s.Categoria == "LAVORO PIANTA" select s.Nome;
+                comboBox3.DataSource = foo;
+
+            }
+            if (comboBox2.SelectedItem.ToString() == "TRATTAMENTO")
+            {
+                var foo = from s in db.LAVORI where s.Categoria == "TRATTAMENTO" select s.Nome;
+                comboBox3.DataSource = foo;
+
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
-        private void fillToolStripButton_Click(object sender, EventArgs e)
+        private void IDGuida_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                //this.rICERCATORITableAdapter.Fill(this.provaDataSet1.RICERCATORI);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            //TODO
 
         }
-
-
     }
 }

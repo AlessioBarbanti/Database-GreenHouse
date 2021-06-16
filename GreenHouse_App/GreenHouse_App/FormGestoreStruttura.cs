@@ -12,24 +12,24 @@ namespace GreenHouse_App
 {
     public partial class FormGestoreStruttura : Form
     {
+        public ProvaGreenHouseDataContext db;
         public FormGestoreStruttura()
         {
             InitializeComponent();
-            DataClassesDataContext db = new DataClassesDataContext();
+            db = new ProvaGreenHouseDataContext();
         }
 
-        private void PermessiManovale_Click(object sender, EventArgs e)
-        {
-           // DataClassesDataContext db = new DataClassesDataContext();
-            //TODO
-            //dataGridView1.DataSource = foo;
-        }
 
         private void RevisioniInScadenza_Click(object sender, EventArgs e)
         {
-            //DataClassesDataContext db = new DataClassesDataContext();
-            //TODO
-            //dataGridView1.DataSource = foo;
+
+            var foo = from a in db.MACCHINARI
+                      where (a.DataRevisione - DateTime.Now).Days < 10
+                      select a;
+
+            dataGridView1.DataSource = foo;
         }
+
+
     }
 }

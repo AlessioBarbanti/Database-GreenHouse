@@ -33,5 +33,16 @@ namespace GreenHouse_App.Properties {
                 return ((string)(this["ProvaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=GreenhouseDB;Integrated Securi" +
+            "ty=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
+        public string GreenhouseDBConnectionString {
+            get {
+                return ((string)(this["GreenhouseDBConnectionString"]));
+            }
+        }
     }
 }

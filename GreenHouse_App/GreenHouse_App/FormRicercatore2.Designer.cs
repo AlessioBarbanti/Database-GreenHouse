@@ -29,9 +29,9 @@ namespace GreenHouse_App
         /// </summary>
         private void InitializeComponent()
         {
-            this.IDGuida = new System.Windows.Forms.TextBox();
+            this.IDEsperimentoTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IDRicercatore = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -41,14 +41,17 @@ namespace GreenHouse_App
             this.label5 = new System.Windows.Forms.Label();
             this.Annulla = new System.Windows.Forms.Button();
             this.Inserisci = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // IDGuida
+            // IDEsperimentoTextBox
             // 
-            this.IDGuida.Location = new System.Drawing.Point(151, 46);
-            this.IDGuida.Name = "IDGuida";
-            this.IDGuida.Size = new System.Drawing.Size(200, 20);
-            this.IDGuida.TabIndex = 11;
+            this.IDEsperimentoTextBox.Location = new System.Drawing.Point(151, 46);
+            this.IDEsperimentoTextBox.Name = "IDEsperimentoTextBox";
+            this.IDEsperimentoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.IDEsperimentoTextBox.TabIndex = 11;
+            this.IDEsperimentoTextBox.TextChanged += new System.EventHandler(this.IDEsperimento_TextChanged);
             // 
             // label2
             // 
@@ -60,12 +63,12 @@ namespace GreenHouse_App
             this.label2.TabIndex = 10;
             this.label2.Text = "ID Esperimento:";
             // 
-            // textBox1
+            // IDRicercatore
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 13;
+            this.IDRicercatore.Location = new System.Drawing.Point(151, 72);
+            this.IDRicercatore.Name = "IDRicercatore";
+            this.IDRicercatore.Size = new System.Drawing.Size(200, 20);
+            this.IDRicercatore.TabIndex = 13;
             // 
             // label1
             // 
@@ -153,11 +156,21 @@ namespace GreenHouse_App
             this.Inserisci.UseVisualStyleBackColor = true;
             this.Inserisci.Click += new System.EventHandler(this.Inserisci_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(390, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(398, 132);
+            this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // FormRicercatore2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Annulla);
             this.Controls.Add(this.Inserisci);
             this.Controls.Add(this.textBox2);
@@ -166,15 +179,17 @@ namespace GreenHouse_App
             this.Controls.Add(this.label3);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IDRicercatore);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.IDGuida);
+            this.Controls.Add(this.IDEsperimentoTextBox);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRicercatore2";
             this.Text = "FormRicercatore2";
+            this.Load += new System.EventHandler(this.FormRicercatore2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,9 +197,9 @@ namespace GreenHouse_App
 
         #endregion
 
-        private System.Windows.Forms.TextBox IDGuida;
+        private System.Windows.Forms.TextBox IDEsperimentoTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IDRicercatore;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
@@ -194,5 +209,6 @@ namespace GreenHouse_App
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Annulla;
         private System.Windows.Forms.Button Inserisci;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
