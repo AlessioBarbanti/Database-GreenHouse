@@ -1,0 +1,42 @@
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.csproj.AssemblyReference.cache
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormGestoreStruttura.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormGuida.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormGuida2.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormLavori.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormManutentore.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormManutenzioni.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatore2.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatoreCapo.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatoreCapo2.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.Form1.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormSupervisore.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatore.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.Properties.Resources.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.csproj.GenerateResource.cache
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.csproj.CoreCompileInputs.cache
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\bin\Debug\GreenHouse_App.exe.config
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\bin\Debug\GreenHouse_App.exe
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\bin\Debug\GreenHouse_App.pdb
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.exe
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.pdb
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\bin\Debug\GreenHouse_App.exe.config
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\bin\Debug\GreenHouse_App.exe
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\bin\Debug\GreenHouse_App.pdb
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.csproj.AssemblyReference.cache
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormGestoreStruttura.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormGuida.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormGuida2.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormLavori.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormManutentore.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormManutenzioni.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatore2.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatoreCapo.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatoreCapo2.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.Form1.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormSupervisore.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatore.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.Properties.Resources.resources
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.csproj.GenerateResource.cache
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.csproj.CoreCompileInputs.cache
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.exe
+C:\Users\aless\Desktop\Progetto db - Copia (2)\GreenHouse_App - Copia Funzionante (forse)\GreenHouse_App\obj\Debug\GreenHouse_App.pdb
