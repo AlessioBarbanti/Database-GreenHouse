@@ -177,6 +177,10 @@ namespace Applicazione_GreenHouseDB
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "LOG-IN";
+<<<<<<< HEAD
+=======
+            this.Load += new System.EventHandler(this.Form1_Load);
+>>>>>>> dcd69f01d9360ef7a2c92bb1249f4121f4eaabe0
             this.ResumeLayout(false);
 
         }

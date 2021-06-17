@@ -18,6 +18,16 @@ namespace Applicazione_GreenHouseDB
         }
 
 
+<<<<<<< HEAD
+=======
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+
+
+>>>>>>> dcd69f01d9360ef7a2c92bb1249f4121f4eaabe0
 
         private void Ricercatore_Click(object sender, EventArgs e)
         {
