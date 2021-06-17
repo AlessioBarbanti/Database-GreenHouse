@@ -81,6 +81,7 @@ namespace GreenHouse_App
             this.RevisioniInScadenza.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.RevisioniInScadenza.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.RevisioniInScadenza.UseVisualStyleBackColor = true;
+            this.RevisioniInScadenza.Click += new System.EventHandler(this.RevisioniInScadenza_Click);
             // 
             // FormRicercatore
             // 

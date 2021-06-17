@@ -85,6 +85,7 @@ namespace GreenHouse_App
             this.IDGuida.Name = "IDGuida";
             this.IDGuida.Size = new System.Drawing.Size(200, 20);
             this.IDGuida.TabIndex = 19;
+            this.IDGuida.TextChanged += new System.EventHandler(this.IDGuida_TextChanged);
             // 
             // label2
             // 
@@ -107,6 +108,7 @@ namespace GreenHouse_App
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 26;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -151,11 +153,13 @@ namespace GreenHouse_App
             // 
             // comboBox3
             // 
+            this.comboBox3.Enabled = false;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(226, 138);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 31;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // FormLavori
             // 
@@ -178,7 +182,6 @@ namespace GreenHouse_App
             this.MinimizeBox = false;
             this.Name = "FormLavori";
             this.Text = "Inserisci Lavoro";
-            this.Load += new System.EventHandler(this.FormLavori_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

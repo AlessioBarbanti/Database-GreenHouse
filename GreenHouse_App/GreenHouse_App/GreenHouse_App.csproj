@@ -128,10 +128,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="ProvaDataGreenHouse.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProvaDataGreenHouse.dbml</DependentUpon>
+=======
+    <Compile Include="ProvaGreenHouse.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProvaGreenHouse.dbml</DependentUpon>
+>>>>>>> 597d71c4040deb9b7182146fff079dc6b5b551e9
     </Compile>
     <EmbeddedResource Include="FormGestoreStruttura.resx">
       <DependentUpon>FormGestoreStruttura.cs</DependentUpon>
@@ -196,6 +203,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="ProvaDataGreenHouse.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>ProvaDataGreenHouse.designer.cs</LastGenOutput>
@@ -203,6 +211,15 @@
     </None>
     <None Include="ProvaDataGreenHouse.dbml.layout">
       <DependentUpon>ProvaDataGreenHouse.dbml</DependentUpon>
+=======
+    <None Include="ProvaGreenHouse.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ProvaGreenHouse.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProvaGreenHouse.dbml.layout">
+      <DependentUpon>ProvaGreenHouse.dbml</DependentUpon>
+>>>>>>> 597d71c4040deb9b7182146fff079dc6b5b551e9
     </None>
     <None Include="Resources\GestoreStruttura.png" />
   </ItemGroup>

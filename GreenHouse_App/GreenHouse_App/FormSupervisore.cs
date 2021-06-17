@@ -12,9 +12,11 @@ namespace GreenHouse_App
 {
     public partial class FormSupervisore : Form
     {
+        public ProvaGreenHouseDataContext db;
         public FormSupervisore()
         {
             InitializeComponent();
+            db = new ProvaGreenHouseDataContext();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -24,10 +26,18 @@ namespace GreenHouse_App
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DataClassesDataContext db = new DataClassesDataContext();
-            var foo = from pippa in db.RICERCATORI
-                      select pippa;
-            dataGridView1.DataSource = foo;
+            
+            //var result = (from a in db.DIPENDENTI
+
+            //              select new Person { Name = a.Name, Age = a.Age }).ToList();
+
+            //var result = (from a in db.DIPENDENTI
+            //              select new { a.Nome, a. }).ToList();
+
+            //var foo = from a in db.DIPENDENTI
+            //          select a.Nome;
+
+            //dataGridView1.DataSource = foo;
         }
     }
 }
