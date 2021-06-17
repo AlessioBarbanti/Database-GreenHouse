@@ -37,11 +37,12 @@ namespace GreenHouse_App.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=GreenhouseDB;Integrated Securi" +
-            "ty=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
-        public string GreenhouseDBConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=PrimaVersioneDBDataGreenHouse;" +
+            "Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate" +
+            "=False")]
+        public string PrimaVersioneDBDataGreenHouseConnectionString {
             get {
-                return ((string)(this["GreenhouseDBConnectionString"]));
+                return ((string)(this["PrimaVersioneDBDataGreenHouseConnectionString"]));
             }
         }
     }
