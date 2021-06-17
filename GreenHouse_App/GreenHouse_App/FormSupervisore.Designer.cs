@@ -33,8 +33,10 @@ namespace GreenHouse_App
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.VisualizzaPermessiButton = new System.Windows.Forms.Button();
             this.PermessiManovale = new System.Windows.Forms.Button();
+            this.IDSerraDiRiferimento = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,25 +83,25 @@ namespace GreenHouse_App
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button2
+            // VisualizzaPermessiButton
             // 
-            this.button2.AutoEllipsis = true;
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button2.Image = global::GreenHouse_App.Properties.Resources.permission1;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(29, 86);
-            this.button2.Margin = new System.Windows.Forms.Padding(20);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.button2.Size = new System.Drawing.Size(165, 174);
-            this.button2.TabIndex = 16;
-            this.button2.TabStop = false;
-            this.button2.Text = "VISUALIZZA PERMESSI";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.VisualizzaPermessiButton.AutoEllipsis = true;
+            this.VisualizzaPermessiButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.VisualizzaPermessiButton.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.VisualizzaPermessiButton.Image = global::GreenHouse_App.Properties.Resources.permission1;
+            this.VisualizzaPermessiButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.VisualizzaPermessiButton.Location = new System.Drawing.Point(29, 82);
+            this.VisualizzaPermessiButton.Margin = new System.Windows.Forms.Padding(20);
+            this.VisualizzaPermessiButton.Name = "VisualizzaPermessiButton";
+            this.VisualizzaPermessiButton.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.VisualizzaPermessiButton.Size = new System.Drawing.Size(165, 174);
+            this.VisualizzaPermessiButton.TabIndex = 16;
+            this.VisualizzaPermessiButton.TabStop = false;
+            this.VisualizzaPermessiButton.Text = "VISUALIZZA PERMESSI";
+            this.VisualizzaPermessiButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.VisualizzaPermessiButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.VisualizzaPermessiButton.UseVisualStyleBackColor = true;
+            this.VisualizzaPermessiButton.Click += new System.EventHandler(this.VisualizzaPermessiButton_Click);
             // 
             // PermessiManovale
             // 
@@ -109,7 +111,7 @@ namespace GreenHouse_App
             this.PermessiManovale.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.PermessiManovale.Image = global::GreenHouse_App.Properties.Resources.writing;
             this.PermessiManovale.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.PermessiManovale.Location = new System.Drawing.Point(29, 300);
+            this.PermessiManovale.Location = new System.Drawing.Point(29, 345);
             this.PermessiManovale.Margin = new System.Windows.Forms.Padding(20);
             this.PermessiManovale.Name = "PermessiManovale";
             this.PermessiManovale.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -121,12 +123,30 @@ namespace GreenHouse_App
             this.PermessiManovale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.PermessiManovale.UseVisualStyleBackColor = true;
             // 
+            // IDSerraDiRiferimento
+            // 
+            this.IDSerraDiRiferimento.Location = new System.Drawing.Point(74, 39);
+            this.IDSerraDiRiferimento.Name = "IDSerraDiRiferimento";
+            this.IDSerraDiRiferimento.Size = new System.Drawing.Size(75, 20);
+            this.IDSerraDiRiferimento.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "ID Serra di riferimento: ";
+            // 
             // FormSupervisore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 548);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.IDSerraDiRiferimento);
+            this.Controls.Add(this.VisualizzaPermessiButton);
             this.Controls.Add(this.PermessiManovale);
             this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
@@ -135,12 +155,15 @@ namespace GreenHouse_App
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button PermessiManovale;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button VisualizzaPermessiButton;
+        private System.Windows.Forms.TextBox IDSerraDiRiferimento;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -24,20 +24,25 @@ namespace GreenHouse_App
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void VisualizzaPermessiButton_Click(object sender, EventArgs e)
         {
-            
-            //var result = (from a in db.DIPENDENTI
+            //var foo = from fee in db.
 
-            //              select new Person { Name = a.Name, Age = a.Age }).ToList();
-
-            //var result = (from a in db.DIPENDENTI
-            //              select new { a.Nome, a. }).ToList();
-
-            //var foo = from a in db.DIPENDENTI
-            //          select a.Nome;
-
+            //          select fee;
             //dataGridView1.DataSource = foo;
         }
+        //var result = (from a in db.DIPENDENTI
+
+        //              select new Person { Name = a.Name, Age = a.Age }).ToList();
+
+        //var result = (from a in db.DIPENDENTI
+        //              select new { a.Nome, a. }).ToList();
+
+        //var foo = from a in db.DIPENDENTI
+        //          select a.Nome;
+
+        //dataGridView1.DataSource = foo;
+   // }
     }
 }

@@ -12,10 +12,11 @@ namespace Applicazione_GreenHouseDB
 {
     public partial class FormGestoreStruttura : Form
     {
+        DataClassesDataContext db;
         public FormGestoreStruttura()
         {
             InitializeComponent();
-            DataClassesDataContext db = new DataClassesDataContext();
+            db = new DataClassesDataContext();
         }
 
         private void PermessiManovale_Click(object sender, EventArgs e)
@@ -27,9 +28,7 @@ namespace Applicazione_GreenHouseDB
 
         private void RevisioniInScadenza_Click(object sender, EventArgs e)
         {
-            //DataClassesDataContext db = new DataClassesDataContext();
-            //TODO
-            //dataGridView1.DataSource = foo;
+            var foo = from a in db. select a;
         }
     }
 }

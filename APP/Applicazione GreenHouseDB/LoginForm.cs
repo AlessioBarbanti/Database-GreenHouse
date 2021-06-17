@@ -18,13 +18,6 @@ namespace Applicazione_GreenHouseDB
         }
 
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-
-
 
         private void Ricercatore_Click(object sender, EventArgs e)
         {
