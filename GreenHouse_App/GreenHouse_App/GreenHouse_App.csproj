@@ -47,11 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataClasses.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses.dbml</DependentUpon>
-    </Compile>
     <Compile Include="FormGestoreStruttura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +128,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvaDataGreenHouse.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProvaDataGreenHouse.dbml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormGestoreStruttura.resx">
       <DependentUpon>FormGestoreStruttura.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,14 +174,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="DataClasses.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataClasses.dbml.layout">
-      <DependentUpon>DataClasses.dbml</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -204,6 +196,14 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ProvaDataGreenHouse.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ProvaDataGreenHouse.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProvaDataGreenHouse.dbml.layout">
+      <DependentUpon>ProvaDataGreenHouse.dbml</DependentUpon>
+    </None>
     <None Include="Resources\GestoreStruttura.png" />
   </ItemGroup>
   <ItemGroup>
