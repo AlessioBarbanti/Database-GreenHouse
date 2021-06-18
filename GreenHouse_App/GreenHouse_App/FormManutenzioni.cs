@@ -37,9 +37,6 @@ namespace GreenHouse_App
                 Close();
             }
             catch {
-                dateTime.Text = "";
-                textBoxIDSerra.Text = "";
-                textBoxIDManutentore.Text = "";
                 MessageBox.Show("Dati inseriti non corretti.", "Errore!",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -57,6 +54,8 @@ namespace GreenHouse_App
                       where a.IDDipendente == Convert.ToInt32(textBoxIDManutentore.Text)
                       select a.IDStruttura;
 
+
+
             if (textBoxIDManutentore.Text != "")
             {
                 try
@@ -65,7 +64,7 @@ namespace GreenHouse_App
                     Inserisci.Enabled = true;
                 }
                 catch {
-                    textBoxIDStruttura.Text = "Errore!";
+                    textBoxIDStruttura.Text = "ID errato.";
                     Inserisci.Enabled = false;
                 }
             }

@@ -21,5 +21,11 @@ namespace GreenHouse_App
         {
 
         }
+
+        private void InserisciViaggio_Click(object sender, EventArgs e)
+        {
+            FormViaggio f2 = new FormViaggio();
+            f2.ShowDialog();
+        }
     }
 }

@@ -893,7 +893,11 @@ namespace GreenHouse_App.GreenhouseDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public virtual int UpdateAll(GreenhouseDBDataSet dataSet) {
             if ((dataSet == null)) {
-                throw new global::System.ArgumentNullException("dataSet");
+                
+                
+                
+                
+                new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;

@@ -29,8 +29,6 @@ C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\Green
 C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormManutentore.resources
 C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormManutenzioni.resources
 C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatore2.resources
-C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatoreCapo.resources
-C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatoreCapo2.resources
 C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.Form1.resources
 C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormSupervisore.resources
 C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormRicercatore.resources
@@ -40,3 +38,6 @@ C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\Green
 C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.exe
 C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.pdb
 C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.csproj.AssemblyReference.cache
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormGestoreEsperimenti.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormGestoreEsperimenti2.resources
+C:\Users\aless\Desktop\Progetto db\GreenHouse_App\GreenHouse_App\obj\Debug\GreenHouse_App.FormViaggio.resources
