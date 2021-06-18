@@ -71,12 +71,6 @@
     <Compile Include="FormLavori.Designer.cs">
       <DependentUpon>FormLavori.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormManovale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormManovale.Designer.cs">
-      <DependentUpon>FormManovale.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormManutentore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,17 +89,25 @@
     <Compile Include="FormRicercatore2.Designer.cs">
       <DependentUpon>FormRicercatore2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRicercatoreCapo.cs">
+    <Compile Include="FormGestoreEsperimenti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRicercatoreCapo.Designer.cs">
-      <DependentUpon>FormRicercatoreCapo.cs</DependentUpon>
+    <Compile Include="FormGestoreEsperimenti.Designer.cs">
+      <DependentUpon>FormGestoreEsperimenti.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRicercatoreCapo2.cs">
+    <Compile Include="FormGestoreEsperimenti2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRicercatoreCapo2.Designer.cs">
-      <DependentUpon>FormRicercatoreCapo2.cs</DependentUpon>
+    <Compile Include="FormGestoreEsperimenti2.Designer.cs">
+      <DependentUpon>FormGestoreEsperimenti2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GreenhouseDBDataSet.cs">
+      <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GreenhouseDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -154,11 +156,11 @@
     <EmbeddedResource Include="FormRicercatore2.resx">
       <DependentUpon>FormRicercatore2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRicercatoreCapo.resx">
-      <DependentUpon>FormRicercatoreCapo.cs</DependentUpon>
+    <EmbeddedResource Include="FormGestoreEsperimenti.resx">
+      <DependentUpon>FormGestoreEsperimenti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRicercatoreCapo2.resx">
-      <DependentUpon>FormRicercatoreCapo2.cs</DependentUpon>
+    <EmbeddedResource Include="FormGestoreEsperimenti2.resx">
+      <DependentUpon>FormGestoreEsperimenti2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -174,6 +176,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="GreenhouseDBDataSet.xsc">
+      <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GreenhouseDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GreenhouseDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GreenhouseDBDataSet.xss">
+      <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

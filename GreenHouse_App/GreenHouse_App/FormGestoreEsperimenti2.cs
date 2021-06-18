@@ -10,17 +10,23 @@ using System.Windows.Forms;
 
 namespace GreenHouse_App
 {
-    public partial class FormRicercatoreCapo : Form
+    public partial class FormGestoreEsperimenti2 : Form
     {
-        public FormRicercatoreCapo()
+        public FormGestoreEsperimenti2()
         {
             InitializeComponent();
         }
 
-        private void RevisioniInScadenza_Click(object sender, EventArgs e)
+
+        private void Inserisci_Click(object sender, EventArgs e)
         {
-            FormRicercatoreCapo2 f2 = new FormRicercatoreCapo2();
-            f2.ShowDialog();
+            //TODO
+            Close();
+        }
+
+        private void Annulla_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

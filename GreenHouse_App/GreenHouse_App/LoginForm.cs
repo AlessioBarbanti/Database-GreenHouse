@@ -48,7 +48,7 @@ namespace GreenHouse_App
 
         private void ricercatoreCapo_Click(object sender, EventArgs e)
         {
-            FormRicercatoreCapo f2 = new FormRicercatoreCapo();
+            FormGestoreEsperimenti f2 = new FormGestoreEsperimenti();
             f2.ShowDialog();
         }
 

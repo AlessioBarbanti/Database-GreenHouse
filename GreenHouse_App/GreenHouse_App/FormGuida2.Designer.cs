@@ -72,7 +72,6 @@ namespace GreenHouse_App
             this.Data.Name = "Data";
             this.Data.Size = new System.Drawing.Size(200, 20);
             this.Data.TabIndex = 2;
-            this.Data.ValueChanged += new System.EventHandler(this.Data_ValueChanged);
             // 
             // label1
             // 
@@ -100,7 +99,6 @@ namespace GreenHouse_App
             this.Scuola.Name = "Scuola";
             this.Scuola.Size = new System.Drawing.Size(200, 20);
             this.Scuola.TabIndex = 7;
-            this.Scuola.TextChanged += new System.EventHandler(this.Scuola_TextChanged);
             // 
             // IDGuida
             // 
@@ -108,7 +106,6 @@ namespace GreenHouse_App
             this.IDGuida.Name = "IDGuida";
             this.IDGuida.Size = new System.Drawing.Size(200, 20);
             this.IDGuida.TabIndex = 9;
-            this.IDGuida.TextChanged += new System.EventHandler(this.IDGuida_TextChanged);
             // 
             // label2
             // 
@@ -126,7 +123,6 @@ namespace GreenHouse_App
             this.NPax.Name = "NPax";
             this.NPax.Size = new System.Drawing.Size(33, 20);
             this.NPax.TabIndex = 11;
-            this.NPax.TextChanged += new System.EventHandler(this.NPax_TextChanged);
             // 
             // label4
             // 

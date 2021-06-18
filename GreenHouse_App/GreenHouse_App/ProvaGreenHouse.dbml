@@ -190,7 +190,7 @@
   <Table Name="dbo.LAVORI_EFFETTUATI" Member="LAVORI_EFFETTUATI">
     <Type Name="LAVORI_EFFETTUATI">
       <Column Name="IDLavoro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="IDLavoroEffettuato" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDLavoroEffettuato" Type="System.Int32" DbType="Int NOT NULL IDENTITY(1,1)" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="DataOraInizio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DataOraFine" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="IDClusterPiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
