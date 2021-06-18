@@ -31,6 +31,7 @@ create table CLUSTER (
      IDCluster int not null,
      Dimensione varchar(50) not null,
      ComposizioneNPKTerreno varchar(50) not null,
+     constraint CHK_DIMENSIONE check (Dimensione = 'piccolo' or Dimensione = 'medio' or Dimensione = 'grande')
      constraint ID_CLUSTER primary key (IDStruttura, IDSerra, IDCluster));
 
 create table CLUSTER_EMBRIONI (
@@ -39,9 +40,10 @@ create table CLUSTER_EMBRIONI (
      DataSemina datetime not null,
      DataGerminazione datetime,
      DataUscita datetime,
-     EmbrioniFalliti int not null,
+     EmbrioniFalliti int default 0,
      IDStruttura int not null,
      IDSerraIncubazione int not null,
+     constraint CHK_DATA_CLUSTER_EMBRIONI (DataSemina<DataGerminazione and DataGerminazione<DataUscita)
      constraint ID_CLUSTER_EMBRIONI primary key (IDPianta, IDClusterEmbrioni));
 
 create table CLUSTER_PIANTE (
@@ -51,14 +53,19 @@ create table CLUSTER_PIANTE (
      DataTrapianto datetime not null,
      DataEspianto datetime,
      NumeroPianteIniziali int not null,
-     NumeroPianteMorte int not null,
-     TrattamentoBiologico varchar(50) not null,
+     NumeroPianteMorte int default 0,
+     TrattamentoBiologico varchar(50) default 'biologico',
      DataSmaltimento datetime,
      IDStruttura int not null,
      IDSerra int not null,
      IDCluster int not null,
      IDEsperimento int not null,
      IDPianta int not null,
+     constraint CHK_DATA_CLUSTER_PIANTE (DataInizio<=DataTrapianto and DataInizio<DataEspianto and DataInizio<DataFine and DataInizio < DataSmaltimento
+                                         and DataTrapianto<DataEspianto and DataTrapianto<DataFine and DataTrapianto<DataSmaltimento
+                                         and DataEspianto<=DataFine and DataEspianto<=DataSmaltimento
+                                         and DataFine<=DataSmaltimento)
+     constraint CHK_TRATTAMENTO check (TrattamentoBiologico = 'biologico' or TrattamentoBiologico = 'tradizionale')
      constraint ID_CLUSTER_PIANTE primary key (IDClusterPiante));
 
 create table COLLABORAZIONI (
@@ -73,6 +80,7 @@ create table CONTRATTI (
      DataFine datetime,
      IDDipendente int not null,
      IDStruttura int not null,
+     constraint CHK_DATA_CONTRATTO check (DataInizio<DataFine)
      constraint ID_CONTRATTO primary key (IDContratto));
 
 create table DIPENDENTI (
@@ -101,6 +109,7 @@ create table ESPERIMENTI (
      Descrizione varchar(200) not null,
      IDAutorizzante int not null,
      IDRicercatoreCapo int not null,
+     constraint CHK_DATA_ESPERIMENTI (DataInizio<DataFine and DataInizio>DataApprovazione and DataApprovazione<DataFine)
      constraint ID_ESPERIMENTI_ID primary key (IDEsperimento));
 
 create table GARAGE (
@@ -115,10 +124,11 @@ create table GARAGE (
 create table IRRIGAZIONI (
      IDClusterPiante int not null,
      DataInizio datetime not null,
-     OraInizio datetime not null,
-     OraFine datetime not null,
+     OraInizio time not null,
+     OraFine time not null,
      DataFine datetime,
      PressioneAcqua int not null,
+     constraint CHK_DATA_IRRIGAZIONI (DataInizio<=DataFine and OraInizio<OraFine)
      constraint ID_IRRIGAZIONI primary key (IDClusterPiante, DataInizio, OraInizio));
 
 create table LAVORI (
@@ -138,6 +148,7 @@ create table LAVORI_EFFETTUATI (
      DataOraFine datetime not null,
      IDClusterPiante int not null,
      IDManovale int not null,
+     constraint CHK_DATA(DataOraInizio<=DataOraFine)
      constraint ID_LAVORI_EFFETTUATI primary key (IDLavoro, IDLavoroEffettuato));
 
 create table MACCHINARI (
@@ -221,11 +232,12 @@ create table PRODOTTI (
      GiorniEffetto int not null,
      Sensibile varchar(15),
      Quantità int not null,
+     constraint CHK_Tipologia check (Tipologia = 'biologico' OR Tipologia = 'tradizionale'),
      constraint ID_PRODOTTI primary key (IDStruttura, IDMagazzino, IDProdotto));
 
 create table RICERCATORI (
-     IDRicercatore int not null,
-     CF varchar(20) not null,
+     IDRicercatore int not null IDENTITY(1,1),
+     CF varchar(20) not null unique,
      Nome varchar(50) not null,
      Cognome varchar(50) not null,
      Provincia varchar(50) not null,
@@ -244,7 +256,7 @@ create table SERRE (
      IDSerra int not null,
      Area int not null,
      NumeroUnitàMassime int not null,
-     NumeroUnitàOccupate int not null,
+     NumeroUnitàOccupate int default 0,
      IDClima int not null,
      constraint ID_SERRE_ID primary key (IDStruttura, IDSerra));
 
@@ -254,7 +266,7 @@ create table SERRE_INCUBAZIONE (
      Nome varchar(50) not null,
      Dimensione int not null,
      ClusterOspitabili int not null,
-     ClusterPresenti int not null,
+     ClusterPresenti int default 0,
      constraint ID_SERRE_INCUBAZIONE primary key (IDStruttura, IDSerraIncubazione));
 
 create table STRUMENTI_COMPLESSI (
@@ -264,6 +276,7 @@ create table STRUMENTI_COMPLESSI (
      Nome varchar(50) not null,
      Alimentazione varchar(50) not null,
      Quantità int not null,
+     constraint CHK_ALIMENTAZIONE check (Alimentazione = 'benzina' or Alimentazione = 'diesel' or Alimentazione = 'elettrico')
      constraint ID_STRUMENTI_COMPLESSI primary key (IDStruttura, IDMagazzino, IDStrumentoComplesso));
 
 create table STRUMENTI_COMPLESSI_UTILIZZATI (
@@ -275,7 +288,7 @@ create table STRUMENTI_COMPLESSI_UTILIZZATI (
      constraint ID_STRUMENTI_COMPLESSI_UTILIZZATI primary key (IDLavoro, IDLavoroEffettuato, IDStruttura, IDMagazzino, IDStrumentoComplesso));
 
 create table STRUTTURE (
-     IDStruttura int not null,
+     IDStruttura int not null IDENTITY(1,1),
      Nome varchar(50) not null,
      Provincia varchar(50) not null,
      CAP varchar(50) not null,
@@ -292,6 +305,7 @@ create table SUPERVISIONI (
      DataFine datetime not null,
      IDStruttura int not null,
      IDSerra int not null,
+     constraint CHK_DATA_SUPERVISIONI check (DataInizio<DataFine)
      constraint ID_SUPERVISIONI primary key (IDSupervisore, DataInizio));
 
 create table UNIVERSITÀ  (
@@ -320,7 +334,7 @@ create table VIAGGI_ISTRUZIONE (
      Scuola varchar(50) not null,
      NumeroPartecipanti int not null,
      OrdineScolastico varchar(50) not null,
-     constraint IDVIAGGI_ISTRUZIONE primary key (IDGuida, IDViaggio));
+     constraint ID_VIAGGI_ISTRUZIONE primary key (IDGuida, IDViaggio));
 
 create table VISITE (
      IDGuida int not null,
@@ -328,7 +342,7 @@ create table VISITE (
      DataOra datetime not null,
      IDStruttura int not null,
      IDSerra int not null,
-     constraint IDVISITE primary key (IDGuida, IDViaggio, DataOra));
+     constraint ID_VISITE primary key (IDGuida, IDViaggio, DataOra));
 
 
 -- Constraints Section
