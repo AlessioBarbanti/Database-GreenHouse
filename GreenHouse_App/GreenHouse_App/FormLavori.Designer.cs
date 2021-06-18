@@ -29,11 +29,11 @@ namespace GreenHouse_App
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxDateTimeInizio = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.taxtBoxIDClusters = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.IDGuida = new System.Windows.Forms.TextBox();
+            this.textBoxIDManovale = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,57 +41,59 @@ namespace GreenHouse_App
             this.Annulla = new System.Windows.Forms.Button();
             this.Inserisci = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.maskedTextBoxDateTimeFine = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // maskedTextBox1
+            // maskedTextBoxDateTimeInizio
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(226, 85);
-            this.maskedTextBox1.Mask = "00/00/0000 00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 0;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxDateTimeInizio.Location = new System.Drawing.Point(173, 80);
+            this.maskedTextBoxDateTimeInizio.Mask = "00/00/0000 00:00";
+            this.maskedTextBoxDateTimeInizio.Name = "maskedTextBoxDateTimeInizio";
+            this.maskedTextBoxDateTimeInizio.Size = new System.Drawing.Size(200, 20);
+            this.maskedTextBoxDateTimeInizio.TabIndex = 3;
+            this.maskedTextBoxDateTimeInizio.ValidatingType = typeof(System.DateTime);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(140, 87);
+            this.label3.Location = new System.Drawing.Point(45, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 18);
+            this.label3.Size = new System.Drawing.Size(122, 18);
             this.label3.TabIndex = 24;
-            this.label3.Text = "Data e Ora:";
+            this.label3.Text = "Data e Ora Inizio:";
             // 
-            // textBox1
+            // taxtBoxIDClusters
             // 
-            this.textBox1.Location = new System.Drawing.Point(226, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 21;
+            this.taxtBoxIDClusters.Location = new System.Drawing.Point(173, 53);
+            this.taxtBoxIDClusters.Name = "taxtBoxIDClusters";
+            this.taxtBoxIDClusters.Size = new System.Drawing.Size(200, 20);
+            this.taxtBoxIDClusters.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(70, 62);
+            this.label1.Location = new System.Drawing.Point(2, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 18);
+            this.label1.Size = new System.Drawing.Size(165, 18);
             this.label1.TabIndex = 20;
-            this.label1.Text = "ID Cluster Interessato:";
+            this.label1.Text = "ID Cluster Esperimento:\r\n";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // IDGuida
+            // textBoxIDManovale
             // 
-            this.IDGuida.Location = new System.Drawing.Point(226, 34);
-            this.IDGuida.Name = "IDGuida";
-            this.IDGuida.Size = new System.Drawing.Size(200, 20);
-            this.IDGuida.TabIndex = 19;
-            this.IDGuida.TextChanged += new System.EventHandler(this.IDGuida_TextChanged);
+            this.textBoxIDManovale.Location = new System.Drawing.Point(173, 26);
+            this.textBoxIDManovale.Name = "textBoxIDManovale";
+            this.textBoxIDManovale.Size = new System.Drawing.Size(200, 20);
+            this.textBoxIDManovale.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(130, 36);
+            this.label2.Location = new System.Drawing.Point(77, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 18);
             this.label2.TabIndex = 18;
@@ -104,17 +106,17 @@ namespace GreenHouse_App
             "LAVORO TERRA",
             "LAVORO PIANTA",
             "TRATTAMENTO"});
-            this.comboBox2.Location = new System.Drawing.Point(226, 112);
+            this.comboBox2.Location = new System.Drawing.Point(173, 133);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 26;
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 5;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(144, 115);
+            this.label4.Location = new System.Drawing.Point(91, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 18);
             this.label4.TabIndex = 27;
@@ -124,7 +126,7 @@ namespace GreenHouse_App
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(162, 138);
+            this.label5.Location = new System.Drawing.Point(109, 159);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 18);
             this.label5.TabIndex = 28;
@@ -132,10 +134,10 @@ namespace GreenHouse_App
             // 
             // Annulla
             // 
-            this.Annulla.Location = new System.Drawing.Point(285, 245);
+            this.Annulla.Location = new System.Drawing.Point(298, 203);
             this.Annulla.Name = "Annulla";
             this.Annulla.Size = new System.Drawing.Size(75, 23);
-            this.Annulla.TabIndex = 30;
+            this.Annulla.TabIndex = 8;
             this.Annulla.TabStop = false;
             this.Annulla.Text = "Annulla";
             this.Annulla.UseVisualStyleBackColor = true;
@@ -143,10 +145,10 @@ namespace GreenHouse_App
             // 
             // Inserisci
             // 
-            this.Inserisci.Location = new System.Drawing.Point(149, 246);
+            this.Inserisci.Location = new System.Drawing.Point(173, 203);
             this.Inserisci.Name = "Inserisci";
             this.Inserisci.Size = new System.Drawing.Size(75, 23);
-            this.Inserisci.TabIndex = 29;
+            this.Inserisci.TabIndex = 7;
             this.Inserisci.Text = "Inserisci";
             this.Inserisci.UseVisualStyleBackColor = true;
             this.Inserisci.Click += new System.EventHandler(this.Inserisci_Click);
@@ -155,17 +157,38 @@ namespace GreenHouse_App
             // 
             this.comboBox3.Enabled = false;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(226, 138);
+            this.comboBox3.Location = new System.Drawing.Point(173, 159);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 31;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBox3.Size = new System.Drawing.Size(200, 21);
+            this.comboBox3.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(51, 108);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 18);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Data e Ora Fine:";
+            // 
+            // maskedTextBoxDateTimeFine
+            // 
+            this.maskedTextBoxDateTimeFine.Location = new System.Drawing.Point(173, 106);
+            this.maskedTextBoxDateTimeFine.Mask = "00/00/0000 00:00";
+            this.maskedTextBoxDateTimeFine.Name = "maskedTextBoxDateTimeFine";
+            this.maskedTextBoxDateTimeFine.Size = new System.Drawing.Size(200, 20);
+            this.maskedTextBoxDateTimeFine.TabIndex = 4;
+            this.maskedTextBoxDateTimeFine.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxDateTimeFine.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxDateTimeFine_MaskInputRejected);
             // 
             // FormLavori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 306);
+            this.ClientSize = new System.Drawing.Size(475, 264);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.maskedTextBoxDateTimeFine);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.Annulla);
             this.Controls.Add(this.Inserisci);
@@ -173,11 +196,11 @@ namespace GreenHouse_App
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.taxtBoxIDClusters);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.IDGuida);
+            this.Controls.Add(this.textBoxIDManovale);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskedTextBoxDateTimeInizio);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLavori";
@@ -189,11 +212,11 @@ namespace GreenHouse_App
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxDateTimeInizio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox taxtBoxIDClusters;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox IDGuida;
+        private System.Windows.Forms.TextBox textBoxIDManovale;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
@@ -201,5 +224,7 @@ namespace GreenHouse_App
         private System.Windows.Forms.Button Annulla;
         private System.Windows.Forms.Button Inserisci;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxDateTimeFine;
     }
 }

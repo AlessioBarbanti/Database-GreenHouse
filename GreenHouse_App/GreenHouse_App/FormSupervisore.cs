@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GreenHouse_App
@@ -28,7 +23,14 @@ namespace GreenHouse_App
         private void VisualizzaPermessiButton_Click(object sender, EventArgs e)
         {
             var foo = from a in db.PERMESSI
+                          //where Convert.ToInt32(IDSerraDiRiferimento.Text) == ;
                       select a.PERMESSI_MANOVALI; //a.IDPermesso
+
+        }
+
+        private void IDSerraDiRiferimento_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

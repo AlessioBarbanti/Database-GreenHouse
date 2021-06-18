@@ -4746,7 +4746,7 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLavoroEffettuato", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLavoroEffettuato", DbType="Int NOT NULL IDENTITY(1,1)", IsPrimaryKey=true)]
 		public int IDLavoroEffettuato
 		{
 			get

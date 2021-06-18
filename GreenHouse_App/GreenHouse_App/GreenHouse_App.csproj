@@ -71,12 +71,6 @@
     <Compile Include="FormLavori.Designer.cs">
       <DependentUpon>FormLavori.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormManovale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormManovale.Designer.cs">
-      <DependentUpon>FormManovale.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormManutentore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +100,14 @@
     </Compile>
     <Compile Include="FormRicercatoreCapo2.Designer.cs">
       <DependentUpon>FormRicercatoreCapo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GreenhouseDBDataSet.cs">
+      <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GreenhouseDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -174,6 +176,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="GreenhouseDBDataSet.xsc">
+      <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GreenhouseDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GreenhouseDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GreenhouseDBDataSet.xss">
+      <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

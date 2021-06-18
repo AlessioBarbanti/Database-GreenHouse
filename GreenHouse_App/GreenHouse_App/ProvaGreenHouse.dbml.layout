@@ -128,10 +128,10 @@
         <elementListCompartment Id="5804b8ee-e391-495c-b17c-25754384620a" absoluteBounds="9.265, 27.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="ebf2c1f3-d21a-43ad-ae45-6ef27b702edb" absoluteBounds="11.75, 30.875, 2, 1.5785953776041701">
+    <classShape Id="ebf2c1f3-d21a-43ad-ae45-6ef27b702edb" absoluteBounds="17.375, 25.125, 2, 1.5785953776041701">
       <DataClassMoniker Name="/ProvaGreenHouseDataContext/PERMESSI_STRUMENTI_COMPLESSI" />
       <nestedChildShapes>
-        <elementListCompartment Id="b6abede1-8a7b-4783-a057-bd3c6a898241" absoluteBounds="11.765, 31.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b6abede1-8a7b-4783-a057-bd3c6a898241" absoluteBounds="17.39, 25.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="babbe4e7-a0d5-4e7f-9fa9-027bbb7eb5ae" absoluteBounds="12, 46.5, 2, 1.5785953776041595">
@@ -219,14 +219,14 @@
         <classShapeMoniker Id="46011fb7-490c-47c1-ad14-160af9e6d1f5" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 28.5969555664063); (3.25 : 28.5969555664063); (3.25 : 30.625); (4.41666666666667 : 30.625 : JumpStart); (4.58333333333333 : 30.625 : JumpEnd); (5.79166666666667 : 30.625 : JumpStart); (6.08333333333333 : 30.625 : JumpEnd); (8.32291666666667 : 30.625 : JumpStart); (8.48958333333333 : 30.625 : JumpEnd); (8.66666666666667 : 30.625 : JumpStart); (8.83333333333333 : 30.625 : JumpEnd); (9.01041666666667 : 30.625 : JumpStart); (9.17708333333333 : 30.625 : JumpEnd); (11.8854166666667 : 30.625 : JumpStart); (12.0520833333333 : 30.625 : JumpEnd); (14 : 30.625); (14 : 38.75); (13 : 38.75); (13 : 39.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 28.4401224824219); (3.25 : 28.4401224824219); (3.25 : 30.5881982421875); (4.41666666666667 : 30.5881982421875 : JumpStart); (4.58333333333333 : 30.5881982421875 : JumpEnd); (5.79166666666667 : 30.5881982421875 : JumpStart); (6.08333333333333 : 30.5881982421875 : JumpEnd); (8.32291666666667 : 30.5881982421875 : JumpStart); (8.48958333333333 : 30.5881982421875 : JumpEnd); (8.66666666666667 : 30.5881982421875 : JumpStart); (8.83333333333333 : 30.5881982421875 : JumpEnd); (9.01041666666667 : 30.5881982421875 : JumpStart); (9.17708333333333 : 30.5881982421875 : JumpEnd); (14 : 30.5881982421875); (14 : 38.75); (13 : 38.75); (13 : 39.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/DIPENDENTI/DIPENDENTI_ACCESSI_INVENTARIO" />
       <nodes>
         <classShapeMoniker Id="6e8845b7-c1c5-4ce7-9e10-0e544ff0d800" />
         <classShapeMoniker Id="27717c9b-720a-4d50-aeef-0c8d74a17f75" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 30.4439111328125); (1.75 : 35.9815991210938); (2.19791916666667 : 35.9815991210938 : JumpStart); (2.36458583333333 : 35.9815991210938 : JumpEnd); (5.79166666666667 : 35.9815991210938 : JumpStart); (6.08333333333333 : 35.9815991210938 : JumpEnd); (6.25 : 35.9815991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 30.4439111328125); (1.75 : 35.9815991210938); (5.79166666666667 : 35.9815991210938 : JumpStart); (5.95833333333333 : 35.9815991210938 : JumpEnd); (6.25 : 35.9815991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/DIPENDENTI/DIPENDENTI_CONTRATTI" />
       <nodes>
         <classShapeMoniker Id="6e8845b7-c1c5-4ce7-9e10-0e544ff0d800" />
@@ -240,42 +240,42 @@
         <classShapeMoniker Id="c16a65ca-4eab-4d8a-89cf-015326988025" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.40625 : 29.6554996744792); (8.40625 : 42.1354484049479); (8.54166666666667 : 42.1354484049479 : JumpStart); (8.95833333333333 : 42.1354484049479 : JumpEnd); (11.2916666666667 : 42.1354484049479 : JumpStart); (11.4583333333333 : 42.1354484049479 : JumpEnd); (14.4166666666667 : 42.1354484049479 : JumpStart); (14.5833333333333 : 42.1354484049479 : JumpEnd); (14.75 : 42.1354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.40625 : 29.6554996744792); (8.40625 : 42.1354484049479); (8.54166666666667 : 42.1354484049479 : JumpStart); (8.95833333333333 : 42.1354484049479 : JumpEnd); (11.2916666666667 : 42.1354484049479 : JumpStart); (11.4583333333333 : 42.1354484049479 : JumpEnd); (14.4166666666667 : 42.1354484049479 : JumpStart); (14.5833333333333 : 42.1354484049479 : JumpEnd); (14.75 : 42.1354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/ESPERIMENTI/ESPERIMENTI_CLUSTER_PIANTE" />
       <nodes>
         <classShapeMoniker Id="22ddba7a-1d75-42ce-b383-c65e178c9733" />
         <classShapeMoniker Id="46011fb7-490c-47c1-ad14-160af9e6d1f5" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.5 : 28.5969962565104); (8.66666666666667 : 28.5969962565104 : JumpStart); (8.83333333333333 : 28.5969962565104 : JumpEnd); (10.1666666666667 : 28.5969962565104 : JumpStart); (10.3333333333333 : 28.5969962565104 : JumpEnd); (11.8854166666667 : 28.5969962565104 : JumpStart); (12.0520833333333 : 28.5969962565104 : JumpEnd); (12.25 : 28.5969962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.5 : 28.5969962565104); (8.66666666666667 : 28.5969962565104 : JumpStart); (8.83333333333333 : 28.5969962565104 : JumpEnd); (10.1666666666667 : 28.5969962565104 : JumpStart); (10.3333333333333 : 28.5969962565104 : JumpEnd); (12.25 : 28.5969962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/ESPERIMENTI/ESPERIMENTI_COLLABORAZIONI" />
       <nodes>
         <classShapeMoniker Id="22ddba7a-1d75-42ce-b383-c65e178c9733" />
         <classShapeMoniker Id="670df94a-5496-410f-87be-d93de77ee5fc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 27.78125); (5.79166666666667 : 27.78125 : JumpStart); (6.08333333333333 : 27.78125 : JumpEnd); (6.5 : 27.78125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 27.78125); (5.79166666666667 : 27.78125 : JumpStart); (6.08333333333333 : 27.78125 : JumpEnd); (6.5 : 27.78125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/DIPENDENTI/DIPENDENTI_ESPERIMENTI" />
       <nodes>
         <classShapeMoniker Id="6e8845b7-c1c5-4ce7-9e10-0e544ff0d800" />
         <classShapeMoniker Id="22ddba7a-1d75-42ce-b383-c65e178c9733" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.25 : 46); (7.25 : 45.0881982421875); (8.41666666666667 : 45.0881982421875 : JumpStart); (8.58333333333333 : 45.0881982421875 : JumpEnd); (8.75 : 45.0881982421875); (8.75 : 39.375); (8.79166666666667 : 39.375 : JumpStart); (8.95833333333333 : 39.375 : JumpEnd); (11.2916666666667 : 39.375 : JumpStart); (11.4583333333333 : 39.375 : JumpEnd); (11.625 : 39.375); (11.625 : 40.1065991210938); (11.6666666666667 : 40.1065991210938 : JumpStart); (11.8333333333333 : 40.1065991210938 : JumpEnd); (12 : 40.1065991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.25 : 46); (7.25 : 45.0881982421875); (8.41666666666667 : 45.0881982421875 : JumpStart); (8.58333333333333 : 45.0881982421875 : JumpEnd); (8.75 : 45.0881982421875); (8.75 : 39.375); (11.2916666666667 : 39.375 : JumpStart); (11.4583333333333 : 39.375 : JumpEnd); (11.625 : 39.375); (11.625 : 40.1065991210938); (12 : 40.1065991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/GARAGE/GARAGE_ACCESSI_INVENTARIO" />
       <nodes>
         <classShapeMoniker Id="9219b337-40c5-458c-90be-f8444bdba014" />
         <classShapeMoniker Id="27717c9b-720a-4d50-aeef-0c8d74a17f75" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(16.75 : 42.2315991210938); (17.5 : 42.2315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(16.75 : 42.2315991210938); (17.5 : 42.2315991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/CLUSTER_PIANTE/CLUSTER_PIANTE_IRRIGAZIONI" />
       <nodes>
         <classShapeMoniker Id="46011fb7-490c-47c1-ad14-160af9e6d1f5" />
         <classShapeMoniker Id="dd9b9f07-de73-4517-89b5-c47e698dc39a" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(15.75 : 40.5); (15.75 : 35.7315991210938); (17.5 : 35.7315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(15.75 : 40.5); (15.75 : 35.7315991210938); (17.3229166666667 : 35.7315991210938 : JumpStart); (17.4895833333333 : 35.7315991210938 : JumpEnd); (17.5 : 35.7315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/CLUSTER_PIANTE/CLUSTER_PIANTE_LAVORI_EFFETTUATI" />
       <nodes>
         <classShapeMoniker Id="46011fb7-490c-47c1-ad14-160af9e6d1f5" />
@@ -289,7 +289,7 @@
         <classShapeMoniker Id="a14c7f2c-6e88-43b9-80a9-7ff5cea9377c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 30.2973046875); (3.16666666666667 : 30.2973046875 : JumpStart); (3.33333333333333 : 30.2973046875 : JumpEnd); (4.41666666666667 : 30.2973046875 : JumpStart); (4.58333333333333 : 30.2973046875 : JumpEnd); (5.79166666666667 : 30.2973046875 : JumpStart); (6.08333333333333 : 30.2973046875 : JumpEnd); (8.32291666666667 : 30.2973046875 : JumpStart); (8.48958333333333 : 30.2973046875 : JumpEnd); (8.66666666666667 : 30.2973046875 : JumpStart); (8.83333333333333 : 30.2973046875 : JumpEnd); (11.8854166666667 : 30.2973046875 : JumpStart); (12.0520833333333 : 30.2973046875 : JumpEnd); (18.5 : 30.2973046875); (18.5 : 34.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 30.2973046875001); (3.16666666666667 : 30.2973046875001 : JumpStart); (3.33333333333333 : 30.2973046875001 : JumpEnd); (4.41666666666667 : 30.2973046875001 : JumpStart); (4.58333333333333 : 30.2973046875001 : JumpEnd); (5.79166666666667 : 30.2973046875001 : JumpStart); (6.08333333333333 : 30.2973046875001 : JumpEnd); (8.32291666666667 : 30.2973046875001 : JumpStart); (8.48958333333333 : 30.2973046875001 : JumpEnd); (8.66666666666667 : 30.2973046875001 : JumpStart); (8.83333333333333 : 30.2973046875001 : JumpEnd); (17.3229166666667 : 30.2973046875001 : JumpStart); (17.4895833333333 : 30.2973046875001 : JumpEnd); (18.5 : 30.2973046875001); (18.5 : 34.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/DIPENDENTI/DIPENDENTI_LAVORI_EFFETTUATI" />
       <nodes>
         <classShapeMoniker Id="6e8845b7-c1c5-4ce7-9e10-0e544ff0d800" />
@@ -303,7 +303,7 @@
         <classShapeMoniker Id="9c15c39e-f5c6-446e-8f53-d429539b0a60" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(19.5 : 36.7131982421875); (19.875 : 37.0881982421875); (19.875 : 41.4431469726563); (20.25 : 41.4431469726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(19.5 : 36.7131982421875); (19.875 : 37.0545064344952); (19.875 : 41.4431469726563); (20.25 : 41.4431469726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/LAVORI_EFFETTUATI/LAVORI_EFFETTUATI_MACCHINARI_UTILIZZATI" />
       <nodes>
         <classShapeMoniker Id="a14c7f2c-6e88-43b9-80a9-7ff5cea9377c" />
@@ -317,35 +317,35 @@
         <classShapeMoniker Id="e726fe7e-939f-4f55-adfb-4c60309aa282" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 41.7732975260417); (8.32291666666667 : 41.7732975260417 : JumpStart); (8.48958333333333 : 41.7732975260417 : JumpEnd); (8.57291666666667 : 41.7732975260417 : JumpStart); (8.95833333333333 : 41.7732975260417 : JumpEnd); (11.2916666666667 : 41.7732975260417 : JumpStart); (11.4583333333333 : 41.7732975260417 : JumpEnd); (13 : 41.7732975260417); (13 : 41.0881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 41.7732975260417); (8.57291666666667 : 41.7732975260417 : JumpStart); (8.73958333333333 : 41.7732975260417 : JumpEnd); (11.2916666666667 : 41.7732975260417 : JumpStart); (11.4583333333333 : 41.7732975260417 : JumpEnd); (13 : 41.7732975260417); (13 : 41.0881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/MAGAZZINI/MAGAZZINI_ACCESSI_INVENTARIO" />
       <nodes>
         <classShapeMoniker Id="afe2dee6-9f1e-4f4d-911a-7c63dd910360" />
         <classShapeMoniker Id="27717c9b-720a-4d50-aeef-0c8d74a17f75" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 27.0729484049479); (3.5 : 27.0729484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 27.0729484049479); (3.5 : 27.0729484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/DIPENDENTI/DIPENDENTI_MANUTENZIONI" />
       <nodes>
         <classShapeMoniker Id="6e8845b7-c1c5-4ce7-9e10-0e544ff0d800" />
         <classShapeMoniker Id="ddc821aa-9d1f-4dcb-8312-225d89f6b524" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 26.75); (1.75 : 25.2171541341146); (5.57291666666667 : 25.2171541341146 : JumpStart); (5.73958333333333 : 25.2171541341146 : JumpEnd); (6.5 : 25.2171541341146)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 26.75); (1.75 : 25.2171541341146); (5.57291666666667 : 25.2171541341146 : JumpStart); (5.73958333333333 : 25.2171541341146 : JumpEnd); (6.5 : 25.2171541341146)]" fixedFrom="Algorithm" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/DIPENDENTI/DIPENDENTI_PERMESSI" />
       <nodes>
         <classShapeMoniker Id="6e8845b7-c1c5-4ce7-9e10-0e544ff0d800" />
         <classShapeMoniker Id="0c81e53d-ba40-4c5a-bbe0-14ee0a6460dc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11 : 45.75); (11.375 : 45.375); (11.375 : 36.2219962565104); (11.4791666666667 : 36.2219962565104 : JumpStart); (11.6458333333333 : 36.2219962565104 : JumpEnd); (11.75 : 36.2219962565104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(11 : 45.75); (11.375 : 45.375); (11.375 : 36.2219962565104); (11.75 : 36.2219962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/MACCHINARI/MACCHINARI_PERMESSI_MACCHINARI" />
       <nodes>
         <classShapeMoniker Id="9c15c39e-f5c6-446e-8f53-d429539b0a60" />
         <classShapeMoniker Id="b40fce94-10da-4f69-be5b-e3a4bbc462ee" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.5 : 26.7228011067708); (7.5 : 27.25); (8.75 : 27.25); (8.75 : 35.8922461282552); (11.4791666666667 : 35.8922461282552 : JumpStart); (11.6458333333333 : 35.8922461282552 : JumpEnd); (11.75 : 35.8922461282552)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.5 : 26.7228011067708); (7.5 : 27.25); (8.75 : 27.25); (8.75 : 35.8922461282552); (11.75 : 35.8922461282552)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/PERMESSI/PERMESSI_PERMESSI_MACCHINARI" />
       <nodes>
         <classShapeMoniker Id="0c81e53d-ba40-4c5a-bbe0-14ee0a6460dc" />
@@ -359,14 +359,14 @@
         <classShapeMoniker Id="50a71134-cb28-415a-ac20-ae29a44021e5" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.5 : 26.1166247558594); (8.79166666666667 : 26.1166247558594 : JumpStart); (8.95833333333333 : 26.1166247558594 : JumpEnd); (10.25 : 26.1166247558594); (10.25 : 26.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.5 : 26.1166247558594); (8.79166666666667 : 26.1166247558594 : JumpStart); (8.95833333333333 : 26.1166247558594 : JumpEnd); (10.25 : 26.1166247558594); (10.25 : 26.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/PERMESSI/PERMESSI_PERMESSI_MANOVALI" />
       <nodes>
         <classShapeMoniker Id="0c81e53d-ba40-4c5a-bbe0-14ee0a6460dc" />
         <classShapeMoniker Id="50a71134-cb28-415a-ac20-ae29a44021e5" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.5 : 26.5905989583333); (8.79166666666667 : 26.5905989583333 : JumpStart); (8.95833333333333 : 26.5905989583333 : JumpEnd); (10.1666666666667 : 26.5905989583333 : JumpStart); (10.3333333333333 : 26.5905989583333 : JumpEnd); (11.96875 : 26.5905989583333); (11.96875 : 30.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.5 : 26.58099609375); (8.79166666666667 : 26.58099609375 : JumpStart); (8.95833333333333 : 26.58099609375 : JumpEnd); (10.1666666666667 : 26.58099609375 : JumpStart); (10.3333333333333 : 26.58099609375 : JumpEnd); (12.0416666666667 : 26.58099609375 : JumpStart); (12.2083333333333 : 26.58099609375 : JumpEnd); (17.375 : 26.58099609375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/PERMESSI/PERMESSI_PERMESSI_STRUMENTI_COMPLESSI" />
       <nodes>
         <classShapeMoniker Id="0c81e53d-ba40-4c5a-bbe0-14ee0a6460dc" />
@@ -387,14 +387,14 @@
         <classShapeMoniker Id="46011fb7-490c-47c1-ad14-160af9e6d1f5" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11 : 43.7027498372396); (11.2916666666667 : 43.7027498372396 : JumpStart); (11.4583333333333 : 43.7027498372396 : JumpEnd); (11.75 : 43.7027498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(11 : 43.7027498372396); (11.2916666666667 : 43.7027498372396 : JumpStart); (11.4583333333333 : 43.7027498372396 : JumpEnd); (11.75 : 43.7027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/PRODOTTI/PRODOTTI_LAVORI" />
       <nodes>
         <classShapeMoniker Id="8bed99b1-7bb5-419f-8ca2-914d41f4a47a" />
         <classShapeMoniker Id="7b7a59ca-9ef2-43a2-acc1-24c935acf037" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 41.8958968098958); (8.625 : 42.2708968098958); (8.625 : 42); (8.62857443490112 : 42.0035744349011 : JumpStart); (8.80892556509888 : 42.1839255650989 : JumpEnd); (8.81607443490112 : 42.1910744349011 : JumpStart); (8.93392556509888 : 42.3089255650989 : JumpEnd); (9 : 42.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(8.25 : 41.8958968098958); (8.625 : 42.2708968098958); (8.625 : 42); (8.69107443490112 : 42.0660744349011 : JumpStart); (8.80892556509888 : 42.1839255650989 : JumpEnd); (8.81607443490112 : 42.1910744349011 : JumpStart); (8.93392556509888 : 42.3089255650989 : JumpEnd); (9 : 42.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/MAGAZZINI/MAGAZZINI_PRODOTTI" />
       <nodes>
         <classShapeMoniker Id="afe2dee6-9f1e-4f4d-911a-7c63dd910360" />
@@ -415,21 +415,21 @@
         <classShapeMoniker Id="670df94a-5496-410f-87be-d93de77ee5fc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.65625 : 24.8093082682292); (5.65625 : 27.6093725); (5.79166666666667 : 27.6093725 : JumpStart); (6.08333333333333 : 27.6093725 : JumpEnd); (6.5 : 27.6093725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.65625 : 24.8093082682292); (5.65625 : 27.6093725); (5.79166666666667 : 27.6093725 : JumpStart); (5.95833333333333 : 27.6093725 : JumpEnd); (6.5 : 27.6093725)]" fixedFrom="Algorithm" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/RICERCATORI/RICERCATORI_ESPERIMENTI" />
       <nodes>
         <classShapeMoniker Id="2def1a13-4f2e-4ebf-8fd3-9ba09a0e4006" />
         <classShapeMoniker Id="22ddba7a-1d75-42ce-b383-c65e178c9733" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.75 : 24.5921541341146); (6.5 : 24.5921541341146)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.75 : 24.5921541341146); (6.5 : 24.5921541341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/RICERCATORI/RICERCATORI_PERMESSI" />
       <nodes>
         <classShapeMoniker Id="2def1a13-4f2e-4ebf-8fd3-9ba09a0e4006" />
         <classShapeMoniker Id="0c81e53d-ba40-4c5a-bbe0-14ee0a6460dc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 44.8381982421875); (8.625 : 45.2131982421875); (8.625 : 56.2604484049479); (9 : 56.2604484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 44.8381982421875); (8.625 : 45.2131982421875); (8.625 : 56.2604484049479); (9 : 56.2604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/SERRE/SERRE_CLUSTER" />
       <nodes>
         <classShapeMoniker Id="23e95fa5-fdd4-4417-9c37-50d364685c55" />
@@ -450,7 +450,7 @@
         <classShapeMoniker Id="0c81e53d-ba40-4c5a-bbe0-14ee0a6460dc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 40.8424217514022); (5.81607443490112 : 41.1584961863034 : JumpStart); (5.93392556509888 : 41.2763473165011 : JumpEnd); (5.9375 : 41.2799217514022); (5.9375 : 43.8565991210938); (6.25 : 43.8565991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 40.8424217514022); (5.81607443490112 : 41.1584961863033 : JumpStart); (5.93392556509888 : 41.2763473165011 : JumpEnd); (5.9375 : 41.2799217514022); (5.9375 : 43.8565991210938); (6.25 : 43.8565991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/CLIMI/CLIMI_SERRE" />
       <nodes>
         <classShapeMoniker Id="59b879a2-da00-4be5-a884-aa40f9868fae" />
@@ -471,21 +471,21 @@
         <classShapeMoniker Id="345cf550-3246-40cd-b71b-d60d10848431" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11 : 36.9384254047476); (11.3160744349011 : 36.6223509698465 : JumpStart); (11.4339255650989 : 36.5044998396487 : JumpEnd); (11.5625 : 36.3759254047476); (11.5625 : 31.6642976888021); (11.75 : 31.6642976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(11 : 37.8125); (11.2916666666667 : 37.8125 : JumpStart); (11.4583333333333 : 37.8125 : JumpEnd); (13.9166666666667 : 37.8125 : JumpStart); (14.0833333333333 : 37.8125 : JumpEnd); (15.6666666666667 : 37.8125 : JumpStart); (15.8333333333333 : 37.8125 : JumpEnd); (17.40625 : 37.8125); (17.40625 : 26.7035953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/STRUMENTI_COMPLESSI/STRUMENTI_COMPLESSI_PERMESSI_STRUMENTI_COMPLESSI" />
       <nodes>
         <classShapeMoniker Id="d801bf41-b0cc-422e-bc6d-f35a1fd83e27" />
         <classShapeMoniker Id="ebf2c1f3-d21a-43ad-ae45-6ef27b702edb" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 40.125); (8.34732443490112 : 40.0276755650989 : JumpStart); (8.46517556509888 : 39.9098244349011 : JumpEnd); (8.625 : 39.75); (8.625 : 37.8565991210938); (9 : 37.8565991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 40.125); (8.625 : 39.75); (8.625 : 37.8565991210938); (9 : 37.8565991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/MAGAZZINI/MAGAZZINI_STRUMENTI_COMPLESSI" />
       <nodes>
         <classShapeMoniker Id="afe2dee6-9f1e-4f4d-911a-7c63dd910360" />
         <classShapeMoniker Id="d801bf41-b0cc-422e-bc6d-f35a1fd83e27" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11 : 37.3234136073217); (11.2916666666667 : 37.3234136073217 : JumpStart); (11.4583333333333 : 37.3234136073217 : JumpEnd); (13.9166666666667 : 37.3234136073217 : JumpStart); (14.0833333333333 : 37.3234136073217 : JumpEnd); (15.6666666666667 : 37.3234136073217 : JumpStart); (15.8333333333333 : 37.3234136073217 : JumpEnd); (18.4166666666667 : 37.3234136073217 : JumpStart); (18.5833333333333 : 37.3234136073217 : JumpEnd); (19.7916666666667 : 37.3234136073217 : JumpStart); (19.9583333333333 : 37.3234136073217 : JumpEnd); (20.25 : 37.3234136073217)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(11 : 37.2604484049479); (11.2916666666667 : 37.2604484049479 : JumpStart); (11.4583333333333 : 37.2604484049479 : JumpEnd); (13.9166666666667 : 37.2604484049479 : JumpStart); (14.0833333333333 : 37.2604484049479 : JumpEnd); (15.6666666666667 : 37.2604484049479 : JumpStart); (15.8333333333333 : 37.2604484049479 : JumpEnd); (17.3229166666667 : 37.2604484049479 : JumpStart); (17.4895833333333 : 37.2604484049479 : JumpEnd); (18.4166666666667 : 37.2604484049479 : JumpStart); (18.5833333333333 : 37.2604484049479 : JumpEnd); (19.7916666666667 : 37.2604484049479 : JumpStart); (19.9583333333333 : 37.2604484049479 : JumpEnd); (20.25 : 37.2604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/STRUMENTI_COMPLESSI/STRUMENTI_COMPLESSI_STRUMENTI_COMPLESSI_UTILIZZATI" />
       <nodes>
         <classShapeMoniker Id="d801bf41-b0cc-422e-bc6d-f35a1fd83e27" />
@@ -499,49 +499,49 @@
         <classShapeMoniker Id="cc3d42fa-e781-4e32-995e-ab1f01e603b9" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.46769230769231 : 42.625); (5.81607443490112 : 42.2766178727912 : JumpStart); (5.99642556509888 : 42.0962667425934 : JumpEnd); (6.09375 : 41.9989423076923); (6.09375 : 36.5036506816406); (6.25 : 36.5036506816406)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.46769230769231 : 42.625); (6.09375 : 41.9989423076923); (6.09375 : 36.5036506816406); (6.25 : 36.5036506816406)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/STRUTTURE/STRUTTURE_CONTRATTI" />
       <nodes>
         <classShapeMoniker Id="c5a793f5-4e4a-4902-a9bd-96ab68e1d9bd" />
         <classShapeMoniker Id="6508856f-a888-43fa-a4db-bac7a5366ec7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 45.1651025390625); (4.5 : 46.9815991210938); (4.94791916666667 : 46.9815991210938 : JumpStart); (5.11458583333333 : 46.9815991210938 : JumpEnd); (6.25 : 46.9815991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.5 : 45.1651025390625); (4.5 : 46.9815991210938); (6.25 : 46.9815991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/STRUTTURE/STRUTTURE_GARAGE" />
       <nodes>
         <classShapeMoniker Id="c5a793f5-4e4a-4902-a9bd-96ab68e1d9bd" />
         <classShapeMoniker Id="9219b337-40c5-458c-90be-f8444bdba014" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 42.6896143846154); (5.81607443490112 : 42.3735399497143 : JumpStart); (5.99642556509888 : 42.1931888195165 : JumpEnd); (6.15625 : 42.0333643846154); (6.15625 : 41.0104484049479); (6.25 : 41.0104484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 42.6896143846154); (5.81607443490112 : 42.3735399497143 : JumpStart); (5.93392556509888 : 42.2556888195165 : JumpEnd); (6.15625 : 42.0333643846154); (6.15625 : 41.0104484049479); (6.25 : 41.0104484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/STRUTTURE/STRUTTURE_MAGAZZINI" />
       <nodes>
         <classShapeMoniker Id="c5a793f5-4e4a-4902-a9bd-96ab68e1d9bd" />
         <classShapeMoniker Id="afe2dee6-9f1e-4f4d-911a-7c63dd910360" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 43.3032995605469); (5.85416666666667 : 43.3032995605469 : JumpStart); (6.02083333333333 : 43.3032995605469 : JumpEnd); (6.25 : 43.3032995605469)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 43.3032995605469); (6.25 : 43.3032995605469)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/STRUTTURE/STRUTTURE_SERRE" />
       <nodes>
         <classShapeMoniker Id="c5a793f5-4e4a-4902-a9bd-96ab68e1d9bd" />
         <classShapeMoniker Id="23e95fa5-fdd4-4417-9c37-50d364685c55" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.0312525 : 45.1651025390625); (5.0312525 : 52.6065991210938); (6.25 : 52.6065991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.0312525 : 45.1651025390625); (5.0312525 : 52.6065991210938); (6.25 : 52.6065991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/STRUTTURE/STRUTTURE_SERRE_INCUBAZIONE" />
       <nodes>
         <classShapeMoniker Id="c5a793f5-4e4a-4902-a9bd-96ab68e1d9bd" />
         <classShapeMoniker Id="f1bac9de-9078-47c9-90d1-1d78c76cf835" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.2812525 : 30.4439111328125); (2.2812525 : 43.8950512695313); (3.5 : 43.8950512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.2812525 : 30.4439111328125); (2.2812525 : 43.8950512695313); (3.5 : 43.8950512695313)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/DIPENDENTI/DIPENDENTI_STRUTTURE" />
       <nodes>
         <classShapeMoniker Id="6e8845b7-c1c5-4ce7-9e10-0e544ff0d800" />
         <classShapeMoniker Id="c5a793f5-4e4a-4902-a9bd-96ab68e1d9bd" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.2182867976262 : 42.875); (8.6875 : 42.4057867976262); (8.6875 : 31.7604484049479); (9 : 31.7604484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.2182867976262 : 42.875); (8.6875 : 42.4057867976262); (8.6875 : 31.7604484049479); (9 : 31.7604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/SERRE/SERRE_SUPERVISIONI" />
       <nodes>
         <classShapeMoniker Id="23e95fa5-fdd4-4417-9c37-50d364685c55" />
@@ -562,14 +562,14 @@
         <classShapeMoniker Id="2def1a13-4f2e-4ebf-8fd3-9ba09a0e4006" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 40.8878516210938); (8.32291666666667 : 40.8878516210938 : JumpStart); (8.48958333333333 : 40.8878516210938 : JumpEnd); (8.57291666666667 : 40.8878516210938 : JumpStart); (8.95833333333333 : 40.8878516210938 : JumpEnd); (9 : 40.8878516210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 40.8878516210938); (8.57291666666667 : 40.8878516210938 : JumpStart); (8.95833333333333 : 40.8878516210938 : JumpEnd); (9 : 40.8878516210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/MAGAZZINI/MAGAZZINI_UTENSILI" />
       <nodes>
         <classShapeMoniker Id="afe2dee6-9f1e-4f4d-911a-7c63dd910360" />
         <classShapeMoniker Id="993462de-5a68-4ad9-9fc3-cee7925ddb15" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 29.4050769042969); (3.16666666666667 : 29.4050769042969 : JumpStart); (3.33333333333333 : 29.4050769042969 : JumpEnd); (3.5 : 29.4050769042969)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 29.4050769042969); (3.16666666666667 : 29.4050769042969 : JumpStart); (3.33333333333333 : 29.4050769042969 : JumpEnd); (3.5 : 29.4050769042969)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/DIPENDENTI/DIPENDENTI_VIAGGI_ISTRUZIONE" />
       <nodes>
         <classShapeMoniker Id="6e8845b7-c1c5-4ce7-9e10-0e544ff0d800" />
@@ -583,7 +583,7 @@
         <classShapeMoniker Id="4f61a5f3-5322-4c0c-a4a9-4d4ea5d9a142" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 42.9399355572416); (8.65625 : 42.5336855572416); (8.65625 : 34.8674246888021); (8.66666666666667 : 34.8674246888021 : JumpStart); (8.83333333333333 : 34.8674246888021 : JumpEnd); (9 : 34.8674246888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 42.9399355572416); (8.65625 : 42.5336855572416); (8.65625 : 34.8674246888021); (9 : 34.8674246888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/ProvaGreenHouseDataContext/SERRE/SERRE_VISITE" />
       <nodes>
         <classShapeMoniker Id="23e95fa5-fdd4-4417-9c37-50d364685c55" />

@@ -41,7 +41,6 @@ namespace GreenHouse_App
             this.label5 = new System.Windows.Forms.Label();
             this.Annulla = new System.Windows.Forms.Button();
             this.Inserisci = new System.Windows.Forms.Button();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // IDEsperimentoTextBox
@@ -121,7 +120,7 @@ namespace GreenHouse_App
             this.textBox2.Location = new System.Drawing.Point(151, 163);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(637, 188);
+            this.textBox2.Size = new System.Drawing.Size(200, 188);
             this.textBox2.TabIndex = 19;
             // 
             // label5
@@ -136,7 +135,7 @@ namespace GreenHouse_App
             // 
             // Annulla
             // 
-            this.Annulla.Location = new System.Drawing.Point(433, 391);
+            this.Annulla.Location = new System.Drawing.Point(276, 384);
             this.Annulla.Name = "Annulla";
             this.Annulla.Size = new System.Drawing.Size(75, 23);
             this.Annulla.TabIndex = 21;
@@ -147,7 +146,7 @@ namespace GreenHouse_App
             // 
             // Inserisci
             // 
-            this.Inserisci.Location = new System.Drawing.Point(297, 392);
+            this.Inserisci.Location = new System.Drawing.Point(151, 384);
             this.Inserisci.Name = "Inserisci";
             this.Inserisci.Size = new System.Drawing.Size(75, 23);
             this.Inserisci.TabIndex = 20;
@@ -155,21 +154,11 @@ namespace GreenHouse_App
             this.Inserisci.UseVisualStyleBackColor = true;
             this.Inserisci.Click += new System.EventHandler(this.Inserisci_Click);
             // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(433, 46);
-            this.maskedTextBox2.Mask = "99999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(39, 20);
-            this.maskedTextBox2.TabIndex = 22;
-            this.maskedTextBox2.ValidatingType = typeof(int);
-            // 
             // FormRicercatore2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.maskedTextBox2);
+            this.ClientSize = new System.Drawing.Size(444, 450);
             this.Controls.Add(this.Annulla);
             this.Controls.Add(this.Inserisci);
             this.Controls.Add(this.textBox2);
@@ -207,6 +196,5 @@ namespace GreenHouse_App
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Annulla;
         private System.Windows.Forms.Button Inserisci;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
     }
 }
