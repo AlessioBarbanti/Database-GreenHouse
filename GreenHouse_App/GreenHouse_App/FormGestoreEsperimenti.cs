@@ -19,7 +19,7 @@ namespace GreenHouse_App
 
         private void RevisioniInScadenza_Click(object sender, EventArgs e)
         {
-            FormRicercatoreCapo2 f2 = new FormRicercatoreCapo2();
+            FormGestoreEsperimenti2 f2 = new FormGestoreEsperimenti2();
             f2.ShowDialog();
         }
     }

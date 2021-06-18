@@ -1,7 +1,7 @@
 ﻿
 namespace GreenHouse_App
 {
-    partial class FormRicercatoreCapo2
+    partial class FormGestoreEsperimenti2
     {
         /// <summary>
         /// Required designer variable.

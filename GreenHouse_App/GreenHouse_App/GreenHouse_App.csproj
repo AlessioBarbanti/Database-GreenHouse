@@ -89,17 +89,17 @@
     <Compile Include="FormRicercatore2.Designer.cs">
       <DependentUpon>FormRicercatore2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRicercatoreCapo.cs">
+    <Compile Include="FormGestoreEsperimenti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRicercatoreCapo.Designer.cs">
-      <DependentUpon>FormRicercatoreCapo.cs</DependentUpon>
+    <Compile Include="FormGestoreEsperimenti.Designer.cs">
+      <DependentUpon>FormGestoreEsperimenti.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRicercatoreCapo2.cs">
+    <Compile Include="FormGestoreEsperimenti2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRicercatoreCapo2.Designer.cs">
-      <DependentUpon>FormRicercatoreCapo2.cs</DependentUpon>
+    <Compile Include="FormGestoreEsperimenti2.Designer.cs">
+      <DependentUpon>FormGestoreEsperimenti2.cs</DependentUpon>
     </Compile>
     <Compile Include="GreenhouseDBDataSet.cs">
       <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
@@ -156,11 +156,11 @@
     <EmbeddedResource Include="FormRicercatore2.resx">
       <DependentUpon>FormRicercatore2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRicercatoreCapo.resx">
-      <DependentUpon>FormRicercatoreCapo.cs</DependentUpon>
+    <EmbeddedResource Include="FormGestoreEsperimenti.resx">
+      <DependentUpon>FormGestoreEsperimenti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRicercatoreCapo2.resx">
-      <DependentUpon>FormRicercatoreCapo2.cs</DependentUpon>
+    <EmbeddedResource Include="FormGestoreEsperimenti2.resx">
+      <DependentUpon>FormGestoreEsperimenti2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

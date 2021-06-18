@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GreenHouse_App
 {
-    public partial class FormRicercatoreCapo2 : Form
+    public partial class FormGestoreEsperimenti2 : Form
     {
-        public FormRicercatoreCapo2()
+        public FormGestoreEsperimenti2()
         {
             InitializeComponent();
         }
