@@ -63,8 +63,7 @@ create table CLUSTER_PIANTE (
      IDPianta int not null,
      constraint CHK_DATA_CLUSTER_PIANTE (DataInizio<=DataTrapianto and DataInizio<DataEspianto and DataInizio<DataFine and DataInizio < DataSmaltimento
                                          and DataTrapianto<DataEspianto and DataTrapianto<DataFine and DataTrapianto<DataSmaltimento
-                                         and DataEspianto<=DataFine and DataEspianto<=DataSmaltimento
-                                         and DataFine<=DataSmaltimento)
+                                         and DataEspianto<=DataFine and DataEspianto<=DataSmaltimento)
      constraint CHK_TRATTAMENTO check (TrattamentoBiologico = 'biologico' or TrattamentoBiologico = 'tradizionale')
      constraint ID_CLUSTER_PIANTE primary key (IDClusterPiante));
 
