@@ -1,7 +1,7 @@
 ﻿
 namespace GreenHouse_App
 {
-    partial class FormRicercatoreCapo
+    partial class FormGestoreEsperimenti
     {
         /// <summary>
         /// Required designer variable.
@@ -52,14 +52,14 @@ namespace GreenHouse_App
             this.RevisioniInScadenza.UseVisualStyleBackColor = true;
             this.RevisioniInScadenza.Click += new System.EventHandler(this.RevisioniInScadenza_Click);
             // 
-            // FormRicercatoreCapo
+            // FormGestoreEsperimenti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.RevisioniInScadenza);
-            this.Name = "FormRicercatoreCapo";
-            this.Text = "FormGestoreEsperimento";
+            this.Name = "FormGestoreEsperimenti";
+            this.Text = "Form Gestore Esperimenti";
             this.ResumeLayout(false);
 
         }

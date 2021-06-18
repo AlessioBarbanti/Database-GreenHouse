@@ -17,11 +17,6 @@ namespace GreenHouse_App
             InitializeComponent();
         }
 
-        private void FormRicercatoreCapo2_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void Inserisci_Click(object sender, EventArgs e)
         {
