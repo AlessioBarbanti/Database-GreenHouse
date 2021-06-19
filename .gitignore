@@ -1,7 +1,6 @@
 .~lock.Diagramma ER.lun#
 .~lock.ER_Diagram_GreenHouse.lun#
 ~$ROGETTO DB) Intervista con il cliente.docx
-**/GreenHouse_App/.vs
 */*/bin/*
 */*/obj/*
 */*/Prova*
@@ -11,3 +10,6 @@ Settings.*
 */*/Properties/*
 GreenHouse_App/.vs/*
 *.suo
+*.xsc
+*.xss
+*.xsd
