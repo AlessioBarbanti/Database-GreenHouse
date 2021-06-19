@@ -514,7 +514,13 @@ namespace GreenHouse_App
 				{
 					if (this._DIPENDENTI.HasLoadedOrAssignedValue)
 					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+						
+						
+						
+						
+						
+						
+						new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
 					this.OnIDDipendenteChanging(value);
 					this.SendPropertyChanging();
@@ -10839,6 +10845,8 @@ namespace GreenHouse_App
 		
 		private int _IDSerra;
 		
+		private string _IDGuida;
+		
 		private EntityRef<VIAGGI_ISTRUZIONE> _VIAGGI_ISTRUZIONE;
 		
 		private EntityRef<SERRE> _SERRE;
@@ -10855,6 +10863,8 @@ namespace GreenHouse_App
     partial void OnIDStrutturaChanged();
     partial void OnIDSerraChanging(int value);
     partial void OnIDSerraChanged();
+    partial void OnIDGuidaChanging(string value);
+    partial void OnIDGuidaChanged();
     #endregion
 		
 		public VISITE()
@@ -10952,6 +10962,26 @@ namespace GreenHouse_App
 					this._IDSerra = value;
 					this.SendPropertyChanged("IDSerra");
 					this.OnIDSerraChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDGuida", CanBeNull=false)]
+		public string IDGuida
+		{
+			get
+			{
+				return this._IDGuida;
+			}
+			set
+			{
+				if ((this._IDGuida != value))
+				{
+					this.OnIDGuidaChanging(value);
+					this.SendPropertyChanging();
+					this._IDGuida = value;
+					this.SendPropertyChanged("IDGuida");
+					this.OnIDGuidaChanged();
 				}
 			}
 		}

@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormGuida3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGuida3.Designer.cs">
+      <DependentUpon>FormGuida3.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGestoreStruttura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProvaGreenHouse.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormGuida3.resx">
+      <DependentUpon>FormGuida3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGestoreStruttura.resx">
       <DependentUpon>FormGestoreStruttura.cs</DependentUpon>
     </EmbeddedResource>

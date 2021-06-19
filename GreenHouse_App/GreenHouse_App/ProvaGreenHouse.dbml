@@ -469,6 +469,7 @@
       <Column Name="DataOra" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IDSerra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Member="IDGuida" Type="System.String" CanBeNull="false" />
       <Association Name="VIAGGI_ISTRUZIONE_VISITE" Member="VIAGGI_ISTRUZIONE" ThisKey="IDViaggio" OtherKey="IDViaggio" Type="VIAGGI_ISTRUZIONE" IsForeignKey="true" />
       <Association Name="SERRE_VISITE" Member="SERRE" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="SERRE" IsForeignKey="true" />
     </Type>
