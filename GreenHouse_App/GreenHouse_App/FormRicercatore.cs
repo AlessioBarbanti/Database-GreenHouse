@@ -30,10 +30,32 @@ namespace GreenHouse_App
 
         private void RevisioniInScadenza_Click(object sender, EventArgs e)
         {
-            var foo = from a in db.MACCHINARI
-                      where (a.DataRevisione - DateTime.Now).Days < 10
-                      select a;
-            Console.WriteLine(foo.First());
+            var foo = from E    in db.ESPERIMENTI
+                      from COLL in (from CO in db.COLLABORAZIONI where CO.IDRicercatore == 1 select new { CO })
+                      from CL   in db.CLUSTER_PIANTE
+                      where
+                        E.IDRicercatoreCapo == 1 && CL.IDEsperimento == E.IDEsperimento && CL.NumeroPianteMorte > 0 || E.IDEsperimento == COLL.CO.IDEsperimento
+                      group new { E, CL } by new
+                      {
+                          E.IDEsperimento,E.Descrizione
+                      } into g orderby g.Sum(p => p.CL.NumeroPianteMorte) descending
+                      select new
+                      {
+                          g.Key.IDEsperimento,
+                          g.Key.Descrizione,
+                          PianteMorte = (int)g.Sum(p => p.CL.NumeroPianteMorte)
+                      };
+
+
+
+            /*  SELECT E.IDEsperimento,Descrizione, SUM(CL.NumeroPianteMorte) AS PianteMorte
+                FROM ESPERIMENTI E, (SELECT * FROM COLLABORAZIONI CO WHERE  CO.IDRicercatore = 1) AS COLL,CLUSTER_PIANTE CL
+                WHERE (E.IDRicercatoreCapo = 1 OR  ) AND CL.IDEsperimento = E.IDEsperimento AND CL.NumeroPianteMorte > 0
+                GROUP BY E.IDEsperimento,Descrizione
+                ORDER BY SUM(CL.NumeroPianteMorte) DESC;
+            */
+
+
             dataGridView1.DataSource = foo;
         }
     }
