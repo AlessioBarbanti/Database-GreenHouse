@@ -9,3 +9,5 @@
 App.config
 Settings.*
 */*/Properties/*
+GreenHouse_App/.vs/*
+*.suo
