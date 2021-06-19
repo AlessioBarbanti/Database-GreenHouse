@@ -55,10 +55,10 @@ namespace GreenHouse_App
                         select d;
 
                        //select new
-                       //{
-                       //    d.IDDipendente,
-                       //    d.Nome,
-                       //    d.IDStruttura,
+                                //{
+                                        //    d.IDDipendente,
+                                                                //    d.Nome,
+                            //    d.IDStruttura,
                        //    nomeacaso = String.Join(", ", (from a in db.STRUMENTI_COMPLESSI
                        //                                   where (from f in db.PERMESSI_STRUMENTI_COMPLESSI where d.IDDipendente == f.IDManovale /*where d.IDStruttura == f.IDStruttura*/ select f.IDStrumentoComplesso).Contains(a.IDStrumentoComplesso)
                        //                                   select a.Nome))
