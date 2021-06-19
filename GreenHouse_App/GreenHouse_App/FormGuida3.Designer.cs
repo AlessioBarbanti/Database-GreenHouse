@@ -39,8 +39,6 @@ namespace GreenHouse_App
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxScuola = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Data = new System.Windows.Forms.DateTimePicker();
             this.Annulla = new System.Windows.Forms.Button();
             this.Inserisci = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -138,23 +136,6 @@ namespace GreenHouse_App
             this.label3.TabIndex = 20;
             this.label3.Text = "Scuola:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 18);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Prima Data:";
-            // 
-            // Data
-            // 
-            this.Data.Location = new System.Drawing.Point(120, 66);
-            this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(200, 20);
-            this.Data.TabIndex = 18;
-            // 
             // Annulla
             // 
             this.Annulla.Location = new System.Drawing.Point(245, 246);
@@ -190,8 +171,6 @@ namespace GreenHouse_App
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxScuola);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Data);
             this.Controls.Add(this.Annulla);
             this.Controls.Add(this.Inserisci);
             this.Name = "FormViaggio";
@@ -214,8 +193,6 @@ namespace GreenHouse_App
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxScuola;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.DateTimePicker Data;
         private System.Windows.Forms.Button Annulla;
         private System.Windows.Forms.Button Inserisci;
     }

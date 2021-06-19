@@ -12,11 +12,11 @@ namespace GreenHouse_App
 {
     public partial class FormManutenzioni : Form
     {
-        public ProvaGreenHouseDataContext db;
+        public GreenHouseDataContext db;
         public FormManutenzioni()
         {
             InitializeComponent();
-            db = new ProvaGreenHouseDataContext();
+            db = new GreenHouseDataContext();
         }
 
         private void Inserisci_Click(object sender, EventArgs e)

@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GreenhouseDB" Class="ProvaGreenHouseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=GreenhouseDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="GreenHouse_App.Properties.Settings" SettingsPropertyName="GreenhouseDBConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Greenhouse Database" Class="GreenHouseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=&quot;Greenhouse Database&quot;;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="GreenHouse_App.Properties.Settings" SettingsPropertyName="Greenhouse_DatabaseConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ACCESSI_INVENTARIO" Member="ACCESSI_INVENTARIO">
     <Type Name="ACCESSI_INVENTARIO">
       <Column Name="IDDipendente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -27,7 +27,7 @@
   </Table>
   <Table Name="dbo.CLIMI" Member="CLIMI">
     <Type Name="CLIMI">
-      <Column Name="IDClima" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDClima" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Descrizione" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
       <Column Name="Luce" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
@@ -55,7 +55,7 @@
       <Column Name="DataSemina" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DataGerminazione" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="DataUscita" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="EmbrioniFalliti" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmbrioniFalliti" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IDSerraIncubazione" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="PIANTE_CLUSTER_EMBRIONI" Member="PIANTE" ThisKey="IDPianta" OtherKey="IDPianta" Type="PIANTE" IsForeignKey="true" />
@@ -64,14 +64,14 @@
   </Table>
   <Table Name="dbo.CLUSTER_PIANTE" Member="CLUSTER_PIANTE">
     <Type Name="CLUSTER_PIANTE">
-      <Column Name="IDClusterPiante" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDClusterPiante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="DataInizio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DataFine" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DataTrapianto" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DataEspianto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="NumeroPianteIniziali" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NumeroPianteMorte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TrattamentoBiologico" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroPianteMorte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrattamentoBiologico" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="DataSmaltimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IDSerra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -95,7 +95,7 @@
   </Table>
   <Table Name="dbo.CONTRATTI" Member="CONTRATTI">
     <Type Name="CONTRATTI">
-      <Column Name="IDContratto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDContratto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TipoContratto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="DataInizio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DataFine" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
@@ -107,7 +107,7 @@
   </Table>
   <Table Name="dbo.DIPENDENTI" Member="DIPENDENTI">
     <Type Name="DIPENDENTI">
-      <Column Name="IDDipendente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDDipendente" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CF" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Cognome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
@@ -120,23 +120,27 @@
       <Column Name="Ruolo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Stipendio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="CV" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="AbilitazioneProdottiChimici" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="DIPENDENTI_ACCESSI_INVENTARIO" Member="ACCESSI_INVENTARIO" ThisKey="IDDipendente" OtherKey="IDDipendente" Type="ACCESSI_INVENTARIO" />
       <Association Name="DIPENDENTI_CONTRATTI" Member="CONTRATTI" ThisKey="IDDipendente" OtherKey="IDDipendente" Type="CONTRATTI" />
       <Association Name="DIPENDENTI_ESPERIMENTI" Member="ESPERIMENTI" ThisKey="IDDipendente" OtherKey="IDAutorizzante" Type="ESPERIMENTI" />
       <Association Name="DIPENDENTI_LAVORI_EFFETTUATI" Member="LAVORI_EFFETTUATI" ThisKey="IDDipendente" OtherKey="IDManovale" Type="LAVORI_EFFETTUATI" />
       <Association Name="DIPENDENTI_MANUTENZIONI" Member="MANUTENZIONI" ThisKey="IDDipendente" OtherKey="IDManutentore" Type="MANUTENZIONI" />
-      <Association Name="DIPENDENTI_PERMESSI" Member="PERMESSI" ThisKey="IDDipendente" OtherKey="IDSupervisoreConcedente" Type="PERMESSI" />
-      <Association Name="DIPENDENTI_PERMESSI_MANOVALI" Member="PERMESSI_MANOVALI" ThisKey="IDDipendente" OtherKey="IDManovale" Type="PERMESSI_MANOVALI" />
-      <Association Name="DIPENDENTI_STRUTTURE" Member="STRUTTURE" ThisKey="IDDipendente" OtherKey="IDDirettore" Type="STRUTTURE" />
+      <Association Name="DIPENDENTI_PERMESSI_MACCHINARI" Member="PERMESSI_MACCHINARI" ThisKey="IDDipendente" OtherKey="IDManovale" Type="PERMESSI_MACCHINARI" />
+      <Association Name="DIPENDENTI_PERMESSI_MACCHINARI1" Member="PERMESSI_MACCHINARI1" ThisKey="IDDipendente" OtherKey="IDSupervisoreConcedente" Type="PERMESSI_MACCHINARI" />
+      <Association Name="DIPENDENTI_PERMESSI_SERRE" Member="PERMESSI_SERRE" ThisKey="IDDipendente" OtherKey="IDSupervisoreConcedente" Type="PERMESSI_SERRE" />
+      <Association Name="DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI" Member="PERMESSI_STRUMENTI_COMPLESSI" ThisKey="IDDipendente" OtherKey="IDManovale" Type="PERMESSI_STRUMENTI_COMPLESSI" />
+      <Association Name="DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI1" Member="PERMESSI_STRUMENTI_COMPLESSI1" ThisKey="IDDipendente" OtherKey="IDSupervisoreConcedente" Type="PERMESSI_STRUMENTI_COMPLESSI" />
+      <Association Name="DIPENDENTI_STRUTTURE" Member="STRUTTURE1" ThisKey="IDDipendente" OtherKey="IDDirettore" Type="STRUTTURE" />
       <Association Name="DIPENDENTI_SUPERVISIONI" Member="SUPERVISIONI" ThisKey="IDDipendente" OtherKey="IDSupervisore" Type="SUPERVISIONI" />
       <Association Name="DIPENDENTI_VIAGGI_ISTRUZIONE" Member="VIAGGI_ISTRUZIONE" ThisKey="IDDipendente" OtherKey="IDGuida" Type="VIAGGI_ISTRUZIONE" />
+      <Association Name="STRUTTURE_DIPENDENTI" Member="STRUTTURE" ThisKey="IDStruttura" OtherKey="IDStruttura" Type="STRUTTURE" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ESPERIMENTI" Member="ESPERIMENTI">
     <Type Name="ESPERIMENTI">
-      <Column Name="IDEsperimento" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDEsperimento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="DataInizio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DataFine" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DataApprovazione" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -167,8 +171,8 @@
     <Type Name="IRRIGAZIONI">
       <Column Name="IDClusterPiante" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="DataInizio" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="OraInizio" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="OraFine" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OraInizio" Type="System.TimeSpan" DbType="Time NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OraFine" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
       <Column Name="DataFine" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="PressioneAcqua" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="CLUSTER_PIANTE_IRRIGAZIONI" Member="CLUSTER_PIANTE" ThisKey="IDClusterPiante" OtherKey="IDClusterPiante" Type="CLUSTER_PIANTE" IsForeignKey="true" />
@@ -176,7 +180,7 @@
   </Table>
   <Table Name="dbo.LAVORI" Member="LAVORI">
     <Type Name="LAVORI">
-      <Column Name="IDLavoro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDLavoro" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Categoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Descrizione" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
@@ -190,7 +194,7 @@
   <Table Name="dbo.LAVORI_EFFETTUATI" Member="LAVORI_EFFETTUATI">
     <Type Name="LAVORI_EFFETTUATI">
       <Column Name="IDLavoro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="IDLavoroEffettuato" Type="System.Int32" DbType="Int NOT NULL IDENTITY(1,1)" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDLavoroEffettuato" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="DataOraInizio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DataOraFine" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="IDClusterPiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -251,53 +255,51 @@
       <Association Name="SERRE_MANUTENZIONI" Member="SERRE" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="SERRE" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.PERMESSI" Member="PERMESSI">
-    <Type Name="PERMESSI">
-      <Column Name="IDPermesso" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+  <Table Name="dbo.PERMESSI_MACCHINARI" Member="PERMESSI_MACCHINARI">
+    <Type Name="PERMESSI_MACCHINARI">
+      <Column Name="IDPermessoMacchinari" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataCreazione" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Validità" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroTelaio" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDSupervisoreConcedente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDManovale" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MACCHINARI_PERMESSI_MACCHINARI" Member="MACCHINARI" ThisKey="NumeroTelaio" OtherKey="NumeroTelaio" Type="MACCHINARI" IsForeignKey="true" />
+      <Association Name="DIPENDENTI_PERMESSI_MACCHINARI" Member="DIPENDENTI" ThisKey="IDManovale" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
+      <Association Name="DIPENDENTI_PERMESSI_MACCHINARI1" Member="DIPENDENTI1" ThisKey="IDSupervisoreConcedente" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERMESSI_SERRE" Member="PERMESSI_SERRE">
+    <Type Name="PERMESSI_SERRE">
+      <Column Name="IDPermessoSerre" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="DataCreazione" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="Validità" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="IDSupervisoreConcedente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="IDStruttura" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="IDSerra" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="IDRicercatore" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="PERMESSI_PERMESSI_MACCHINARI" Member="PERMESSI_MACCHINARI" ThisKey="IDPermesso" OtherKey="IDPermesso" Type="PERMESSI_MACCHINARI" Cardinality="One" />
-      <Association Name="PERMESSI_PERMESSI_MANOVALI" Member="PERMESSI_MANOVALI" ThisKey="IDPermesso" OtherKey="IDPermesso" Type="PERMESSI_MANOVALI" Cardinality="One" />
-      <Association Name="PERMESSI_PERMESSI_STRUMENTI_COMPLESSI" Member="PERMESSI_STRUMENTI_COMPLESSI" ThisKey="IDPermesso" OtherKey="IDPermesso" Type="PERMESSI_STRUMENTI_COMPLESSI" Cardinality="One" />
-      <Association Name="DIPENDENTI_PERMESSI" Member="DIPENDENTI" ThisKey="IDSupervisoreConcedente" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
-      <Association Name="RICERCATORI_PERMESSI" Member="RICERCATORI" ThisKey="IDRicercatore" OtherKey="IDRicercatore" Type="RICERCATORI" IsForeignKey="true" />
-      <Association Name="SERRE_PERMESSI" Member="SERRE" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="SERRE" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PERMESSI_MACCHINARI" Member="PERMESSI_MACCHINARI">
-    <Type Name="PERMESSI_MACCHINARI">
-      <Column Name="IDPermesso" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="NumeroTelaio" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="MACCHINARI_PERMESSI_MACCHINARI" Member="MACCHINARI" ThisKey="NumeroTelaio" OtherKey="NumeroTelaio" Type="MACCHINARI" IsForeignKey="true" />
-      <Association Name="PERMESSI_PERMESSI_MACCHINARI" Member="PERMESSI" ThisKey="IDPermesso" OtherKey="IDPermesso" Type="PERMESSI" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PERMESSI_MANOVALI" Member="PERMESSI_MANOVALI">
-    <Type Name="PERMESSI_MANOVALI">
-      <Column Name="IDPermesso" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="IDManovale" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="DIPENDENTI_PERMESSI_MANOVALI" Member="DIPENDENTI" ThisKey="IDManovale" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
-      <Association Name="PERMESSI_PERMESSI_MANOVALI" Member="PERMESSI" ThisKey="IDPermesso" OtherKey="IDPermesso" Type="PERMESSI" IsForeignKey="true" />
+      <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDSerra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRicercatore" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DIPENDENTI_PERMESSI_SERRE" Member="DIPENDENTI" ThisKey="IDSupervisoreConcedente" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
+      <Association Name="RICERCATORI_PERMESSI_SERRE" Member="RICERCATORI" ThisKey="IDRicercatore" OtherKey="IDRicercatore" Type="RICERCATORI" IsForeignKey="true" />
+      <Association Name="SERRE_PERMESSI_SERRE" Member="SERRE" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="SERRE" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PERMESSI_STRUMENTI_COMPLESSI" Member="PERMESSI_STRUMENTI_COMPLESSI">
     <Type Name="PERMESSI_STRUMENTI_COMPLESSI">
-      <Column Name="IDPermesso" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDPermessoStrumentiComplessi" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataCreazione" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Validità" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IDMagazzino" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IDStrumentoComplesso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="PERMESSI_PERMESSI_STRUMENTI_COMPLESSI" Member="PERMESSI" ThisKey="IDPermesso" OtherKey="IDPermesso" Type="PERMESSI" IsForeignKey="true" />
+      <Column Name="IDSupervisoreConcedente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDManovale" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI" Member="DIPENDENTI" ThisKey="IDManovale" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
+      <Association Name="DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI1" Member="DIPENDENTI1" ThisKey="IDSupervisoreConcedente" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
       <Association Name="STRUMENTI_COMPLESSI_PERMESSI_STRUMENTI_COMPLESSI" Member="STRUMENTI_COMPLESSI" ThisKey="IDStruttura,IDMagazzino,IDStrumentoComplesso" OtherKey="IDStruttura,IDMagazzino,IDStrumentoComplesso" Type="STRUMENTI_COMPLESSI" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PIANTE" Member="PIANTE">
     <Type Name="PIANTE">
-      <Column Name="IDPianta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDPianta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Razza" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Varietà" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="UnitàOccupate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -323,7 +325,7 @@
   </Table>
   <Table Name="dbo.RICERCATORI" Member="RICERCATORI">
     <Type Name="RICERCATORI">
-      <Column Name="IDRicercatore" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDRicercatore" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CF" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Cognome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
@@ -339,7 +341,7 @@
       <Association Name="RICERCATORI_ANNOTAZIONI" Member="ANNOTAZIONI" ThisKey="IDRicercatore" OtherKey="IDRicercatore" Type="ANNOTAZIONI" />
       <Association Name="RICERCATORI_COLLABORAZIONI" Member="COLLABORAZIONI" ThisKey="IDRicercatore" OtherKey="IDRicercatore" Type="COLLABORAZIONI" />
       <Association Name="RICERCATORI_ESPERIMENTI" Member="ESPERIMENTI" ThisKey="IDRicercatore" OtherKey="IDRicercatoreCapo" Type="ESPERIMENTI" />
-      <Association Name="RICERCATORI_PERMESSI" Member="PERMESSI" ThisKey="IDRicercatore" OtherKey="IDRicercatore" Type="PERMESSI" />
+      <Association Name="RICERCATORI_PERMESSI_SERRE" Member="PERMESSI_SERRE" ThisKey="IDRicercatore" OtherKey="IDRicercatore" Type="PERMESSI_SERRE" />
       <Association Name="UNIVERSITÀ_RICERCATORI" Member="UNIVERSITÀ" ThisKey="NomeUniversità" OtherKey="Nome" Type="UNIVERSITÀ" IsForeignKey="true" />
     </Type>
   </Table>
@@ -349,11 +351,11 @@
       <Column Name="IDSerra" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Area" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="NumeroUnitàMassime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NumeroUnitàOccupate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroUnitàOccupate" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="IDClima" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="SERRE_CLUSTER" Member="CLUSTER" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="CLUSTER" />
       <Association Name="SERRE_MANUTENZIONI" Member="MANUTENZIONI" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="MANUTENZIONI" />
-      <Association Name="SERRE_PERMESSI" Member="PERMESSI" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="PERMESSI" />
+      <Association Name="SERRE_PERMESSI_SERRE" Member="PERMESSI_SERRE" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="PERMESSI_SERRE" />
       <Association Name="SERRE_SUPERVISIONI" Member="SUPERVISIONI" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="SUPERVISIONI" />
       <Association Name="SERRE_VISITE" Member="VISITE" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="VISITE" />
       <Association Name="CLIMI_SERRE" Member="CLIMI" ThisKey="IDClima" OtherKey="IDClima" Type="CLIMI" IsForeignKey="true" />
@@ -367,7 +369,7 @@
       <Column Name="Nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Dimensione" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ClusterOspitabili" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ClusterPresenti" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClusterPresenti" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="SERRE_INCUBAZIONE_ACCESSI_INVENTARIO" Member="ACCESSI_INVENTARIO" ThisKey="IDStruttura,IDSerraIncubazione" OtherKey="IDStruttura,IDSerraIncubazione" Type="ACCESSI_INVENTARIO" />
       <Association Name="SERRE_INCUBAZIONE_CLUSTER_EMBRIONI" Member="CLUSTER_EMBRIONI" ThisKey="IDStruttura,IDSerraIncubazione" OtherKey="IDStruttura,IDSerraIncubazione" Type="CLUSTER_EMBRIONI" />
       <Association Name="STRUTTURE_SERRE_INCUBAZIONE" Member="STRUTTURE" ThisKey="IDStruttura" OtherKey="IDStruttura" Type="STRUTTURE" IsForeignKey="true" />
@@ -399,7 +401,7 @@
   </Table>
   <Table Name="dbo.STRUTTURE" Member="STRUTTURE">
     <Type Name="STRUTTURE">
-      <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Provincia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="CAP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
@@ -407,13 +409,14 @@
       <Column Name="NumeroCivico" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Telefono" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="DataInizioGestione" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="IDDirettore" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDDirettore" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="STRUTTURE_CONTRATTI" Member="CONTRATTI" ThisKey="IDStruttura" OtherKey="IDStruttura" Type="CONTRATTI" />
+      <Association Name="STRUTTURE_DIPENDENTI" Member="DIPENDENTI" ThisKey="IDStruttura" OtherKey="IDStruttura" Type="DIPENDENTI" />
       <Association Name="STRUTTURE_GARAGE" Member="GARAGE" ThisKey="IDStruttura" OtherKey="IDStruttura" Type="GARAGE" />
       <Association Name="STRUTTURE_MAGAZZINI" Member="MAGAZZINI" ThisKey="IDStruttura" OtherKey="IDStruttura" Type="MAGAZZINI" />
       <Association Name="STRUTTURE_SERRE" Member="SERRE" ThisKey="IDStruttura" OtherKey="IDStruttura" Type="SERRE" />
       <Association Name="STRUTTURE_SERRE_INCUBAZIONE" Member="SERRE_INCUBAZIONE" ThisKey="IDStruttura" OtherKey="IDStruttura" Type="SERRE_INCUBAZIONE" />
-      <Association Name="DIPENDENTI_STRUTTURE" Member="DIPENDENTI" ThisKey="IDDirettore" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
+      <Association Name="DIPENDENTI_STRUTTURE" Member="DIPENDENTI1" ThisKey="IDDirettore" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.SUPERVISIONI" Member="SUPERVISIONI">
@@ -453,24 +456,23 @@
   </Table>
   <Table Name="dbo.VIAGGI_ISTRUZIONE" Member="VIAGGI_ISTRUZIONE">
     <Type Name="VIAGGI_ISTRUZIONE">
+      <Column Name="IDGuida" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDViaggio" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="PrimaData" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="Scuola" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="NumeroPartecipanti" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="OrdineScolastico" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="IDGuida" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="VIAGGI_ISTRUZIONE_VISITE" Member="VISITE" ThisKey="IDViaggio" OtherKey="IDViaggio" Type="VISITE" />
+      <Association Name="VIAGGI_ISTRUZIONE_VISITE" Member="VISITE" ThisKey="IDGuida,IDViaggio" OtherKey="IDGuida,IDViaggio" Type="VISITE" />
       <Association Name="DIPENDENTI_VIAGGI_ISTRUZIONE" Member="DIPENDENTI" ThisKey="IDGuida" OtherKey="IDDipendente" Type="DIPENDENTI" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.VISITE" Member="VISITE">
     <Type Name="VISITE">
+      <Column Name="IDGuida" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDViaggio" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="DataOra" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDStruttura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IDSerra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Member="IDGuida" Type="System.String" CanBeNull="false" />
-      <Association Name="VIAGGI_ISTRUZIONE_VISITE" Member="VIAGGI_ISTRUZIONE" ThisKey="IDViaggio" OtherKey="IDViaggio" Type="VIAGGI_ISTRUZIONE" IsForeignKey="true" />
+      <Association Name="VIAGGI_ISTRUZIONE_VISITE" Member="VIAGGI_ISTRUZIONE" ThisKey="IDGuida,IDViaggio" OtherKey="IDGuida,IDViaggio" Type="VIAGGI_ISTRUZIONE" IsForeignKey="true" />
       <Association Name="SERRE_VISITE" Member="SERRE" ThisKey="IDStruttura,IDSerra" OtherKey="IDStruttura,IDSerra" Type="SERRE" IsForeignKey="true" />
     </Type>
   </Table>

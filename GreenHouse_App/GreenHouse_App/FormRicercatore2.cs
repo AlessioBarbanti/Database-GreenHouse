@@ -13,12 +13,12 @@ namespace GreenHouse_App
     public partial class FormRicercatore2 : Form
     {
         private int LastAnnotation;
-        public ProvaGreenHouseDataContext db; 
+        public GreenHouseDataContext db; 
 
         public FormRicercatore2()
         {
             InitializeComponent();
-            db = new ProvaGreenHouseDataContext();
+            db = new GreenHouseDataContext();
         }
 
         private void Inserisci_Click(object sender, EventArgs e)
@@ -30,12 +30,13 @@ namespace GreenHouse_App
             {
                 IDEsperimento = Convert.ToInt32(IDEsperimentoTextBox.Text),
                 NumeroAnnotazione = LastAnnotation,
-                DataOra = dateTimePicker1.Value,
+                DataOra = Convert.ToDateTime(Convert.ToString(dateTimePicker1.Value.ToShortDateString()) + " " + maskedTextBox1.Text),
                 Testo = textBox2.Text,
                 IDRicercatore = Convert.ToInt32(IDRicercatore.Text)
             };
 
-            // Add the new object to the Orders collection.
+            Console.WriteLine(Convert.ToString(dateTimePicker1.Value));
+
             db.ANNOTAZIONI.InsertOnSubmit(ord);
             db.SubmitChanges();
             Close();

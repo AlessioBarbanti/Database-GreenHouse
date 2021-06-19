@@ -13,11 +13,11 @@ namespace GreenHouse_App
 {
     public partial class FormGuida2 : Form
     {
-        private ProvaGreenHouseDataContext db;
+        private GreenHouseDataContext db;
         public FormGuida2()
         {
             InitializeComponent();
-            db = new ProvaGreenHouseDataContext();
+            db = new GreenHouseDataContext();
         }
 
 
@@ -40,7 +40,7 @@ namespace GreenHouse_App
                                   where a.IDViaggio == Convert.ToInt32(textBoxIDViaggio.Text)
                                   select a.IDGuida;
 
-                foo.IDGuida = Convert.ToString(tempIDGuida.First());
+                foo.IDGuida = tempIDGuida.First();
                 if (Convert.ToDateTime(Data.Text) < DateTime.Now) {
 
                     throw new Exception();

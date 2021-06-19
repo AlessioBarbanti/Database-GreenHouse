@@ -38,10 +38,13 @@ namespace GreenHouse_App
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewStrumentoComplesso = new System.Windows.Forms.DataGridView();
             this.VisualizzaPermessiButton = new System.Windows.Forms.Button();
             this.PermessiManovale = new System.Windows.Forms.Button();
-            this.IDSerraDiRiferimento = new System.Windows.Forms.TextBox();
+            this.textBoxIDStrutturaDiRiferimento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -49,6 +52,8 @@ namespace GreenHouse_App
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridViewMacchinario = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridViewDEBUG = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStrumentoComplesso)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -56,6 +61,8 @@ namespace GreenHouse_App
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMacchinario)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDEBUG)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewStrumentoComplesso
@@ -64,9 +71,6 @@ namespace GreenHouse_App
             this.dataGridViewStrumentoComplesso.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewStrumentoComplesso.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewStrumentoComplesso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewStrumentoComplesso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewStrumentoComplesso.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewStrumentoComplesso.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
@@ -77,7 +81,7 @@ namespace GreenHouse_App
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 11F);
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewStrumentoComplesso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewStrumentoComplesso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStrumentoComplesso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 11F);
@@ -140,28 +144,29 @@ namespace GreenHouse_App
             this.PermessiManovale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.PermessiManovale.UseVisualStyleBackColor = true;
             // 
-            // IDSerraDiRiferimento
+            // textBoxIDStrutturaDiRiferimento
             // 
-            this.IDSerraDiRiferimento.Location = new System.Drawing.Point(74, 39);
-            this.IDSerraDiRiferimento.Name = "IDSerraDiRiferimento";
-            this.IDSerraDiRiferimento.Size = new System.Drawing.Size(75, 20);
-            this.IDSerraDiRiferimento.TabIndex = 17;
-            this.IDSerraDiRiferimento.TextChanged += new System.EventHandler(this.IDSerraDiRiferimento_TextChanged);
+            this.textBoxIDStrutturaDiRiferimento.Location = new System.Drawing.Point(74, 39);
+            this.textBoxIDStrutturaDiRiferimento.Name = "textBoxIDStrutturaDiRiferimento";
+            this.textBoxIDStrutturaDiRiferimento.Size = new System.Drawing.Size(75, 20);
+            this.textBoxIDStrutturaDiRiferimento.TabIndex = 17;
+            this.textBoxIDStrutturaDiRiferimento.TextChanged += new System.EventHandler(this.IDSerraDiRiferimento_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(60, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
+            this.label1.Size = new System.Drawing.Size(129, 13);
             this.label1.TabIndex = 18;
-            this.label1.Text = "ID Serra di riferimento: ";
+            this.label1.Text = "ID Struttura di riferimento: ";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(274, 23);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -187,9 +192,6 @@ namespace GreenHouse_App
             this.dataGridViewSerra.AllowUserToDeleteRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewSerra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewSerra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewSerra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSerra.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewSerra.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
@@ -287,6 +289,55 @@ namespace GreenHouse_App
             this.dataGridViewMacchinario.Size = new System.Drawing.Size(627, 494);
             this.dataGridViewMacchinario.TabIndex = 2;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dataGridViewDEBUG);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(623, 487);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "DEBUG";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewDEBUG
+            // 
+            this.dataGridViewDEBUG.AllowUserToAddRows = false;
+            this.dataGridViewDEBUG.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewDEBUG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewDEBUG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewDEBUG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewDEBUG.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridViewDEBUG.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewDEBUG.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Comic Sans MS", 11F);
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDEBUG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewDEBUG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Comic Sans MS", 11F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.NullValue = "//";
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDEBUG.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewDEBUG.EnableHeadersVisualStyles = false;
+            this.dataGridViewDEBUG.Location = new System.Drawing.Point(-4, 0);
+            this.dataGridViewDEBUG.Name = "dataGridViewDEBUG";
+            this.dataGridViewDEBUG.ReadOnly = true;
+            this.dataGridViewDEBUG.RowHeadersVisible = false;
+            this.dataGridViewDEBUG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewDEBUG.ShowCellErrors = false;
+            this.dataGridViewDEBUG.ShowCellToolTips = false;
+            this.dataGridViewDEBUG.ShowEditingIcon = false;
+            this.dataGridViewDEBUG.ShowRowErrors = false;
+            this.dataGridViewDEBUG.Size = new System.Drawing.Size(631, 487);
+            this.dataGridViewDEBUG.TabIndex = 3;
+            // 
             // FormSupervisore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,7 +345,7 @@ namespace GreenHouse_App
             this.ClientSize = new System.Drawing.Size(917, 548);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.IDSerraDiRiferimento);
+            this.Controls.Add(this.textBoxIDStrutturaDiRiferimento);
             this.Controls.Add(this.VisualizzaPermessiButton);
             this.Controls.Add(this.PermessiManovale);
             this.MaximizeBox = false;
@@ -308,6 +359,8 @@ namespace GreenHouse_App
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMacchinario)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDEBUG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,7 +370,7 @@ namespace GreenHouse_App
         private System.Windows.Forms.DataGridView dataGridViewStrumentoComplesso;
         private System.Windows.Forms.Button PermessiManovale;
         private System.Windows.Forms.Button VisualizzaPermessiButton;
-        private System.Windows.Forms.TextBox IDSerraDiRiferimento;
+        private System.Windows.Forms.TextBox textBoxIDStrutturaDiRiferimento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -325,5 +378,7 @@ namespace GreenHouse_App
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView dataGridViewSerra;
         private System.Windows.Forms.DataGridView dataGridViewMacchinario;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.DataGridView dataGridViewDEBUG;
     }
 }

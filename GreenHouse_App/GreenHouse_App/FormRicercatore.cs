@@ -14,12 +14,12 @@ namespace GreenHouse_App
 
     public partial class FormRicercatore : Form
     {
-        public ProvaGreenHouseDataContext db;
+        public GreenHouseDataContext db;
 
         public FormRicercatore()
         {
             InitializeComponent();
-            db = new ProvaGreenHouseDataContext();
+            db = new GreenHouseDataContext();
         }
 
         private void button1_Click(object sender, EventArgs e)

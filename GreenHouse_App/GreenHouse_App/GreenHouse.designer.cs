@@ -22,8 +22,8 @@ namespace GreenHouse_App
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="GreenhouseDB")]
-	public partial class ProvaGreenHouseDataContext : System.Data.Linq.DataContext
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Greenhouse Database")]
+	public partial class GreenHouseDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -84,15 +84,12 @@ namespace GreenHouse_App
     partial void InsertMANUTENZIONI(MANUTENZIONI instance);
     partial void UpdateMANUTENZIONI(MANUTENZIONI instance);
     partial void DeleteMANUTENZIONI(MANUTENZIONI instance);
-    partial void InsertPERMESSI(PERMESSI instance);
-    partial void UpdatePERMESSI(PERMESSI instance);
-    partial void DeletePERMESSI(PERMESSI instance);
     partial void InsertPERMESSI_MACCHINARI(PERMESSI_MACCHINARI instance);
     partial void UpdatePERMESSI_MACCHINARI(PERMESSI_MACCHINARI instance);
     partial void DeletePERMESSI_MACCHINARI(PERMESSI_MACCHINARI instance);
-    partial void InsertPERMESSI_MANOVALI(PERMESSI_MANOVALI instance);
-    partial void UpdatePERMESSI_MANOVALI(PERMESSI_MANOVALI instance);
-    partial void DeletePERMESSI_MANOVALI(PERMESSI_MANOVALI instance);
+    partial void InsertPERMESSI_SERRE(PERMESSI_SERRE instance);
+    partial void UpdatePERMESSI_SERRE(PERMESSI_SERRE instance);
+    partial void DeletePERMESSI_SERRE(PERMESSI_SERRE instance);
     partial void InsertPERMESSI_STRUMENTI_COMPLESSI(PERMESSI_STRUMENTI_COMPLESSI instance);
     partial void UpdatePERMESSI_STRUMENTI_COMPLESSI(PERMESSI_STRUMENTI_COMPLESSI instance);
     partial void DeletePERMESSI_STRUMENTI_COMPLESSI(PERMESSI_STRUMENTI_COMPLESSI instance);
@@ -137,31 +134,31 @@ namespace GreenHouse_App
     partial void DeleteVISITE(VISITE instance);
     #endregion
 		
-		public ProvaGreenHouseDataContext() : 
-				base(global::GreenHouse_App.Properties.Settings.Default.GreenhouseDBConnectionString, mappingSource)
+		public GreenHouseDataContext() : 
+				base(global::GreenHouse_App.Properties.Settings.Default.Greenhouse_DatabaseConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ProvaGreenHouseDataContext(string connection) : 
+		public GreenHouseDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ProvaGreenHouseDataContext(System.Data.IDbConnection connection) : 
+		public GreenHouseDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ProvaGreenHouseDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public GreenHouseDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ProvaGreenHouseDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public GreenHouseDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -311,14 +308,6 @@ namespace GreenHouse_App
 			}
 		}
 		
-		public System.Data.Linq.Table<PERMESSI> PERMESSI
-		{
-			get
-			{
-				return this.GetTable<PERMESSI>();
-			}
-		}
-		
 		public System.Data.Linq.Table<PERMESSI_MACCHINARI> PERMESSI_MACCHINARI
 		{
 			get
@@ -327,11 +316,11 @@ namespace GreenHouse_App
 			}
 		}
 		
-		public System.Data.Linq.Table<PERMESSI_MANOVALI> PERMESSI_MANOVALI
+		public System.Data.Linq.Table<PERMESSI_SERRE> PERMESSI_SERRE
 		{
 			get
 			{
-				return this.GetTable<PERMESSI_MANOVALI>();
+				return this.GetTable<PERMESSI_SERRE>();
 			}
 		}
 		
@@ -514,13 +503,7 @@ namespace GreenHouse_App
 				{
 					if (this._DIPENDENTI.HasLoadedOrAssignedValue)
 					{
-						
-						
-						
-						
-						
-						
-						new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
 					this.OnIDDipendenteChanging(value);
 					this.SendPropertyChanging();
@@ -1099,7 +1082,7 @@ namespace GreenHouse_App
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDClima", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDClima", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IDClima
 		{
 			get
@@ -1534,7 +1517,7 @@ namespace GreenHouse_App
 		
 		private System.Nullable<System.DateTime> _DataUscita;
 		
-		private int _EmbrioniFalliti;
+		private System.Nullable<int> _EmbrioniFalliti;
 		
 		private int _IDStruttura;
 		
@@ -1558,7 +1541,7 @@ namespace GreenHouse_App
     partial void OnDataGerminazioneChanged();
     partial void OnDataUscitaChanging(System.Nullable<System.DateTime> value);
     partial void OnDataUscitaChanged();
-    partial void OnEmbrioniFallitiChanging(int value);
+    partial void OnEmbrioniFallitiChanging(System.Nullable<int> value);
     partial void OnEmbrioniFallitiChanged();
     partial void OnIDStrutturaChanging(int value);
     partial void OnIDStrutturaChanged();
@@ -1677,8 +1660,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmbrioniFalliti", DbType="Int NOT NULL")]
-		public int EmbrioniFalliti
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmbrioniFalliti", DbType="Int")]
+		public System.Nullable<int> EmbrioniFalliti
 		{
 			get
 			{
@@ -1854,7 +1837,7 @@ namespace GreenHouse_App
 		
 		private int _NumeroPianteIniziali;
 		
-		private int _NumeroPianteMorte;
+		private System.Nullable<int> _NumeroPianteMorte;
 		
 		private string _TrattamentoBiologico;
 		
@@ -1896,7 +1879,7 @@ namespace GreenHouse_App
     partial void OnDataEspiantoChanged();
     partial void OnNumeroPianteInizialiChanging(int value);
     partial void OnNumeroPianteInizialiChanged();
-    partial void OnNumeroPianteMorteChanging(int value);
+    partial void OnNumeroPianteMorteChanging(System.Nullable<int> value);
     partial void OnNumeroPianteMorteChanged();
     partial void OnTrattamentoBiologicoChanging(string value);
     partial void OnTrattamentoBiologicoChanged();
@@ -1924,7 +1907,7 @@ namespace GreenHouse_App
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDClusterPiante", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDClusterPiante", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IDClusterPiante
 		{
 			get
@@ -2044,8 +2027,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroPianteMorte", DbType="Int NOT NULL")]
-		public int NumeroPianteMorte
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroPianteMorte", DbType="Int")]
+		public System.Nullable<int> NumeroPianteMorte
 		{
 			get
 			{
@@ -2064,7 +2047,7 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrattamentoBiologico", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrattamentoBiologico", DbType="VarChar(50)")]
 		public string TrattamentoBiologico
 		{
 			get
@@ -2616,7 +2599,7 @@ namespace GreenHouse_App
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDContratto", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDContratto", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IDContratto
 		{
 			get
@@ -2865,9 +2848,9 @@ namespace GreenHouse_App
 		
 		private string _CV;
 		
-		private int _IDStruttura;
-		
 		private string _AbilitazioneProdottiChimici;
+		
+		private int _IDStruttura;
 		
 		private EntitySet<ACCESSI_INVENTARIO> _ACCESSI_INVENTARIO;
 		
@@ -2879,15 +2862,23 @@ namespace GreenHouse_App
 		
 		private EntitySet<MANUTENZIONI> _MANUTENZIONI;
 		
-		private EntitySet<PERMESSI> _PERMESSI;
+		private EntitySet<PERMESSI_MACCHINARI> _PERMESSI_MACCHINARI;
 		
-		private EntitySet<PERMESSI_MANOVALI> _PERMESSI_MANOVALI;
+		private EntitySet<PERMESSI_MACCHINARI> _PERMESSI_MACCHINARI1;
 		
-		private EntitySet<STRUTTURE> _STRUTTURE;
+		private EntitySet<PERMESSI_SERRE> _PERMESSI_SERRE;
+		
+		private EntitySet<PERMESSI_STRUMENTI_COMPLESSI> _PERMESSI_STRUMENTI_COMPLESSI;
+		
+		private EntitySet<PERMESSI_STRUMENTI_COMPLESSI> _PERMESSI_STRUMENTI_COMPLESSI1;
+		
+		private EntitySet<STRUTTURE> _STRUTTURE1;
 		
 		private EntitySet<SUPERVISIONI> _SUPERVISIONI;
 		
 		private EntitySet<VIAGGI_ISTRUZIONE> _VIAGGI_ISTRUZIONE;
+		
+		private EntityRef<STRUTTURE> _STRUTTURE;
 		
     #region Definizioni metodo Extensibility
     partial void OnLoaded();
@@ -2919,10 +2910,10 @@ namespace GreenHouse_App
     partial void OnStipendioChanged();
     partial void OnCVChanging(string value);
     partial void OnCVChanged();
-    partial void OnIDStrutturaChanging(int value);
-    partial void OnIDStrutturaChanged();
     partial void OnAbilitazioneProdottiChimiciChanging(string value);
     partial void OnAbilitazioneProdottiChimiciChanged();
+    partial void OnIDStrutturaChanging(int value);
+    partial void OnIDStrutturaChanged();
     #endregion
 		
 		public DIPENDENTI()
@@ -2932,15 +2923,19 @@ namespace GreenHouse_App
 			this._ESPERIMENTI = new EntitySet<ESPERIMENTI>(new Action<ESPERIMENTI>(this.attach_ESPERIMENTI), new Action<ESPERIMENTI>(this.detach_ESPERIMENTI));
 			this._LAVORI_EFFETTUATI = new EntitySet<LAVORI_EFFETTUATI>(new Action<LAVORI_EFFETTUATI>(this.attach_LAVORI_EFFETTUATI), new Action<LAVORI_EFFETTUATI>(this.detach_LAVORI_EFFETTUATI));
 			this._MANUTENZIONI = new EntitySet<MANUTENZIONI>(new Action<MANUTENZIONI>(this.attach_MANUTENZIONI), new Action<MANUTENZIONI>(this.detach_MANUTENZIONI));
-			this._PERMESSI = new EntitySet<PERMESSI>(new Action<PERMESSI>(this.attach_PERMESSI), new Action<PERMESSI>(this.detach_PERMESSI));
-			this._PERMESSI_MANOVALI = new EntitySet<PERMESSI_MANOVALI>(new Action<PERMESSI_MANOVALI>(this.attach_PERMESSI_MANOVALI), new Action<PERMESSI_MANOVALI>(this.detach_PERMESSI_MANOVALI));
-			this._STRUTTURE = new EntitySet<STRUTTURE>(new Action<STRUTTURE>(this.attach_STRUTTURE), new Action<STRUTTURE>(this.detach_STRUTTURE));
+			this._PERMESSI_MACCHINARI = new EntitySet<PERMESSI_MACCHINARI>(new Action<PERMESSI_MACCHINARI>(this.attach_PERMESSI_MACCHINARI), new Action<PERMESSI_MACCHINARI>(this.detach_PERMESSI_MACCHINARI));
+			this._PERMESSI_MACCHINARI1 = new EntitySet<PERMESSI_MACCHINARI>(new Action<PERMESSI_MACCHINARI>(this.attach_PERMESSI_MACCHINARI1), new Action<PERMESSI_MACCHINARI>(this.detach_PERMESSI_MACCHINARI1));
+			this._PERMESSI_SERRE = new EntitySet<PERMESSI_SERRE>(new Action<PERMESSI_SERRE>(this.attach_PERMESSI_SERRE), new Action<PERMESSI_SERRE>(this.detach_PERMESSI_SERRE));
+			this._PERMESSI_STRUMENTI_COMPLESSI = new EntitySet<PERMESSI_STRUMENTI_COMPLESSI>(new Action<PERMESSI_STRUMENTI_COMPLESSI>(this.attach_PERMESSI_STRUMENTI_COMPLESSI), new Action<PERMESSI_STRUMENTI_COMPLESSI>(this.detach_PERMESSI_STRUMENTI_COMPLESSI));
+			this._PERMESSI_STRUMENTI_COMPLESSI1 = new EntitySet<PERMESSI_STRUMENTI_COMPLESSI>(new Action<PERMESSI_STRUMENTI_COMPLESSI>(this.attach_PERMESSI_STRUMENTI_COMPLESSI1), new Action<PERMESSI_STRUMENTI_COMPLESSI>(this.detach_PERMESSI_STRUMENTI_COMPLESSI1));
+			this._STRUTTURE1 = new EntitySet<STRUTTURE>(new Action<STRUTTURE>(this.attach_STRUTTURE1), new Action<STRUTTURE>(this.detach_STRUTTURE1));
 			this._SUPERVISIONI = new EntitySet<SUPERVISIONI>(new Action<SUPERVISIONI>(this.attach_SUPERVISIONI), new Action<SUPERVISIONI>(this.detach_SUPERVISIONI));
 			this._VIAGGI_ISTRUZIONE = new EntitySet<VIAGGI_ISTRUZIONE>(new Action<VIAGGI_ISTRUZIONE>(this.attach_VIAGGI_ISTRUZIONE), new Action<VIAGGI_ISTRUZIONE>(this.detach_VIAGGI_ISTRUZIONE));
+			this._STRUTTURE = default(EntityRef<STRUTTURE>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDDipendente", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDDipendente", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IDDipendente
 		{
 			get
@@ -3200,26 +3195,6 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDStruttura", DbType="Int NOT NULL")]
-		public int IDStruttura
-		{
-			get
-			{
-				return this._IDStruttura;
-			}
-			set
-			{
-				if ((this._IDStruttura != value))
-				{
-					this.OnIDStrutturaChanging(value);
-					this.SendPropertyChanging();
-					this._IDStruttura = value;
-					this.SendPropertyChanged("IDStruttura");
-					this.OnIDStrutturaChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AbilitazioneProdottiChimici", DbType="VarChar(15)")]
 		public string AbilitazioneProdottiChimici
 		{
@@ -3236,6 +3211,30 @@ namespace GreenHouse_App
 					this._AbilitazioneProdottiChimici = value;
 					this.SendPropertyChanged("AbilitazioneProdottiChimici");
 					this.OnAbilitazioneProdottiChimiciChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDStruttura", DbType="Int NOT NULL")]
+		public int IDStruttura
+		{
+			get
+			{
+				return this._IDStruttura;
+			}
+			set
+			{
+				if ((this._IDStruttura != value))
+				{
+					if (this._STRUTTURE.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIDStrutturaChanging(value);
+					this.SendPropertyChanging();
+					this._IDStruttura = value;
+					this.SendPropertyChanged("IDStruttura");
+					this.OnIDStrutturaChanged();
 				}
 			}
 		}
@@ -3305,42 +3304,81 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI", Storage="_PERMESSI", ThisKey="IDDipendente", OtherKey="IDSupervisoreConcedente")]
-		public EntitySet<PERMESSI> PERMESSI
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_MACCHINARI", Storage="_PERMESSI_MACCHINARI", ThisKey="IDDipendente", OtherKey="IDManovale")]
+		public EntitySet<PERMESSI_MACCHINARI> PERMESSI_MACCHINARI
 		{
 			get
 			{
-				return this._PERMESSI;
+				return this._PERMESSI_MACCHINARI;
 			}
 			set
 			{
-				this._PERMESSI.Assign(value);
+				this._PERMESSI_MACCHINARI.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_MANOVALI", Storage="_PERMESSI_MANOVALI", ThisKey="IDDipendente", OtherKey="IDManovale")]
-		public EntitySet<PERMESSI_MANOVALI> PERMESSI_MANOVALI
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_MACCHINARI1", Storage="_PERMESSI_MACCHINARI1", ThisKey="IDDipendente", OtherKey="IDSupervisoreConcedente")]
+		public EntitySet<PERMESSI_MACCHINARI> PERMESSI_MACCHINARI1
 		{
 			get
 			{
-				return this._PERMESSI_MANOVALI;
+				return this._PERMESSI_MACCHINARI1;
 			}
 			set
 			{
-				this._PERMESSI_MANOVALI.Assign(value);
+				this._PERMESSI_MACCHINARI1.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_STRUTTURE", Storage="_STRUTTURE", ThisKey="IDDipendente", OtherKey="IDDirettore")]
-		public EntitySet<STRUTTURE> STRUTTURE
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_SERRE", Storage="_PERMESSI_SERRE", ThisKey="IDDipendente", OtherKey="IDSupervisoreConcedente")]
+		public EntitySet<PERMESSI_SERRE> PERMESSI_SERRE
 		{
 			get
 			{
-				return this._STRUTTURE;
+				return this._PERMESSI_SERRE;
 			}
 			set
 			{
-				this._STRUTTURE.Assign(value);
+				this._PERMESSI_SERRE.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI", Storage="_PERMESSI_STRUMENTI_COMPLESSI", ThisKey="IDDipendente", OtherKey="IDManovale")]
+		public EntitySet<PERMESSI_STRUMENTI_COMPLESSI> PERMESSI_STRUMENTI_COMPLESSI
+		{
+			get
+			{
+				return this._PERMESSI_STRUMENTI_COMPLESSI;
+			}
+			set
+			{
+				this._PERMESSI_STRUMENTI_COMPLESSI.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI1", Storage="_PERMESSI_STRUMENTI_COMPLESSI1", ThisKey="IDDipendente", OtherKey="IDSupervisoreConcedente")]
+		public EntitySet<PERMESSI_STRUMENTI_COMPLESSI> PERMESSI_STRUMENTI_COMPLESSI1
+		{
+			get
+			{
+				return this._PERMESSI_STRUMENTI_COMPLESSI1;
+			}
+			set
+			{
+				this._PERMESSI_STRUMENTI_COMPLESSI1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_STRUTTURE", Storage="_STRUTTURE1", ThisKey="IDDipendente", OtherKey="IDDirettore")]
+		public EntitySet<STRUTTURE> STRUTTURE1
+		{
+			get
+			{
+				return this._STRUTTURE1;
+			}
+			set
+			{
+				this._STRUTTURE1.Assign(value);
 			}
 		}
 		
@@ -3367,6 +3405,40 @@ namespace GreenHouse_App
 			set
 			{
 				this._VIAGGI_ISTRUZIONE.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="STRUTTURE_DIPENDENTI", Storage="_STRUTTURE", ThisKey="IDStruttura", OtherKey="IDStruttura", IsForeignKey=true)]
+		public STRUTTURE STRUTTURE
+		{
+			get
+			{
+				return this._STRUTTURE.Entity;
+			}
+			set
+			{
+				STRUTTURE previousValue = this._STRUTTURE.Entity;
+				if (((previousValue != value) 
+							|| (this._STRUTTURE.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._STRUTTURE.Entity = null;
+						previousValue.DIPENDENTI.Remove(this);
+					}
+					this._STRUTTURE.Entity = value;
+					if ((value != null))
+					{
+						value.DIPENDENTI.Add(this);
+						this._IDStruttura = value.IDStruttura;
+					}
+					else
+					{
+						this._IDStruttura = default(int);
+					}
+					this.SendPropertyChanged("STRUTTURE");
+				}
 			}
 		}
 		
@@ -3450,40 +3522,76 @@ namespace GreenHouse_App
 			entity.DIPENDENTI = null;
 		}
 		
-		private void attach_PERMESSI(PERMESSI entity)
+		private void attach_PERMESSI_MACCHINARI(PERMESSI_MACCHINARI entity)
 		{
 			this.SendPropertyChanging();
 			entity.DIPENDENTI = this;
 		}
 		
-		private void detach_PERMESSI(PERMESSI entity)
+		private void detach_PERMESSI_MACCHINARI(PERMESSI_MACCHINARI entity)
 		{
 			this.SendPropertyChanging();
 			entity.DIPENDENTI = null;
 		}
 		
-		private void attach_PERMESSI_MANOVALI(PERMESSI_MANOVALI entity)
+		private void attach_PERMESSI_MACCHINARI1(PERMESSI_MACCHINARI entity)
+		{
+			this.SendPropertyChanging();
+			entity.DIPENDENTI1 = this;
+		}
+		
+		private void detach_PERMESSI_MACCHINARI1(PERMESSI_MACCHINARI entity)
+		{
+			this.SendPropertyChanging();
+			entity.DIPENDENTI1 = null;
+		}
+		
+		private void attach_PERMESSI_SERRE(PERMESSI_SERRE entity)
 		{
 			this.SendPropertyChanging();
 			entity.DIPENDENTI = this;
 		}
 		
-		private void detach_PERMESSI_MANOVALI(PERMESSI_MANOVALI entity)
+		private void detach_PERMESSI_SERRE(PERMESSI_SERRE entity)
 		{
 			this.SendPropertyChanging();
 			entity.DIPENDENTI = null;
 		}
 		
-		private void attach_STRUTTURE(STRUTTURE entity)
+		private void attach_PERMESSI_STRUMENTI_COMPLESSI(PERMESSI_STRUMENTI_COMPLESSI entity)
 		{
 			this.SendPropertyChanging();
 			entity.DIPENDENTI = this;
 		}
 		
-		private void detach_STRUTTURE(STRUTTURE entity)
+		private void detach_PERMESSI_STRUMENTI_COMPLESSI(PERMESSI_STRUMENTI_COMPLESSI entity)
 		{
 			this.SendPropertyChanging();
 			entity.DIPENDENTI = null;
+		}
+		
+		private void attach_PERMESSI_STRUMENTI_COMPLESSI1(PERMESSI_STRUMENTI_COMPLESSI entity)
+		{
+			this.SendPropertyChanging();
+			entity.DIPENDENTI1 = this;
+		}
+		
+		private void detach_PERMESSI_STRUMENTI_COMPLESSI1(PERMESSI_STRUMENTI_COMPLESSI entity)
+		{
+			this.SendPropertyChanging();
+			entity.DIPENDENTI1 = null;
+		}
+		
+		private void attach_STRUTTURE1(STRUTTURE entity)
+		{
+			this.SendPropertyChanging();
+			entity.DIPENDENTI1 = this;
+		}
+		
+		private void detach_STRUTTURE1(STRUTTURE entity)
+		{
+			this.SendPropertyChanging();
+			entity.DIPENDENTI1 = null;
 		}
 		
 		private void attach_SUPERVISIONI(SUPERVISIONI entity)
@@ -3571,7 +3679,7 @@ namespace GreenHouse_App
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDEsperimento", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDEsperimento", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IDEsperimento
 		{
 			get
@@ -4172,9 +4280,9 @@ namespace GreenHouse_App
 		
 		private System.DateTime _DataInizio;
 		
-		private System.DateTime _OraInizio;
+		private System.TimeSpan _OraInizio;
 		
-		private System.DateTime _OraFine;
+		private System.TimeSpan _OraFine;
 		
 		private System.Nullable<System.DateTime> _DataFine;
 		
@@ -4190,9 +4298,9 @@ namespace GreenHouse_App
     partial void OnIDClusterPianteChanged();
     partial void OnDataInizioChanging(System.DateTime value);
     partial void OnDataInizioChanged();
-    partial void OnOraInizioChanging(System.DateTime value);
+    partial void OnOraInizioChanging(System.TimeSpan value);
     partial void OnOraInizioChanged();
-    partial void OnOraFineChanging(System.DateTime value);
+    partial void OnOraFineChanging(System.TimeSpan value);
     partial void OnOraFineChanged();
     partial void OnDataFineChanging(System.Nullable<System.DateTime> value);
     partial void OnDataFineChanged();
@@ -4250,8 +4358,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OraInizio", DbType="DateTime NOT NULL", IsPrimaryKey=true)]
-		public System.DateTime OraInizio
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OraInizio", DbType="Time NOT NULL", IsPrimaryKey=true)]
+		public System.TimeSpan OraInizio
 		{
 			get
 			{
@@ -4270,8 +4378,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OraFine", DbType="DateTime NOT NULL")]
-		public System.DateTime OraFine
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OraFine", DbType="Time NOT NULL")]
+		public System.TimeSpan OraFine
 		{
 			get
 			{
@@ -4436,7 +4544,7 @@ namespace GreenHouse_App
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLavoro", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLavoro", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IDLavoro
 		{
 			get
@@ -4752,7 +4860,7 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLavoroEffettuato", DbType="Int NOT NULL IDENTITY(1,1)", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLavoroEffettuato", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int IDLavoroEffettuato
 		{
 			get
@@ -6121,15 +6229,318 @@ namespace GreenHouse_App
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PERMESSI")]
-	public partial class PERMESSI : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PERMESSI_MACCHINARI")]
+	public partial class PERMESSI_MACCHINARI : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _IDPermesso;
+		private int _IDPermessoMacchinari;
 		
-		private string _Tipo;
+		private System.DateTime _DataCreazione;
+		
+		private string _Validità;
+		
+		private string _NumeroTelaio;
+		
+		private int _IDSupervisoreConcedente;
+		
+		private int _IDManovale;
+		
+		private EntityRef<MACCHINARI> _MACCHINARI;
+		
+		private EntityRef<DIPENDENTI> _DIPENDENTI;
+		
+		private EntityRef<DIPENDENTI> _DIPENDENTI1;
+		
+    #region Definizioni metodo Extensibility
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDPermessoMacchinariChanging(int value);
+    partial void OnIDPermessoMacchinariChanged();
+    partial void OnDataCreazioneChanging(System.DateTime value);
+    partial void OnDataCreazioneChanged();
+    partial void OnValiditàChanging(string value);
+    partial void OnValiditàChanged();
+    partial void OnNumeroTelaioChanging(string value);
+    partial void OnNumeroTelaioChanged();
+    partial void OnIDSupervisoreConcedenteChanging(int value);
+    partial void OnIDSupervisoreConcedenteChanged();
+    partial void OnIDManovaleChanging(int value);
+    partial void OnIDManovaleChanged();
+    #endregion
+		
+		public PERMESSI_MACCHINARI()
+		{
+			this._MACCHINARI = default(EntityRef<MACCHINARI>);
+			this._DIPENDENTI = default(EntityRef<DIPENDENTI>);
+			this._DIPENDENTI1 = default(EntityRef<DIPENDENTI>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPermessoMacchinari", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IDPermessoMacchinari
+		{
+			get
+			{
+				return this._IDPermessoMacchinari;
+			}
+			set
+			{
+				if ((this._IDPermessoMacchinari != value))
+				{
+					this.OnIDPermessoMacchinariChanging(value);
+					this.SendPropertyChanging();
+					this._IDPermessoMacchinari = value;
+					this.SendPropertyChanged("IDPermessoMacchinari");
+					this.OnIDPermessoMacchinariChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataCreazione", DbType="DateTime NOT NULL")]
+		public System.DateTime DataCreazione
+		{
+			get
+			{
+				return this._DataCreazione;
+			}
+			set
+			{
+				if ((this._DataCreazione != value))
+				{
+					this.OnDataCreazioneChanging(value);
+					this.SendPropertyChanging();
+					this._DataCreazione = value;
+					this.SendPropertyChanged("DataCreazione");
+					this.OnDataCreazioneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Validità", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Validità
+		{
+			get
+			{
+				return this._Validità;
+			}
+			set
+			{
+				if ((this._Validità != value))
+				{
+					this.OnValiditàChanging(value);
+					this.SendPropertyChanging();
+					this._Validità = value;
+					this.SendPropertyChanged("Validità");
+					this.OnValiditàChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroTelaio", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string NumeroTelaio
+		{
+			get
+			{
+				return this._NumeroTelaio;
+			}
+			set
+			{
+				if ((this._NumeroTelaio != value))
+				{
+					if (this._MACCHINARI.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnNumeroTelaioChanging(value);
+					this.SendPropertyChanging();
+					this._NumeroTelaio = value;
+					this.SendPropertyChanged("NumeroTelaio");
+					this.OnNumeroTelaioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDSupervisoreConcedente", DbType="Int NOT NULL")]
+		public int IDSupervisoreConcedente
+		{
+			get
+			{
+				return this._IDSupervisoreConcedente;
+			}
+			set
+			{
+				if ((this._IDSupervisoreConcedente != value))
+				{
+					if (this._DIPENDENTI1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIDSupervisoreConcedenteChanging(value);
+					this.SendPropertyChanging();
+					this._IDSupervisoreConcedente = value;
+					this.SendPropertyChanged("IDSupervisoreConcedente");
+					this.OnIDSupervisoreConcedenteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDManovale", DbType="Int NOT NULL")]
+		public int IDManovale
+		{
+			get
+			{
+				return this._IDManovale;
+			}
+			set
+			{
+				if ((this._IDManovale != value))
+				{
+					if (this._DIPENDENTI.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIDManovaleChanging(value);
+					this.SendPropertyChanging();
+					this._IDManovale = value;
+					this.SendPropertyChanged("IDManovale");
+					this.OnIDManovaleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MACCHINARI_PERMESSI_MACCHINARI", Storage="_MACCHINARI", ThisKey="NumeroTelaio", OtherKey="NumeroTelaio", IsForeignKey=true)]
+		public MACCHINARI MACCHINARI
+		{
+			get
+			{
+				return this._MACCHINARI.Entity;
+			}
+			set
+			{
+				MACCHINARI previousValue = this._MACCHINARI.Entity;
+				if (((previousValue != value) 
+							|| (this._MACCHINARI.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MACCHINARI.Entity = null;
+						previousValue.PERMESSI_MACCHINARI.Remove(this);
+					}
+					this._MACCHINARI.Entity = value;
+					if ((value != null))
+					{
+						value.PERMESSI_MACCHINARI.Add(this);
+						this._NumeroTelaio = value.NumeroTelaio;
+					}
+					else
+					{
+						this._NumeroTelaio = default(string);
+					}
+					this.SendPropertyChanged("MACCHINARI");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_MACCHINARI", Storage="_DIPENDENTI", ThisKey="IDManovale", OtherKey="IDDipendente", IsForeignKey=true)]
+		public DIPENDENTI DIPENDENTI
+		{
+			get
+			{
+				return this._DIPENDENTI.Entity;
+			}
+			set
+			{
+				DIPENDENTI previousValue = this._DIPENDENTI.Entity;
+				if (((previousValue != value) 
+							|| (this._DIPENDENTI.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._DIPENDENTI.Entity = null;
+						previousValue.PERMESSI_MACCHINARI.Remove(this);
+					}
+					this._DIPENDENTI.Entity = value;
+					if ((value != null))
+					{
+						value.PERMESSI_MACCHINARI.Add(this);
+						this._IDManovale = value.IDDipendente;
+					}
+					else
+					{
+						this._IDManovale = default(int);
+					}
+					this.SendPropertyChanged("DIPENDENTI");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_MACCHINARI1", Storage="_DIPENDENTI1", ThisKey="IDSupervisoreConcedente", OtherKey="IDDipendente", IsForeignKey=true)]
+		public DIPENDENTI DIPENDENTI1
+		{
+			get
+			{
+				return this._DIPENDENTI1.Entity;
+			}
+			set
+			{
+				DIPENDENTI previousValue = this._DIPENDENTI1.Entity;
+				if (((previousValue != value) 
+							|| (this._DIPENDENTI1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._DIPENDENTI1.Entity = null;
+						previousValue.PERMESSI_MACCHINARI1.Remove(this);
+					}
+					this._DIPENDENTI1.Entity = value;
+					if ((value != null))
+					{
+						value.PERMESSI_MACCHINARI1.Add(this);
+						this._IDSupervisoreConcedente = value.IDDipendente;
+					}
+					else
+					{
+						this._IDSupervisoreConcedente = default(int);
+					}
+					this.SendPropertyChanged("DIPENDENTI1");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PERMESSI_SERRE")]
+	public partial class PERMESSI_SERRE : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IDPermessoSerre;
 		
 		private System.DateTime _DataCreazione;
 		
@@ -6137,17 +6548,11 @@ namespace GreenHouse_App
 		
 		private int _IDSupervisoreConcedente;
 		
-		private System.Nullable<int> _IDStruttura;
+		private int _IDStruttura;
 		
-		private System.Nullable<int> _IDSerra;
+		private int _IDSerra;
 		
-		private System.Nullable<int> _IDRicercatore;
-		
-		private EntityRef<PERMESSI_MACCHINARI> _PERMESSI_MACCHINARI;
-		
-		private EntityRef<PERMESSI_MANOVALI> _PERMESSI_MANOVALI;
-		
-		private EntityRef<PERMESSI_STRUMENTI_COMPLESSI> _PERMESSI_STRUMENTI_COMPLESSI;
+		private int _IDRicercatore;
 		
 		private EntityRef<DIPENDENTI> _DIPENDENTI;
 		
@@ -6159,71 +6564,46 @@ namespace GreenHouse_App
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDPermessoChanging(int value);
-    partial void OnIDPermessoChanged();
-    partial void OnTipoChanging(string value);
-    partial void OnTipoChanged();
+    partial void OnIDPermessoSerreChanging(int value);
+    partial void OnIDPermessoSerreChanged();
     partial void OnDataCreazioneChanging(System.DateTime value);
     partial void OnDataCreazioneChanged();
     partial void OnValiditàChanging(string value);
     partial void OnValiditàChanged();
     partial void OnIDSupervisoreConcedenteChanging(int value);
     partial void OnIDSupervisoreConcedenteChanged();
-    partial void OnIDStrutturaChanging(System.Nullable<int> value);
+    partial void OnIDStrutturaChanging(int value);
     partial void OnIDStrutturaChanged();
-    partial void OnIDSerraChanging(System.Nullable<int> value);
+    partial void OnIDSerraChanging(int value);
     partial void OnIDSerraChanged();
-    partial void OnIDRicercatoreChanging(System.Nullable<int> value);
+    partial void OnIDRicercatoreChanging(int value);
     partial void OnIDRicercatoreChanged();
     #endregion
 		
-		public PERMESSI()
+		public PERMESSI_SERRE()
 		{
-			this._PERMESSI_MACCHINARI = default(EntityRef<PERMESSI_MACCHINARI>);
-			this._PERMESSI_MANOVALI = default(EntityRef<PERMESSI_MANOVALI>);
-			this._PERMESSI_STRUMENTI_COMPLESSI = default(EntityRef<PERMESSI_STRUMENTI_COMPLESSI>);
 			this._DIPENDENTI = default(EntityRef<DIPENDENTI>);
 			this._RICERCATORI = default(EntityRef<RICERCATORI>);
 			this._SERRE = default(EntityRef<SERRE>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPermesso", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int IDPermesso
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPermessoSerre", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IDPermessoSerre
 		{
 			get
 			{
-				return this._IDPermesso;
+				return this._IDPermessoSerre;
 			}
 			set
 			{
-				if ((this._IDPermesso != value))
+				if ((this._IDPermessoSerre != value))
 				{
-					this.OnIDPermessoChanging(value);
+					this.OnIDPermessoSerreChanging(value);
 					this.SendPropertyChanging();
-					this._IDPermesso = value;
-					this.SendPropertyChanged("IDPermesso");
-					this.OnIDPermessoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tipo", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Tipo
-		{
-			get
-			{
-				return this._Tipo;
-			}
-			set
-			{
-				if ((this._Tipo != value))
-				{
-					this.OnTipoChanging(value);
-					this.SendPropertyChanging();
-					this._Tipo = value;
-					this.SendPropertyChanged("Tipo");
-					this.OnTipoChanged();
+					this._IDPermessoSerre = value;
+					this.SendPropertyChanged("IDPermessoSerre");
+					this.OnIDPermessoSerreChanged();
 				}
 			}
 		}
@@ -6292,8 +6672,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDStruttura", DbType="Int")]
-		public System.Nullable<int> IDStruttura
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDStruttura", DbType="Int NOT NULL")]
+		public int IDStruttura
 		{
 			get
 			{
@@ -6316,8 +6696,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDSerra", DbType="Int")]
-		public System.Nullable<int> IDSerra
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDSerra", DbType="Int NOT NULL")]
+		public int IDSerra
 		{
 			get
 			{
@@ -6340,8 +6720,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRicercatore", DbType="Int")]
-		public System.Nullable<int> IDRicercatore
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRicercatore", DbType="Int NOT NULL")]
+		public int IDRicercatore
 		{
 			get
 			{
@@ -6364,94 +6744,7 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PERMESSI_PERMESSI_MACCHINARI", Storage="_PERMESSI_MACCHINARI", ThisKey="IDPermesso", OtherKey="IDPermesso", IsUnique=true, IsForeignKey=false)]
-		public PERMESSI_MACCHINARI PERMESSI_MACCHINARI
-		{
-			get
-			{
-				return this._PERMESSI_MACCHINARI.Entity;
-			}
-			set
-			{
-				PERMESSI_MACCHINARI previousValue = this._PERMESSI_MACCHINARI.Entity;
-				if (((previousValue != value) 
-							|| (this._PERMESSI_MACCHINARI.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._PERMESSI_MACCHINARI.Entity = null;
-						previousValue.PERMESSI = null;
-					}
-					this._PERMESSI_MACCHINARI.Entity = value;
-					if ((value != null))
-					{
-						value.PERMESSI = this;
-					}
-					this.SendPropertyChanged("PERMESSI_MACCHINARI");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PERMESSI_PERMESSI_MANOVALI", Storage="_PERMESSI_MANOVALI", ThisKey="IDPermesso", OtherKey="IDPermesso", IsUnique=true, IsForeignKey=false)]
-		public PERMESSI_MANOVALI PERMESSI_MANOVALI
-		{
-			get
-			{
-				return this._PERMESSI_MANOVALI.Entity;
-			}
-			set
-			{
-				PERMESSI_MANOVALI previousValue = this._PERMESSI_MANOVALI.Entity;
-				if (((previousValue != value) 
-							|| (this._PERMESSI_MANOVALI.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._PERMESSI_MANOVALI.Entity = null;
-						previousValue.PERMESSI = null;
-					}
-					this._PERMESSI_MANOVALI.Entity = value;
-					if ((value != null))
-					{
-						value.PERMESSI = this;
-					}
-					this.SendPropertyChanged("PERMESSI_MANOVALI");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PERMESSI_PERMESSI_STRUMENTI_COMPLESSI", Storage="_PERMESSI_STRUMENTI_COMPLESSI", ThisKey="IDPermesso", OtherKey="IDPermesso", IsUnique=true, IsForeignKey=false)]
-		public PERMESSI_STRUMENTI_COMPLESSI PERMESSI_STRUMENTI_COMPLESSI
-		{
-			get
-			{
-				return this._PERMESSI_STRUMENTI_COMPLESSI.Entity;
-			}
-			set
-			{
-				PERMESSI_STRUMENTI_COMPLESSI previousValue = this._PERMESSI_STRUMENTI_COMPLESSI.Entity;
-				if (((previousValue != value) 
-							|| (this._PERMESSI_STRUMENTI_COMPLESSI.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._PERMESSI_STRUMENTI_COMPLESSI.Entity = null;
-						previousValue.PERMESSI = null;
-					}
-					this._PERMESSI_STRUMENTI_COMPLESSI.Entity = value;
-					if ((value != null))
-					{
-						value.PERMESSI = this;
-					}
-					this.SendPropertyChanged("PERMESSI_STRUMENTI_COMPLESSI");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI", Storage="_DIPENDENTI", ThisKey="IDSupervisoreConcedente", OtherKey="IDDipendente", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_SERRE", Storage="_DIPENDENTI", ThisKey="IDSupervisoreConcedente", OtherKey="IDDipendente", IsForeignKey=true)]
 		public DIPENDENTI DIPENDENTI
 		{
 			get
@@ -6468,12 +6761,12 @@ namespace GreenHouse_App
 					if ((previousValue != null))
 					{
 						this._DIPENDENTI.Entity = null;
-						previousValue.PERMESSI.Remove(this);
+						previousValue.PERMESSI_SERRE.Remove(this);
 					}
 					this._DIPENDENTI.Entity = value;
 					if ((value != null))
 					{
-						value.PERMESSI.Add(this);
+						value.PERMESSI_SERRE.Add(this);
 						this._IDSupervisoreConcedente = value.IDDipendente;
 					}
 					else
@@ -6485,7 +6778,7 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RICERCATORI_PERMESSI", Storage="_RICERCATORI", ThisKey="IDRicercatore", OtherKey="IDRicercatore", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RICERCATORI_PERMESSI_SERRE", Storage="_RICERCATORI", ThisKey="IDRicercatore", OtherKey="IDRicercatore", IsForeignKey=true)]
 		public RICERCATORI RICERCATORI
 		{
 			get
@@ -6502,24 +6795,24 @@ namespace GreenHouse_App
 					if ((previousValue != null))
 					{
 						this._RICERCATORI.Entity = null;
-						previousValue.PERMESSI.Remove(this);
+						previousValue.PERMESSI_SERRE.Remove(this);
 					}
 					this._RICERCATORI.Entity = value;
 					if ((value != null))
 					{
-						value.PERMESSI.Add(this);
+						value.PERMESSI_SERRE.Add(this);
 						this._IDRicercatore = value.IDRicercatore;
 					}
 					else
 					{
-						this._IDRicercatore = default(Nullable<int>);
+						this._IDRicercatore = default(int);
 					}
 					this.SendPropertyChanged("RICERCATORI");
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SERRE_PERMESSI", Storage="_SERRE", ThisKey="IDStruttura,IDSerra", OtherKey="IDStruttura,IDSerra", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SERRE_PERMESSI_SERRE", Storage="_SERRE", ThisKey="IDStruttura,IDSerra", OtherKey="IDStruttura,IDSerra", IsForeignKey=true)]
 		public SERRE SERRE
 		{
 			get
@@ -6536,357 +6829,21 @@ namespace GreenHouse_App
 					if ((previousValue != null))
 					{
 						this._SERRE.Entity = null;
-						previousValue.PERMESSI.Remove(this);
+						previousValue.PERMESSI_SERRE.Remove(this);
 					}
 					this._SERRE.Entity = value;
 					if ((value != null))
 					{
-						value.PERMESSI.Add(this);
+						value.PERMESSI_SERRE.Add(this);
 						this._IDStruttura = value.IDStruttura;
 						this._IDSerra = value.IDSerra;
 					}
 					else
 					{
-						this._IDStruttura = default(Nullable<int>);
-						this._IDSerra = default(Nullable<int>);
+						this._IDStruttura = default(int);
+						this._IDSerra = default(int);
 					}
 					this.SendPropertyChanged("SERRE");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PERMESSI_MACCHINARI")]
-	public partial class PERMESSI_MACCHINARI : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDPermesso;
-		
-		private string _NumeroTelaio;
-		
-		private EntityRef<MACCHINARI> _MACCHINARI;
-		
-		private EntityRef<PERMESSI> _PERMESSI;
-		
-    #region Definizioni metodo Extensibility
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDPermessoChanging(int value);
-    partial void OnIDPermessoChanged();
-    partial void OnNumeroTelaioChanging(string value);
-    partial void OnNumeroTelaioChanged();
-    #endregion
-		
-		public PERMESSI_MACCHINARI()
-		{
-			this._MACCHINARI = default(EntityRef<MACCHINARI>);
-			this._PERMESSI = default(EntityRef<PERMESSI>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPermesso", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int IDPermesso
-		{
-			get
-			{
-				return this._IDPermesso;
-			}
-			set
-			{
-				if ((this._IDPermesso != value))
-				{
-					if (this._PERMESSI.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnIDPermessoChanging(value);
-					this.SendPropertyChanging();
-					this._IDPermesso = value;
-					this.SendPropertyChanged("IDPermesso");
-					this.OnIDPermessoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroTelaio", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string NumeroTelaio
-		{
-			get
-			{
-				return this._NumeroTelaio;
-			}
-			set
-			{
-				if ((this._NumeroTelaio != value))
-				{
-					if (this._MACCHINARI.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnNumeroTelaioChanging(value);
-					this.SendPropertyChanging();
-					this._NumeroTelaio = value;
-					this.SendPropertyChanged("NumeroTelaio");
-					this.OnNumeroTelaioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MACCHINARI_PERMESSI_MACCHINARI", Storage="_MACCHINARI", ThisKey="NumeroTelaio", OtherKey="NumeroTelaio", IsForeignKey=true)]
-		public MACCHINARI MACCHINARI
-		{
-			get
-			{
-				return this._MACCHINARI.Entity;
-			}
-			set
-			{
-				MACCHINARI previousValue = this._MACCHINARI.Entity;
-				if (((previousValue != value) 
-							|| (this._MACCHINARI.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._MACCHINARI.Entity = null;
-						previousValue.PERMESSI_MACCHINARI.Remove(this);
-					}
-					this._MACCHINARI.Entity = value;
-					if ((value != null))
-					{
-						value.PERMESSI_MACCHINARI.Add(this);
-						this._NumeroTelaio = value.NumeroTelaio;
-					}
-					else
-					{
-						this._NumeroTelaio = default(string);
-					}
-					this.SendPropertyChanged("MACCHINARI");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PERMESSI_PERMESSI_MACCHINARI", Storage="_PERMESSI", ThisKey="IDPermesso", OtherKey="IDPermesso", IsForeignKey=true)]
-		public PERMESSI PERMESSI
-		{
-			get
-			{
-				return this._PERMESSI.Entity;
-			}
-			set
-			{
-				PERMESSI previousValue = this._PERMESSI.Entity;
-				if (((previousValue != value) 
-							|| (this._PERMESSI.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._PERMESSI.Entity = null;
-						previousValue.PERMESSI_MACCHINARI = null;
-					}
-					this._PERMESSI.Entity = value;
-					if ((value != null))
-					{
-						value.PERMESSI_MACCHINARI = this;
-						this._IDPermesso = value.IDPermesso;
-					}
-					else
-					{
-						this._IDPermesso = default(int);
-					}
-					this.SendPropertyChanged("PERMESSI");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PERMESSI_MANOVALI")]
-	public partial class PERMESSI_MANOVALI : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDPermesso;
-		
-		private int _IDManovale;
-		
-		private EntityRef<DIPENDENTI> _DIPENDENTI;
-		
-		private EntityRef<PERMESSI> _PERMESSI;
-		
-    #region Definizioni metodo Extensibility
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDPermessoChanging(int value);
-    partial void OnIDPermessoChanged();
-    partial void OnIDManovaleChanging(int value);
-    partial void OnIDManovaleChanged();
-    #endregion
-		
-		public PERMESSI_MANOVALI()
-		{
-			this._DIPENDENTI = default(EntityRef<DIPENDENTI>);
-			this._PERMESSI = default(EntityRef<PERMESSI>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPermesso", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int IDPermesso
-		{
-			get
-			{
-				return this._IDPermesso;
-			}
-			set
-			{
-				if ((this._IDPermesso != value))
-				{
-					if (this._PERMESSI.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnIDPermessoChanging(value);
-					this.SendPropertyChanging();
-					this._IDPermesso = value;
-					this.SendPropertyChanged("IDPermesso");
-					this.OnIDPermessoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDManovale", DbType="Int NOT NULL")]
-		public int IDManovale
-		{
-			get
-			{
-				return this._IDManovale;
-			}
-			set
-			{
-				if ((this._IDManovale != value))
-				{
-					if (this._DIPENDENTI.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnIDManovaleChanging(value);
-					this.SendPropertyChanging();
-					this._IDManovale = value;
-					this.SendPropertyChanged("IDManovale");
-					this.OnIDManovaleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_MANOVALI", Storage="_DIPENDENTI", ThisKey="IDManovale", OtherKey="IDDipendente", IsForeignKey=true)]
-		public DIPENDENTI DIPENDENTI
-		{
-			get
-			{
-				return this._DIPENDENTI.Entity;
-			}
-			set
-			{
-				DIPENDENTI previousValue = this._DIPENDENTI.Entity;
-				if (((previousValue != value) 
-							|| (this._DIPENDENTI.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._DIPENDENTI.Entity = null;
-						previousValue.PERMESSI_MANOVALI.Remove(this);
-					}
-					this._DIPENDENTI.Entity = value;
-					if ((value != null))
-					{
-						value.PERMESSI_MANOVALI.Add(this);
-						this._IDManovale = value.IDDipendente;
-					}
-					else
-					{
-						this._IDManovale = default(int);
-					}
-					this.SendPropertyChanged("DIPENDENTI");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PERMESSI_PERMESSI_MANOVALI", Storage="_PERMESSI", ThisKey="IDPermesso", OtherKey="IDPermesso", IsForeignKey=true)]
-		public PERMESSI PERMESSI
-		{
-			get
-			{
-				return this._PERMESSI.Entity;
-			}
-			set
-			{
-				PERMESSI previousValue = this._PERMESSI.Entity;
-				if (((previousValue != value) 
-							|| (this._PERMESSI.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._PERMESSI.Entity = null;
-						previousValue.PERMESSI_MANOVALI = null;
-					}
-					this._PERMESSI.Entity = value;
-					if ((value != null))
-					{
-						value.PERMESSI_MANOVALI = this;
-						this._IDPermesso = value.IDPermesso;
-					}
-					else
-					{
-						this._IDPermesso = default(int);
-					}
-					this.SendPropertyChanged("PERMESSI");
 				}
 			}
 		}
@@ -6918,7 +6875,11 @@ namespace GreenHouse_App
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _IDPermesso;
+		private int _IDPermessoStrumentiComplessi;
+		
+		private System.DateTime _DataCreazione;
+		
+		private string _Validità;
 		
 		private int _IDStruttura;
 		
@@ -6926,7 +6887,13 @@ namespace GreenHouse_App
 		
 		private int _IDStrumentoComplesso;
 		
-		private EntityRef<PERMESSI> _PERMESSI;
+		private int _IDSupervisoreConcedente;
+		
+		private int _IDManovale;
+		
+		private EntityRef<DIPENDENTI> _DIPENDENTI;
+		
+		private EntityRef<DIPENDENTI> _DIPENDENTI1;
 		
 		private EntityRef<STRUMENTI_COMPLESSI> _STRUMENTI_COMPLESSI;
 		
@@ -6934,43 +6901,88 @@ namespace GreenHouse_App
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDPermessoChanging(int value);
-    partial void OnIDPermessoChanged();
+    partial void OnIDPermessoStrumentiComplessiChanging(int value);
+    partial void OnIDPermessoStrumentiComplessiChanged();
+    partial void OnDataCreazioneChanging(System.DateTime value);
+    partial void OnDataCreazioneChanged();
+    partial void OnValiditàChanging(string value);
+    partial void OnValiditàChanged();
     partial void OnIDStrutturaChanging(int value);
     partial void OnIDStrutturaChanged();
     partial void OnIDMagazzinoChanging(int value);
     partial void OnIDMagazzinoChanged();
     partial void OnIDStrumentoComplessoChanging(int value);
     partial void OnIDStrumentoComplessoChanged();
+    partial void OnIDSupervisoreConcedenteChanging(int value);
+    partial void OnIDSupervisoreConcedenteChanged();
+    partial void OnIDManovaleChanging(int value);
+    partial void OnIDManovaleChanged();
     #endregion
 		
 		public PERMESSI_STRUMENTI_COMPLESSI()
 		{
-			this._PERMESSI = default(EntityRef<PERMESSI>);
+			this._DIPENDENTI = default(EntityRef<DIPENDENTI>);
+			this._DIPENDENTI1 = default(EntityRef<DIPENDENTI>);
 			this._STRUMENTI_COMPLESSI = default(EntityRef<STRUMENTI_COMPLESSI>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPermesso", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int IDPermesso
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPermessoStrumentiComplessi", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IDPermessoStrumentiComplessi
 		{
 			get
 			{
-				return this._IDPermesso;
+				return this._IDPermessoStrumentiComplessi;
 			}
 			set
 			{
-				if ((this._IDPermesso != value))
+				if ((this._IDPermessoStrumentiComplessi != value))
 				{
-					if (this._PERMESSI.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnIDPermessoChanging(value);
+					this.OnIDPermessoStrumentiComplessiChanging(value);
 					this.SendPropertyChanging();
-					this._IDPermesso = value;
-					this.SendPropertyChanged("IDPermesso");
-					this.OnIDPermessoChanged();
+					this._IDPermessoStrumentiComplessi = value;
+					this.SendPropertyChanged("IDPermessoStrumentiComplessi");
+					this.OnIDPermessoStrumentiComplessiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataCreazione", DbType="DateTime NOT NULL")]
+		public System.DateTime DataCreazione
+		{
+			get
+			{
+				return this._DataCreazione;
+			}
+			set
+			{
+				if ((this._DataCreazione != value))
+				{
+					this.OnDataCreazioneChanging(value);
+					this.SendPropertyChanging();
+					this._DataCreazione = value;
+					this.SendPropertyChanged("DataCreazione");
+					this.OnDataCreazioneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Validità", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Validità
+		{
+			get
+			{
+				return this._Validità;
+			}
+			set
+			{
+				if ((this._Validità != value))
+				{
+					this.OnValiditàChanging(value);
+					this.SendPropertyChanging();
+					this._Validità = value;
+					this.SendPropertyChanged("Validità");
+					this.OnValiditàChanged();
 				}
 			}
 		}
@@ -7047,36 +7059,118 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PERMESSI_PERMESSI_STRUMENTI_COMPLESSI", Storage="_PERMESSI", ThisKey="IDPermesso", OtherKey="IDPermesso", IsForeignKey=true)]
-		public PERMESSI PERMESSI
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDSupervisoreConcedente", DbType="Int NOT NULL")]
+		public int IDSupervisoreConcedente
 		{
 			get
 			{
-				return this._PERMESSI.Entity;
+				return this._IDSupervisoreConcedente;
 			}
 			set
 			{
-				PERMESSI previousValue = this._PERMESSI.Entity;
+				if ((this._IDSupervisoreConcedente != value))
+				{
+					if (this._DIPENDENTI1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIDSupervisoreConcedenteChanging(value);
+					this.SendPropertyChanging();
+					this._IDSupervisoreConcedente = value;
+					this.SendPropertyChanged("IDSupervisoreConcedente");
+					this.OnIDSupervisoreConcedenteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDManovale", DbType="Int NOT NULL")]
+		public int IDManovale
+		{
+			get
+			{
+				return this._IDManovale;
+			}
+			set
+			{
+				if ((this._IDManovale != value))
+				{
+					if (this._DIPENDENTI.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIDManovaleChanging(value);
+					this.SendPropertyChanging();
+					this._IDManovale = value;
+					this.SendPropertyChanged("IDManovale");
+					this.OnIDManovaleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI", Storage="_DIPENDENTI", ThisKey="IDManovale", OtherKey="IDDipendente", IsForeignKey=true)]
+		public DIPENDENTI DIPENDENTI
+		{
+			get
+			{
+				return this._DIPENDENTI.Entity;
+			}
+			set
+			{
+				DIPENDENTI previousValue = this._DIPENDENTI.Entity;
 				if (((previousValue != value) 
-							|| (this._PERMESSI.HasLoadedOrAssignedValue == false)))
+							|| (this._DIPENDENTI.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._PERMESSI.Entity = null;
-						previousValue.PERMESSI_STRUMENTI_COMPLESSI = null;
+						this._DIPENDENTI.Entity = null;
+						previousValue.PERMESSI_STRUMENTI_COMPLESSI.Remove(this);
 					}
-					this._PERMESSI.Entity = value;
+					this._DIPENDENTI.Entity = value;
 					if ((value != null))
 					{
-						value.PERMESSI_STRUMENTI_COMPLESSI = this;
-						this._IDPermesso = value.IDPermesso;
+						value.PERMESSI_STRUMENTI_COMPLESSI.Add(this);
+						this._IDManovale = value.IDDipendente;
 					}
 					else
 					{
-						this._IDPermesso = default(int);
+						this._IDManovale = default(int);
 					}
-					this.SendPropertyChanged("PERMESSI");
+					this.SendPropertyChanged("DIPENDENTI");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI1", Storage="_DIPENDENTI1", ThisKey="IDSupervisoreConcedente", OtherKey="IDDipendente", IsForeignKey=true)]
+		public DIPENDENTI DIPENDENTI1
+		{
+			get
+			{
+				return this._DIPENDENTI1.Entity;
+			}
+			set
+			{
+				DIPENDENTI previousValue = this._DIPENDENTI1.Entity;
+				if (((previousValue != value) 
+							|| (this._DIPENDENTI1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._DIPENDENTI1.Entity = null;
+						previousValue.PERMESSI_STRUMENTI_COMPLESSI1.Remove(this);
+					}
+					this._DIPENDENTI1.Entity = value;
+					if ((value != null))
+					{
+						value.PERMESSI_STRUMENTI_COMPLESSI1.Add(this);
+						this._IDSupervisoreConcedente = value.IDDipendente;
+					}
+					else
+					{
+						this._IDSupervisoreConcedente = default(int);
+					}
+					this.SendPropertyChanged("DIPENDENTI1");
 				}
 			}
 		}
@@ -7179,7 +7273,7 @@ namespace GreenHouse_App
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPianta", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPianta", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IDPianta
 		{
 			get
@@ -7721,7 +7815,7 @@ namespace GreenHouse_App
 		
 		private EntitySet<ESPERIMENTI> _ESPERIMENTI;
 		
-		private EntitySet<PERMESSI> _PERMESSI;
+		private EntitySet<PERMESSI_SERRE> _PERMESSI_SERRE;
 		
 		private EntityRef<UNIVERSITÀ> _UNIVERSITÀ;
 		
@@ -7762,12 +7856,12 @@ namespace GreenHouse_App
 			this._ANNOTAZIONI = new EntitySet<ANNOTAZIONI>(new Action<ANNOTAZIONI>(this.attach_ANNOTAZIONI), new Action<ANNOTAZIONI>(this.detach_ANNOTAZIONI));
 			this._COLLABORAZIONI = new EntitySet<COLLABORAZIONI>(new Action<COLLABORAZIONI>(this.attach_COLLABORAZIONI), new Action<COLLABORAZIONI>(this.detach_COLLABORAZIONI));
 			this._ESPERIMENTI = new EntitySet<ESPERIMENTI>(new Action<ESPERIMENTI>(this.attach_ESPERIMENTI), new Action<ESPERIMENTI>(this.detach_ESPERIMENTI));
-			this._PERMESSI = new EntitySet<PERMESSI>(new Action<PERMESSI>(this.attach_PERMESSI), new Action<PERMESSI>(this.detach_PERMESSI));
+			this._PERMESSI_SERRE = new EntitySet<PERMESSI_SERRE>(new Action<PERMESSI_SERRE>(this.attach_PERMESSI_SERRE), new Action<PERMESSI_SERRE>(this.detach_PERMESSI_SERRE));
 			this._UNIVERSITÀ = default(EntityRef<UNIVERSITÀ>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRicercatore", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRicercatore", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IDRicercatore
 		{
 			get
@@ -8070,16 +8164,16 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RICERCATORI_PERMESSI", Storage="_PERMESSI", ThisKey="IDRicercatore", OtherKey="IDRicercatore")]
-		public EntitySet<PERMESSI> PERMESSI
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RICERCATORI_PERMESSI_SERRE", Storage="_PERMESSI_SERRE", ThisKey="IDRicercatore", OtherKey="IDRicercatore")]
+		public EntitySet<PERMESSI_SERRE> PERMESSI_SERRE
 		{
 			get
 			{
-				return this._PERMESSI;
+				return this._PERMESSI_SERRE;
 			}
 			set
 			{
-				this._PERMESSI.Assign(value);
+				this._PERMESSI_SERRE.Assign(value);
 			}
 		}
 		
@@ -8173,13 +8267,13 @@ namespace GreenHouse_App
 			entity.RICERCATORI = null;
 		}
 		
-		private void attach_PERMESSI(PERMESSI entity)
+		private void attach_PERMESSI_SERRE(PERMESSI_SERRE entity)
 		{
 			this.SendPropertyChanging();
 			entity.RICERCATORI = this;
 		}
 		
-		private void detach_PERMESSI(PERMESSI entity)
+		private void detach_PERMESSI_SERRE(PERMESSI_SERRE entity)
 		{
 			this.SendPropertyChanging();
 			entity.RICERCATORI = null;
@@ -8200,7 +8294,7 @@ namespace GreenHouse_App
 		
 		private int _NumeroUnitàMassime;
 		
-		private int _NumeroUnitàOccupate;
+		private System.Nullable<int> _NumeroUnitàOccupate;
 		
 		private int _IDClima;
 		
@@ -8208,7 +8302,7 @@ namespace GreenHouse_App
 		
 		private EntitySet<MANUTENZIONI> _MANUTENZIONI;
 		
-		private EntitySet<PERMESSI> _PERMESSI;
+		private EntitySet<PERMESSI_SERRE> _PERMESSI_SERRE;
 		
 		private EntitySet<SUPERVISIONI> _SUPERVISIONI;
 		
@@ -8230,7 +8324,7 @@ namespace GreenHouse_App
     partial void OnAreaChanged();
     partial void OnNumeroUnitàMassimeChanging(int value);
     partial void OnNumeroUnitàMassimeChanged();
-    partial void OnNumeroUnitàOccupateChanging(int value);
+    partial void OnNumeroUnitàOccupateChanging(System.Nullable<int> value);
     partial void OnNumeroUnitàOccupateChanged();
     partial void OnIDClimaChanging(int value);
     partial void OnIDClimaChanged();
@@ -8240,7 +8334,7 @@ namespace GreenHouse_App
 		{
 			this._CLUSTER = new EntitySet<CLUSTER>(new Action<CLUSTER>(this.attach_CLUSTER), new Action<CLUSTER>(this.detach_CLUSTER));
 			this._MANUTENZIONI = new EntitySet<MANUTENZIONI>(new Action<MANUTENZIONI>(this.attach_MANUTENZIONI), new Action<MANUTENZIONI>(this.detach_MANUTENZIONI));
-			this._PERMESSI = new EntitySet<PERMESSI>(new Action<PERMESSI>(this.attach_PERMESSI), new Action<PERMESSI>(this.detach_PERMESSI));
+			this._PERMESSI_SERRE = new EntitySet<PERMESSI_SERRE>(new Action<PERMESSI_SERRE>(this.attach_PERMESSI_SERRE), new Action<PERMESSI_SERRE>(this.detach_PERMESSI_SERRE));
 			this._SUPERVISIONI = new EntitySet<SUPERVISIONI>(new Action<SUPERVISIONI>(this.attach_SUPERVISIONI), new Action<SUPERVISIONI>(this.detach_SUPERVISIONI));
 			this._VISITE = new EntitySet<VISITE>(new Action<VISITE>(this.attach_VISITE), new Action<VISITE>(this.detach_VISITE));
 			this._CLIMI = default(EntityRef<CLIMI>);
@@ -8332,8 +8426,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroUnitàOccupate", DbType="Int NOT NULL")]
-		public int NumeroUnitàOccupate
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroUnitàOccupate", DbType="Int")]
+		public System.Nullable<int> NumeroUnitàOccupate
 		{
 			get
 			{
@@ -8402,16 +8496,16 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SERRE_PERMESSI", Storage="_PERMESSI", ThisKey="IDStruttura,IDSerra", OtherKey="IDStruttura,IDSerra")]
-		public EntitySet<PERMESSI> PERMESSI
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SERRE_PERMESSI_SERRE", Storage="_PERMESSI_SERRE", ThisKey="IDStruttura,IDSerra", OtherKey="IDStruttura,IDSerra")]
+		public EntitySet<PERMESSI_SERRE> PERMESSI_SERRE
 		{
 			get
 			{
-				return this._PERMESSI;
+				return this._PERMESSI_SERRE;
 			}
 			set
 			{
-				this._PERMESSI.Assign(value);
+				this._PERMESSI_SERRE.Assign(value);
 			}
 		}
 		
@@ -8553,13 +8647,13 @@ namespace GreenHouse_App
 			entity.SERRE = null;
 		}
 		
-		private void attach_PERMESSI(PERMESSI entity)
+		private void attach_PERMESSI_SERRE(PERMESSI_SERRE entity)
 		{
 			this.SendPropertyChanging();
 			entity.SERRE = this;
 		}
 		
-		private void detach_PERMESSI(PERMESSI entity)
+		private void detach_PERMESSI_SERRE(PERMESSI_SERRE entity)
 		{
 			this.SendPropertyChanging();
 			entity.SERRE = null;
@@ -8606,7 +8700,7 @@ namespace GreenHouse_App
 		
 		private int _ClusterOspitabili;
 		
-		private int _ClusterPresenti;
+		private System.Nullable<int> _ClusterPresenti;
 		
 		private EntitySet<ACCESSI_INVENTARIO> _ACCESSI_INVENTARIO;
 		
@@ -8628,7 +8722,7 @@ namespace GreenHouse_App
     partial void OnDimensioneChanged();
     partial void OnClusterOspitabiliChanging(int value);
     partial void OnClusterOspitabiliChanged();
-    partial void OnClusterPresentiChanging(int value);
+    partial void OnClusterPresentiChanging(System.Nullable<int> value);
     partial void OnClusterPresentiChanged();
     #endregion
 		
@@ -8744,8 +8838,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClusterPresenti", DbType="Int NOT NULL")]
-		public int ClusterPresenti
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClusterPresenti", DbType="Int")]
+		public System.Nullable<int> ClusterPresenti
 		{
 			get
 			{
@@ -9434,9 +9528,11 @@ namespace GreenHouse_App
 		
 		private System.DateTime _DataInizioGestione;
 		
-		private int _IDDirettore;
+		private System.Nullable<int> _IDDirettore;
 		
 		private EntitySet<CONTRATTI> _CONTRATTI;
+		
+		private EntitySet<DIPENDENTI> _DIPENDENTI;
 		
 		private EntitySet<GARAGE> _GARAGE;
 		
@@ -9446,7 +9542,7 @@ namespace GreenHouse_App
 		
 		private EntitySet<SERRE_INCUBAZIONE> _SERRE_INCUBAZIONE;
 		
-		private EntityRef<DIPENDENTI> _DIPENDENTI;
+		private EntityRef<DIPENDENTI> _DIPENDENTI1;
 		
     #region Definizioni metodo Extensibility
     partial void OnLoaded();
@@ -9468,22 +9564,23 @@ namespace GreenHouse_App
     partial void OnTelefonoChanged();
     partial void OnDataInizioGestioneChanging(System.DateTime value);
     partial void OnDataInizioGestioneChanged();
-    partial void OnIDDirettoreChanging(int value);
+    partial void OnIDDirettoreChanging(System.Nullable<int> value);
     partial void OnIDDirettoreChanged();
     #endregion
 		
 		public STRUTTURE()
 		{
 			this._CONTRATTI = new EntitySet<CONTRATTI>(new Action<CONTRATTI>(this.attach_CONTRATTI), new Action<CONTRATTI>(this.detach_CONTRATTI));
+			this._DIPENDENTI = new EntitySet<DIPENDENTI>(new Action<DIPENDENTI>(this.attach_DIPENDENTI), new Action<DIPENDENTI>(this.detach_DIPENDENTI));
 			this._GARAGE = new EntitySet<GARAGE>(new Action<GARAGE>(this.attach_GARAGE), new Action<GARAGE>(this.detach_GARAGE));
 			this._MAGAZZINI = new EntitySet<MAGAZZINI>(new Action<MAGAZZINI>(this.attach_MAGAZZINI), new Action<MAGAZZINI>(this.detach_MAGAZZINI));
 			this._SERRE = new EntitySet<SERRE>(new Action<SERRE>(this.attach_SERRE), new Action<SERRE>(this.detach_SERRE));
 			this._SERRE_INCUBAZIONE = new EntitySet<SERRE_INCUBAZIONE>(new Action<SERRE_INCUBAZIONE>(this.attach_SERRE_INCUBAZIONE), new Action<SERRE_INCUBAZIONE>(this.detach_SERRE_INCUBAZIONE));
-			this._DIPENDENTI = default(EntityRef<DIPENDENTI>);
+			this._DIPENDENTI1 = default(EntityRef<DIPENDENTI>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDStruttura", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDStruttura", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int IDStruttura
 		{
 			get
@@ -9643,8 +9740,8 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDDirettore", DbType="Int NOT NULL")]
-		public int IDDirettore
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDDirettore", DbType="Int")]
+		public System.Nullable<int> IDDirettore
 		{
 			get
 			{
@@ -9654,7 +9751,7 @@ namespace GreenHouse_App
 			{
 				if ((this._IDDirettore != value))
 				{
-					if (this._DIPENDENTI.HasLoadedOrAssignedValue)
+					if (this._DIPENDENTI1.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -9677,6 +9774,19 @@ namespace GreenHouse_App
 			set
 			{
 				this._CONTRATTI.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="STRUTTURE_DIPENDENTI", Storage="_DIPENDENTI", ThisKey="IDStruttura", OtherKey="IDStruttura")]
+		public EntitySet<DIPENDENTI> DIPENDENTI
+		{
+			get
+			{
+				return this._DIPENDENTI;
+			}
+			set
+			{
+				this._DIPENDENTI.Assign(value);
 			}
 		}
 		
@@ -9732,36 +9842,36 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_STRUTTURE", Storage="_DIPENDENTI", ThisKey="IDDirettore", OtherKey="IDDipendente", IsForeignKey=true)]
-		public DIPENDENTI DIPENDENTI
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DIPENDENTI_STRUTTURE", Storage="_DIPENDENTI1", ThisKey="IDDirettore", OtherKey="IDDipendente", IsForeignKey=true)]
+		public DIPENDENTI DIPENDENTI1
 		{
 			get
 			{
-				return this._DIPENDENTI.Entity;
+				return this._DIPENDENTI1.Entity;
 			}
 			set
 			{
-				DIPENDENTI previousValue = this._DIPENDENTI.Entity;
+				DIPENDENTI previousValue = this._DIPENDENTI1.Entity;
 				if (((previousValue != value) 
-							|| (this._DIPENDENTI.HasLoadedOrAssignedValue == false)))
+							|| (this._DIPENDENTI1.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._DIPENDENTI.Entity = null;
-						previousValue.STRUTTURE.Remove(this);
+						this._DIPENDENTI1.Entity = null;
+						previousValue.STRUTTURE1.Remove(this);
 					}
-					this._DIPENDENTI.Entity = value;
+					this._DIPENDENTI1.Entity = value;
 					if ((value != null))
 					{
-						value.STRUTTURE.Add(this);
+						value.STRUTTURE1.Add(this);
 						this._IDDirettore = value.IDDipendente;
 					}
 					else
 					{
-						this._IDDirettore = default(int);
+						this._IDDirettore = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("DIPENDENTI");
+					this.SendPropertyChanged("DIPENDENTI1");
 				}
 			}
 		}
@@ -9793,6 +9903,18 @@ namespace GreenHouse_App
 		}
 		
 		private void detach_CONTRATTI(CONTRATTI entity)
+		{
+			this.SendPropertyChanging();
+			entity.STRUTTURE = null;
+		}
+		
+		private void attach_DIPENDENTI(DIPENDENTI entity)
+		{
+			this.SendPropertyChanging();
+			entity.STRUTTURE = this;
+		}
+		
+		private void detach_DIPENDENTI(DIPENDENTI entity)
 		{
 			this.SendPropertyChanging();
 			entity.STRUTTURE = null;
@@ -10586,17 +10708,15 @@ namespace GreenHouse_App
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _IDViaggio;
+		private int _IDGuida;
 		
-		private System.DateTime _PrimaData;
+		private int _IDViaggio;
 		
 		private string _Scuola;
 		
 		private int _NumeroPartecipanti;
 		
 		private string _OrdineScolastico;
-		
-		private int _IDGuida;
 		
 		private EntitySet<VISITE> _VISITE;
 		
@@ -10606,18 +10726,16 @@ namespace GreenHouse_App
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
+    partial void OnIDGuidaChanging(int value);
+    partial void OnIDGuidaChanged();
     partial void OnIDViaggioChanging(int value);
     partial void OnIDViaggioChanged();
-    partial void OnPrimaDataChanging(System.DateTime value);
-    partial void OnPrimaDataChanged();
     partial void OnScuolaChanging(string value);
     partial void OnScuolaChanged();
     partial void OnNumeroPartecipantiChanging(int value);
     partial void OnNumeroPartecipantiChanged();
     partial void OnOrdineScolasticoChanging(string value);
     partial void OnOrdineScolasticoChanged();
-    partial void OnIDGuidaChanging(int value);
-    partial void OnIDGuidaChanged();
     #endregion
 		
 		public VIAGGI_ISTRUZIONE()
@@ -10625,6 +10743,30 @@ namespace GreenHouse_App
 			this._VISITE = new EntitySet<VISITE>(new Action<VISITE>(this.attach_VISITE), new Action<VISITE>(this.detach_VISITE));
 			this._DIPENDENTI = default(EntityRef<DIPENDENTI>);
 			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDGuida", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int IDGuida
+		{
+			get
+			{
+				return this._IDGuida;
+			}
+			set
+			{
+				if ((this._IDGuida != value))
+				{
+					if (this._DIPENDENTI.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIDGuidaChanging(value);
+					this.SendPropertyChanging();
+					this._IDGuida = value;
+					this.SendPropertyChanged("IDGuida");
+					this.OnIDGuidaChanged();
+				}
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDViaggio", DbType="Int NOT NULL", IsPrimaryKey=true)]
@@ -10643,26 +10785,6 @@ namespace GreenHouse_App
 					this._IDViaggio = value;
 					this.SendPropertyChanged("IDViaggio");
 					this.OnIDViaggioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimaData", DbType="DateTime NOT NULL")]
-		public System.DateTime PrimaData
-		{
-			get
-			{
-				return this._PrimaData;
-			}
-			set
-			{
-				if ((this._PrimaData != value))
-				{
-					this.OnPrimaDataChanging(value);
-					this.SendPropertyChanging();
-					this._PrimaData = value;
-					this.SendPropertyChanged("PrimaData");
-					this.OnPrimaDataChanged();
 				}
 			}
 		}
@@ -10727,31 +10849,7 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDGuida", DbType="Int NOT NULL")]
-		public int IDGuida
-		{
-			get
-			{
-				return this._IDGuida;
-			}
-			set
-			{
-				if ((this._IDGuida != value))
-				{
-					if (this._DIPENDENTI.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnIDGuidaChanging(value);
-					this.SendPropertyChanging();
-					this._IDGuida = value;
-					this.SendPropertyChanged("IDGuida");
-					this.OnIDGuidaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VIAGGI_ISTRUZIONE_VISITE", Storage="_VISITE", ThisKey="IDViaggio", OtherKey="IDViaggio")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VIAGGI_ISTRUZIONE_VISITE", Storage="_VISITE", ThisKey="IDGuida,IDViaggio", OtherKey="IDGuida,IDViaggio")]
 		public EntitySet<VISITE> VISITE
 		{
 			get
@@ -10837,6 +10935,8 @@ namespace GreenHouse_App
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
+		private int _IDGuida;
+		
 		private int _IDViaggio;
 		
 		private System.DateTime _DataOra;
@@ -10844,8 +10944,6 @@ namespace GreenHouse_App
 		private int _IDStruttura;
 		
 		private int _IDSerra;
-		
-		private string _IDGuida;
 		
 		private EntityRef<VIAGGI_ISTRUZIONE> _VIAGGI_ISTRUZIONE;
 		
@@ -10855,6 +10953,8 @@ namespace GreenHouse_App
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
+    partial void OnIDGuidaChanging(int value);
+    partial void OnIDGuidaChanged();
     partial void OnIDViaggioChanging(int value);
     partial void OnIDViaggioChanged();
     partial void OnDataOraChanging(System.DateTime value);
@@ -10863,8 +10963,6 @@ namespace GreenHouse_App
     partial void OnIDStrutturaChanged();
     partial void OnIDSerraChanging(int value);
     partial void OnIDSerraChanged();
-    partial void OnIDGuidaChanging(string value);
-    partial void OnIDGuidaChanged();
     #endregion
 		
 		public VISITE()
@@ -10872,6 +10970,30 @@ namespace GreenHouse_App
 			this._VIAGGI_ISTRUZIONE = default(EntityRef<VIAGGI_ISTRUZIONE>);
 			this._SERRE = default(EntityRef<SERRE>);
 			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDGuida", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int IDGuida
+		{
+			get
+			{
+				return this._IDGuida;
+			}
+			set
+			{
+				if ((this._IDGuida != value))
+				{
+					if (this._VIAGGI_ISTRUZIONE.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIDGuidaChanging(value);
+					this.SendPropertyChanging();
+					this._IDGuida = value;
+					this.SendPropertyChanged("IDGuida");
+					this.OnIDGuidaChanged();
+				}
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDViaggio", DbType="Int NOT NULL", IsPrimaryKey=true)]
@@ -10966,27 +11088,7 @@ namespace GreenHouse_App
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDGuida", CanBeNull=false)]
-		public string IDGuida
-		{
-			get
-			{
-				return this._IDGuida;
-			}
-			set
-			{
-				if ((this._IDGuida != value))
-				{
-					this.OnIDGuidaChanging(value);
-					this.SendPropertyChanging();
-					this._IDGuida = value;
-					this.SendPropertyChanged("IDGuida");
-					this.OnIDGuidaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VIAGGI_ISTRUZIONE_VISITE", Storage="_VIAGGI_ISTRUZIONE", ThisKey="IDViaggio", OtherKey="IDViaggio", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="VIAGGI_ISTRUZIONE_VISITE", Storage="_VIAGGI_ISTRUZIONE", ThisKey="IDGuida,IDViaggio", OtherKey="IDGuida,IDViaggio", IsForeignKey=true)]
 		public VIAGGI_ISTRUZIONE VIAGGI_ISTRUZIONE
 		{
 			get
@@ -11009,10 +11111,12 @@ namespace GreenHouse_App
 					if ((value != null))
 					{
 						value.VISITE.Add(this);
+						this._IDGuida = value.IDGuida;
 						this._IDViaggio = value.IDViaggio;
 					}
 					else
 					{
+						this._IDGuida = default(int);
 						this._IDViaggio = default(int);
 					}
 					this.SendPropertyChanged("VIAGGI_ISTRUZIONE");

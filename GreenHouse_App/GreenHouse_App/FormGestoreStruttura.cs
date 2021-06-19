@@ -12,11 +12,11 @@ namespace GreenHouse_App
 {
     public partial class FormGestoreStruttura : Form
     {
-        public ProvaGreenHouseDataContext db;
+        public GreenHouseDataContext db;
         public FormGestoreStruttura()
         {
             InitializeComponent();
-            db = new ProvaGreenHouseDataContext();
+            db = new GreenHouseDataContext();
         }
 
 

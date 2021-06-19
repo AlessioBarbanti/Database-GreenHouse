@@ -12,11 +12,11 @@ namespace GreenHouse_App
 {
     public partial class FormViaggio : Form
     {
-        public ProvaGreenHouseDataContext db;
+        public GreenHouseDataContext db;
         public FormViaggio()
         {
             InitializeComponent();
-            db = new ProvaGreenHouseDataContext();
+            db = new GreenHouseDataContext();
         }
 
         private void Inserisci_Click(object sender, EventArgs e)
@@ -29,7 +29,6 @@ namespace GreenHouse_App
             foo = new VIAGGI_ISTRUZIONE
             {
                     IDGuida = Convert.ToInt32(textBoxIDGuida.Text),
-                    PrimaData = Convert.ToDateTime(Data.Text),
                     Scuola = textBoxScuola.Text,
                     NumeroPartecipanti = Convert.ToInt32(textBoxNPax.Text)
                 };

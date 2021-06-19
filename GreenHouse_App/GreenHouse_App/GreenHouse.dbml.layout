@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 22.5, 61" name="GreenHouse">
+  <DataContextMoniker Name="/GreenHouseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c26acee4-95b5-4566-8d8c-694c5d30923a" absoluteBounds="12, 46.25, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/ACCESSI_INVENTARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="513381b6-83a1-40de-b1b4-a32f061dae39" absoluteBounds="12.015, 46.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b880e62-dddf-4d3d-b9b7-ad2f5edb137e" absoluteBounds="6.25, 35, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/GreenHouseDataContext/ANNOTAZIONI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8eb74d07-80bd-4dfb-bf19-7f313d0b5a24" absoluteBounds="6.265, 35.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b519890-b973-4b58-8ac3-175fb2e60c8c" absoluteBounds="3.5, 45.75, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/GreenHouseDataContext/CLIMI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d91b9e82-5766-4b2f-ae55-7e22f98432bd" absoluteBounds="3.515, 46.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9298f53-9c49-43ed-aea3-4e924a1cd08e" absoluteBounds="9, 40.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/GreenHouseDataContext/CLUSTER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99d531b3-747b-435b-b935-b54023339c9a" absoluteBounds="9.015, 41.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba646b2b-8890-463f-aaa2-3bccfdf9d79e" absoluteBounds="9, 58.375, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/GreenHouseDataContext/CLUSTER_EMBRIONI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="564a1cc6-29a3-4bd8-b716-2a6fa847511b" absoluteBounds="9.015, 58.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddd2a95e-c3e2-4775-a6f2-24132fd2aaf9" absoluteBounds="14.75, 35.5, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/GreenHouseDataContext/CLUSTER_PIANTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db7e3c7e-9917-4969-bf17-7e03a83f4b3b" absoluteBounds="14.765, 35.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d68e5b9-1ff8-476d-a18e-218a7aa2b949" absoluteBounds="6.25, 32.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/GreenHouseDataContext/COLLABORAZIONI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e9dca88-8805-4b5c-8b8f-5eebcb2a5b69" absoluteBounds="6.265, 32.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e24cf3b7-f82a-428b-9db2-5ea257df51ee" absoluteBounds="6.25, 39.125, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/CONTRATTI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ab33f06-ace0-4f36-b846-5bf8188544ea" absoluteBounds="6.265, 39.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="100f033f-fb9a-4759-a83b-88e97f1755d2" absoluteBounds="0.75, 28.125, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/GreenHouseDataContext/DIPENDENTI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45bfd963-6c22-4370-9619-2f9851863d03" absoluteBounds="0.765, 28.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d60cd677-6070-4867-b713-4806e87fe9dc" absoluteBounds="3.5, 31.875, 2, 2.155499674479163">
+      <DataClassMoniker Name="/GreenHouseDataContext/ESPERIMENTI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c0af36f-0061-46fc-867c-276df0e5fd83" absoluteBounds="3.515, 32.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59a36be7-dcdf-4fe2-9319-270dc3b8108b" absoluteBounds="6.25, 52.875, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/GARAGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c15d26ef-75dc-4092-89c6-22e376af6b75" absoluteBounds="6.265, 53.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c579836d-1fce-4731-b9db-a17fc8065a0d" absoluteBounds="17.5, 36.25, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/IRRIGAZIONI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ed15f16-f2bd-4f20-a151-850fd46898c3" absoluteBounds="17.515, 36.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c3a6f9d3-69ea-4fee-84dd-78eabbe9b7ac" absoluteBounds="11.75, 49.5, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/GreenHouseDataContext/LAVORI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15cca2b5-e7ae-46ee-a1b6-faaa1d315040" absoluteBounds="11.765, 49.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d20d2c1-7267-4815-bd69-965040be8a13" absoluteBounds="17.5, 39.875, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/LAVORI_EFFETTUATI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d52d1b9b-7580-40bd-9e34-a639272da7e9" absoluteBounds="17.515, 40.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71804432-41f1-44c6-b9fe-3ef3c9f89367" absoluteBounds="9, 52.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/GreenHouseDataContext/MACCHINARI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="173daa8a-a10a-4097-9f67-b767804537cc" absoluteBounds="9.015, 53.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d91fa154-06c7-4847-bbbc-63a1093d66fb" absoluteBounds="20.25, 46.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/GreenHouseDataContext/MACCHINARI_UTILIZZATI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4107267e-933b-4a8a-8205-f16f99979e3d" absoluteBounds="20.265, 47.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="73f06f6c-b9cb-49ce-8060-c48b3ecf893a" absoluteBounds="6.25, 47, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/GreenHouseDataContext/MAGAZZINI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b331f9d1-ea04-4ad0-9340-1752e840e7cd" absoluteBounds="6.265, 47.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9f51972e-5b0f-4e2c-a495-6ef1ea601d00" absoluteBounds="3.5, 29, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/GreenHouseDataContext/MANUTENZIONI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="705a9fb9-0eec-445e-a3de-a3a8acd2e9cc" absoluteBounds="3.515, 29.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f336d199-de95-4a34-961a-63d2d0e15823" absoluteBounds="11.75, 40.625, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/PERMESSI_MACCHINARI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6edbe79c-708a-4994-96d5-9c1172515cf8" absoluteBounds="11.765, 41.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40cc2e63-3c7d-47bd-8be2-4cd3eb24d8c5" absoluteBounds="6.5, 28.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GreenHouseDataContext/PERMESSI_SERRE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a7e52f7-963b-41a3-9f7b-01692d0383ce" absoluteBounds="6.515, 29.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f479cf95-d476-4c54-9b87-204f59cad4ed" absoluteBounds="11.75, 35.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/GreenHouseDataContext/PERMESSI_STRUMENTI_COMPLESSI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d07e6fe5-d73f-440c-8126-43c7e66b4e39" absoluteBounds="11.765, 36.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2cc07c0b-2102-46c8-a786-f7e35d8d356c" absoluteBounds="12, 32.5, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/GreenHouseDataContext/PIANTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d52a5566-4609-4cbf-9a1a-3304fdd63941" absoluteBounds="12.015, 32.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83f63b2b-df4a-4709-8aa1-dc21cd9d6b47" absoluteBounds="9, 49.25, 2, 2.7324039713541595">
+      <DataClassMoniker Name="/GreenHouseDataContext/PRODOTTI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccbb1b6f-200b-4096-89c3-2f058db19d04" absoluteBounds="9.015, 49.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c3582b3f-e2f2-4c6e-bf6c-e65f83c82357" absoluteBounds="3.75, 19.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/GreenHouseDataContext/RICERCATORI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47f883c7-d4da-4946-b90d-6e96f84db360" absoluteBounds="3.765, 19.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b824a9bc-8f1d-40ef-a014-15cc4bd236b8" absoluteBounds="6.25, 49.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/SERRE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a8e5ae4-2910-4bc6-8258-8edfdd15f3b0" absoluteBounds="6.265, 50.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2827e708-3c02-48a2-a351-970119a4ac62" absoluteBounds="6.25, 58.5, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/SERRE_INCUBAZIONE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1742a86-cd1b-42a8-aa36-ec37de1894bc" absoluteBounds="6.265, 58.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f5b9451-b084-4de7-af5a-fdfafca99ecb" absoluteBounds="9, 43.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/STRUMENTI_COMPLESSI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0e27837-cbea-4817-be57-4db50af2e4ed" absoluteBounds="9.015, 44.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3fa7b5a8-b6e6-4ddb-94a6-e710f397831b" absoluteBounds="20.25, 41.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/GreenHouseDataContext/STRUMENTI_COMPLESSI_UTILIZZATI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b7f0c25-e34e-4d0f-b3bf-2a597b7d2dd7" absoluteBounds="20.265, 42.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d56fda7-1652-4577-b62d-956729739c1f" absoluteBounds="3.5, 49.5, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/GreenHouseDataContext/STRUTTURE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f70a17a-3c52-4468-a7d8-03ef36fd5680" absoluteBounds="3.515, 49.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cdd92f41-36f4-4ef1-a850-31ad74b7a45b" absoluteBounds="9, 38, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/GreenHouseDataContext/SUPERVISIONI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f0f48ed-bfe4-48f0-aadc-d1282a290ec5" absoluteBounds="9.015, 38.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80afeb49-955f-4794-93d6-afe84eccf54b" absoluteBounds="1, 19.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/GreenHouseDataContext/UNIVERSITÀ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb6dd935-7cbc-4d9b-b264-b1fbcc88ae93" absoluteBounds="1.0150000000000001, 20.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4e5bc58-bd5a-4ae1-924b-effac9a2a338" absoluteBounds="9, 46.5, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GreenHouseDataContext/UTENSILI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64be6603-1e35-486e-98db-6aa084f4255e" absoluteBounds="9.015, 46.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ad9a5bb2-9b99-4ea6-b1d3-39bd066b8b80" absoluteBounds="3.5, 24.25, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/GreenHouseDataContext/VIAGGI_ISTRUZIONE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="102d0695-2a00-4c42-a7d2-152a6f523a83" absoluteBounds="3.515, 24.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="697e0342-6ee6-4536-93da-b7b7d8c9c7f7" absoluteBounds="9, 35.125, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/GreenHouseDataContext/VISITE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="872471ff-ba90-41b5-acac-fd8d6047e43d" absoluteBounds="9.015, 35.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11 : 40.875); (11.375 : 40.5); (11.375 : 39.3766097005208); (11.4166666666667 : 39.3766097005208 : JumpStart); (11.7083333333333 : 39.3766097005208 : JumpEnd); (13.9166666666667 : 39.3766097005208 : JumpStart); (14.0833333333333 : 39.3766097005208 : JumpEnd); (14.375 : 39.3766097005208); (14.75 : 39.0016097005208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GreenHouseDataContext/CLUSTER/CLUSTER_CLUSTER_PIANTE" />
+      <nodes>
+        <classShapeMoniker Id="a9298f53-9c49-43ed-aea3-4e924a1cd08e" />
+        <classShapeMoniker Id="ddd2a95e-c3e2-4775-a6f2-24132fd2aaf9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 29.9719555664063); (2.91666666666667 : 29.9719555664063 : JumpStart); (3.20833333333333 : 29.9719555664063 : JumpEnd); (3.25 : 29.9719555664063); (3.25 : 31.2804996744792); (3.29166666666667 : 31.2804996744792 : JumpStart); (3.45833333333333 : 31.2804996744792 : JumpEnd); (5.57291666666667 : 31.2804996744792 : JumpStart); (5.73958333333333 : 31.2804996744792 : JumpEnd); (5.79166666666667 : 31.2804996744792 : JumpStart); (5.95833333333333 : 31.2804996744792 : JumpEnd); (6.04166666666667 : 31.2804996744792 : JumpStart); (6.20833333333333 : 31.2804996744792 : JumpEnd); (6.26041666666667 : 31.2804996744792 : JumpStart); (6.42708333333333 : 31.2804996744792 : JumpEnd); (8.66820612820513 : 31.2804996744792 : JumpStart); (8.8348727948718 : 31.2804996744792 : JumpEnd); (9.91666666666667 : 31.2804996744792 : JumpStart); (10.0833333333333 : 31.2804996744792 : JumpEnd); (11.5416666666667 : 31.2804996744792 : JumpStart); (11.7083333333333 : 31.2804996744792 : JumpEnd); (11.75 : 31.2804996744792); (11.75 : 35.5); (13.8229166666667 : 35.5 : JumpStart); (13.9895833333333 : 35.5 : JumpEnd); (14 : 35.5); (14 : 45.875); (13 : 45.875); (13 : 46.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_ACCESSI_INVENTARIO" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="c26acee4-95b5-4566-8d8c-694c5d30923a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 31.8189111328125); (1.75 : 40.1065991210938); (1.93229291666667 : 40.1065991210938 : JumpStart); (2.09895958333333 : 40.1065991210938 : JumpEnd); (5.79166666666667 : 40.1065991210938 : JumpStart); (5.95833333333333 : 40.1065991210938 : JumpEnd); (6.25 : 40.1065991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_CONTRATTI" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="e24cf3b7-f82a-428b-9db2-5ea257df51ee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 34.0304996744792); (4.5 : 35.8854484049479); (5.79166666666667 : 35.8854484049479 : JumpStart); (5.95833333333333 : 35.8854484049479 : JumpEnd); (6.25 : 35.8854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/ESPERIMENTI/ESPERIMENTI_ANNOTAZIONI" />
+      <nodes>
+        <classShapeMoniker Id="d60cd677-6070-4867-b713-4806e87fe9dc" />
+        <classShapeMoniker Id="9b880e62-dddf-4d3d-b9b7-ad2f5edb137e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 32.09375); (5.57291666666667 : 32.09375 : JumpStart); (5.73958333333333 : 32.09375 : JumpEnd); (5.79166666666667 : 32.09375 : JumpStart); (5.95833333333333 : 32.09375 : JumpEnd); (6.26041666666667 : 32.09375 : JumpStart); (6.42708333333333 : 32.09375 : JumpEnd); (8.60416666666667 : 32.09375 : JumpStart); (8.77083333333333 : 32.09375 : JumpEnd); (9.91666666666667 : 32.09375 : JumpStart); (10.0833333333333 : 32.09375 : JumpEnd); (11.4166666666667 : 32.09375 : JumpStart); (11.8333333333333 : 32.09375 : JumpEnd); (15.75 : 32.09375); (15.75 : 35.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/ESPERIMENTI/ESPERIMENTI_CLUSTER_PIANTE" />
+      <nodes>
+        <classShapeMoniker Id="d60cd677-6070-4867-b713-4806e87fe9dc" />
+        <classShapeMoniker Id="ddd2a95e-c3e2-4775-a6f2-24132fd2aaf9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 32.9719962565104); (5.57291666666667 : 32.9719962565104 : JumpStart); (5.73958333333333 : 32.9719962565104 : JumpEnd); (5.79166666666667 : 32.9719962565104 : JumpStart); (5.95833333333333 : 32.9719962565104 : JumpEnd); (6.25 : 32.9719962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/ESPERIMENTI/ESPERIMENTI_COLLABORAZIONI" />
+      <nodes>
+        <classShapeMoniker Id="d60cd677-6070-4867-b713-4806e87fe9dc" />
+        <classShapeMoniker Id="9d68e5b9-1ff8-476d-a18e-218a7aa2b949" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 31.8189111328125); (2.2812525 : 32.9527498372396); (2.46354541666667 : 32.9527498372396 : JumpStart); (2.63021208333333 : 32.9527498372396 : JumpEnd); (3.5 : 32.9527498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_ESPERIMENTI" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="d60cd677-6070-4867-b713-4806e87fe9dc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 52.875); (7.25 : 51.9631982421875); (8.41666666666667 : 51.9631982421875 : JumpStart); (8.58333333333333 : 51.9631982421875 : JumpEnd); (8.75 : 51.9631982421875); (8.75 : 46.25); (8.76041666666667 : 46.25 : JumpStart); (9.02083333333333 : 46.25 : JumpEnd); (11.2916666666667 : 46.25 : JumpStart); (11.5208333333333 : 46.25 : JumpEnd); (11.625 : 46.25); (11.625 : 47.2315991210938); (11.6666666666667 : 47.2315991210938 : JumpStart); (11.8333333333333 : 47.2315991210938 : JumpEnd); (12 : 47.2315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/GARAGE/GARAGE_ACCESSI_INVENTARIO" />
+      <nodes>
+        <classShapeMoniker Id="59a36be7-dcdf-4fe2-9319-270dc3b8108b" />
+        <classShapeMoniker Id="c26acee4-95b5-4566-8d8c-694c5d30923a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 37.2315991210938); (17.1666666666667 : 37.2315991210938 : JumpStart); (17.3333333333333 : 37.2315991210938 : JumpEnd); (17.5 : 37.2315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/CLUSTER_PIANTE/CLUSTER_PIANTE_IRRIGAZIONI" />
+      <nodes>
+        <classShapeMoniker Id="ddd2a95e-c3e2-4775-a6f2-24132fd2aaf9" />
+        <classShapeMoniker Id="c579836d-1fce-4731-b9db-a17fc8065a0d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.7812525 : 39.0016097005208); (15.7812525 : 40.8565991210938); (17.5 : 40.8565991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/CLUSTER_PIANTE/CLUSTER_PIANTE_LAVORI_EFFETTUATI" />
+      <nodes>
+        <classShapeMoniker Id="ddd2a95e-c3e2-4775-a6f2-24132fd2aaf9" />
+        <classShapeMoniker Id="5d20d2c1-7267-4815-bd69-965040be8a13" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 50.5777498372396); (18.5 : 50.5777498372396); (18.5 : 41.8381982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/LAVORI/LAVORI_LAVORI_EFFETTUATI" />
+      <nodes>
+        <classShapeMoniker Id="c3a6f9d3-69ea-4fee-84dd-78eabbe9b7ac" />
+        <classShapeMoniker Id="5d20d2c1-7267-4815-bd69-965040be8a13" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 29.0172257832031); (3 : 29.0172257832031); (3 : 31.5304996744792); (5.57291666666667 : 31.5304996744792 : JumpStart); (5.73958333333333 : 31.5304996744792 : JumpEnd); (5.79166666666667 : 31.5304996744792 : JumpStart); (5.95833333333333 : 31.5304996744792 : JumpEnd); (6.04166666666667 : 31.5304996744792 : JumpStart); (6.20833333333333 : 31.5304996744792 : JumpEnd); (6.26041666666667 : 31.5304996744792 : JumpStart); (6.42708333333333 : 31.5304996744792 : JumpEnd); (8.91820612820513 : 31.5304996744792 : JumpStart); (9.0848727948718 : 31.5304996744792 : JumpEnd); (9.91666666666667 : 31.5304996744792 : JumpStart); (10.0833333333333 : 31.5304996744792 : JumpEnd); (11.4166666666667 : 31.5304996744792 : JumpStart); (11.8333333333333 : 31.5304996744792 : JumpEnd); (17.25 : 31.5304996744792); (17.25 : 39.5); (18.5 : 39.5); (18.5 : 39.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_LAVORI_EFFETTUATI" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="5d20d2c1-7267-4815-bd69-965040be8a13" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 53.8565991210938); (8.41666666666667 : 53.8565991210938 : JumpStart); (8.58333333333333 : 53.8565991210938 : JumpEnd); (9 : 53.8565991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/GARAGE/GARAGE_MACCHINARI" />
+      <nodes>
+        <classShapeMoniker Id="59a36be7-dcdf-4fe2-9319-270dc3b8108b" />
+        <classShapeMoniker Id="71804432-41f1-44c6-b9fe-3ef3c9f89367" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.0312525 : 41.8381982421875); (19.0312525 : 47.4431469726563); (20.25 : 47.4431469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/LAVORI_EFFETTUATI/LAVORI_EFFETTUATI_MACCHINARI_UTILIZZATI" />
+      <nodes>
+        <classShapeMoniker Id="5d20d2c1-7267-4815-bd69-965040be8a13" />
+        <classShapeMoniker Id="d91fa154-06c7-4847-bbbc-63a1093d66fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 53.9239005533854); (11.3541666666667 : 53.9239005533854 : JumpStart); (11.5208333333333 : 53.9239005533854 : JumpEnd); (21.25 : 53.9239005533854); (21.25 : 48.1362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/MACCHINARI/MACCHINARI_MACCHINARI_UTILIZZATI" />
+      <nodes>
+        <classShapeMoniker Id="71804432-41f1-44c6-b9fe-3ef3c9f89367" />
+        <classShapeMoniker Id="d91fa154-06c7-4847-bbbc-63a1093d66fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 48.6482975260417); (8.41666666666667 : 48.6482975260417 : JumpStart); (8.58333333333333 : 48.6482975260417 : JumpEnd); (8.60416666666667 : 48.6482975260417 : JumpStart); (9.02083333333333 : 48.6482975260417 : JumpEnd); (11.2916666666667 : 48.6482975260417 : JumpStart); (11.5208333333333 : 48.6482975260417 : JumpEnd); (13 : 48.6482975260417); (13 : 48.2131982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/MAGAZZINI/MAGAZZINI_ACCESSI_INVENTARIO" />
+      <nodes>
+        <classShapeMoniker Id="73f06f6c-b9cb-49ce-8060-c48b3ecf893a" />
+        <classShapeMoniker Id="c26acee4-95b5-4566-8d8c-694c5d30923a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 29.4945906748047); (2.91666666666667 : 29.4945906748047 : JumpStart); (3.20833333333333 : 29.4945906748047 : JumpEnd); (3.5 : 29.4945906748047)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_MANUTENZIONI" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="9f51972e-5b0f-4e2c-a495-6ef1ea601d00" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 52.75); (11.375 : 52.375); (11.375 : 41.6065991210938); (11.75 : 41.6065991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/MACCHINARI/MACCHINARI_PERMESSI_MACCHINARI" />
+      <nodes>
+        <classShapeMoniker Id="71804432-41f1-44c6-b9fe-3ef3c9f89367" />
+        <classShapeMoniker Id="f336d199-de95-4a34-961a-63d2d0e15823" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 30.6574801204427); (2.91666666666667 : 30.6574801204427 : JumpStart); (3.33333333333333 : 30.6574801204427 : JumpEnd); (3.375 : 30.6574801204427); (3.375 : 31.4054996744792); (5.57291666666667 : 31.4054996744792 : JumpStart); (5.73958333333333 : 31.4054996744792 : JumpEnd); (5.79166666666667 : 31.4054996744792 : JumpStart); (5.95833333333333 : 31.4054996744792 : JumpEnd); (6.04166666666667 : 31.4054996744792 : JumpStart); (6.20833333333333 : 31.4054996744792 : JumpEnd); (6.26041666666667 : 31.4054996744792 : JumpStart); (6.42708333333333 : 31.4054996744792 : JumpEnd); (8.79320612820513 : 31.4054996744792 : JumpStart); (8.9598727948718 : 31.4054996744792 : JumpEnd); (9.91666666666667 : 31.4054996744792 : JumpStart); (10.0833333333333 : 31.4054996744792 : JumpEnd); (11.5 : 31.4054996744792); (11.5 : 40.25); (12.1354146666667 : 40.25 : JumpStart); (12.3020813333333 : 40.25 : JumpEnd); (12.75 : 40.25); (12.75 : 40.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_PERMESSI_MACCHINARI" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="f336d199-de95-4a34-961a-63d2d0e15823" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 28.5398608916016); (3.125 : 28.5398608916016); (3.125 : 31.1554996744792); (3.16666666666667 : 31.1554996744792 : JumpStart); (3.45833333333333 : 31.1554996744792 : JumpEnd); (5.57291666666667 : 31.1554996744792 : JumpStart); (5.73958333333333 : 31.1554996744792 : JumpEnd); (5.79166666666667 : 31.1554996744792 : JumpStart); (5.95833333333333 : 31.1554996744792 : JumpEnd); (6.04166666666667 : 31.1554996744792 : JumpStart); (6.20833333333333 : 31.1554996744792 : JumpEnd); (6.26041666666667 : 31.1554996744792 : JumpStart); (6.42708333333333 : 31.1554996744792 : JumpEnd); (8.54320612820513 : 31.1554996744792 : JumpStart); (8.7098727948718 : 31.1554996744792 : JumpEnd); (9.91666666666667 : 31.1554996744792 : JumpStart); (10.0833333333333 : 31.1554996744792 : JumpEnd); (11.625 : 31.1554996744792); (11.625 : 40); (12.218748 : 40); (12.218748 : 40.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_PERMESSI_MACCHINARI1" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="f336d199-de95-4a34-961a-63d2d0e15823" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 30.9319482421875); (2.91666666666667 : 30.9319482421875 : JumpStart); (3.45833333333333 : 30.9319482421875 : JumpEnd); (5.57291666666667 : 30.9319482421875 : JumpStart); (5.73958333333333 : 30.9319482421875 : JumpEnd); (5.79166666666667 : 30.9319482421875 : JumpStart); (5.95833333333333 : 30.9319482421875 : JumpEnd); (6.04166666666667 : 30.9319482421875 : JumpStart); (6.20833333333333 : 30.9319482421875 : JumpEnd); (6.26041666666667 : 30.9319482421875 : JumpStart); (6.42708333333333 : 30.9319482421875 : JumpEnd); (6.5 : 30.9319482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_PERMESSI_SERRE" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="40cc2e63-3c7d-47bd-8be2-4cd3eb24d8c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 31.8189111328125); (1.2187475 : 37.4479484049479); (1.40104041666667 : 37.4479484049479 : JumpStart); (1.56770708333333 : 37.4479484049479 : JumpEnd); (1.66666666666667 : 37.4479484049479 : JumpStart); (1.83333333333333 : 37.4479484049479 : JumpEnd); (1.93229291666667 : 37.4479484049479 : JumpStart); (2.09895958333333 : 37.4479484049479 : JumpEnd); (5.79166666666667 : 37.4479484049479 : JumpStart); (5.95833333333333 : 37.4479484049479 : JumpEnd); (8.60416666666667 : 37.4479484049479 : JumpStart); (8.92708333333333 : 37.4479484049479 : JumpEnd); (11.3229166666667 : 37.4479484049479 : JumpStart); (11.7083333333333 : 37.4479484049479 : JumpEnd); (11.75 : 37.4479484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="f479cf95-d476-4c54-9b87-204f59cad4ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 31.8189111328125); (2.54687875 : 37.1719201074219); (5.79166666666667 : 37.1719201074219 : JumpStart); (5.95833333333333 : 37.1719201074219 : JumpEnd); (8.60416666666667 : 37.1719201074219 : JumpStart); (8.92708333333333 : 37.1719201074219 : JumpEnd); (11.3229166666667 : 37.1719201074219 : JumpStart); (11.7083333333333 : 37.1719201074219 : JumpEnd); (11.75 : 37.1719201074219)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_PERMESSI_STRUMENTI_COMPLESSI1" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="f479cf95-d476-4c54-9b87-204f59cad4ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12 : 34.0785953776042); (11.8089255650989 : 34.2696698125053 : JumpStart); (11.6910744349011 : 34.387520942703 : JumpEnd); (11.625 : 34.4535953776042); (11.4375 : 34.4535953776042); (11.4375 : 57.9375); (11 : 58.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GreenHouseDataContext/PIANTE/PIANTE_CLUSTER_EMBRIONI" />
+      <nodes>
+        <classShapeMoniker Id="2cc07c0b-2102-46c8-a786-f7e35d8d356c" />
+        <classShapeMoniker Id="ba646b2b-8890-463f-aaa2-3bccfdf9d79e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.90625 : 34.0785953776042); (13.90625 : 38.5497029036458); (13.9166666666667 : 38.5497029036458 : JumpStart); (14.0833333333333 : 38.5497029036458 : JumpEnd); (14.75 : 38.5497029036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/PIANTE/PIANTE_CLUSTER_PIANTE" />
+      <nodes>
+        <classShapeMoniker Id="2cc07c0b-2102-46c8-a786-f7e35d8d356c" />
+        <classShapeMoniker Id="ddd2a95e-c3e2-4775-a6f2-24132fd2aaf9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 50.5777498372396); (11.2916666666667 : 50.5777498372396 : JumpStart); (11.5208333333333 : 50.5777498372396 : JumpEnd); (11.75 : 50.5777498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/PRODOTTI/PRODOTTI_LAVORI" />
+      <nodes>
+        <classShapeMoniker Id="83f63b2b-df4a-4709-8aa1-dc21cd9d6b47" />
+        <classShapeMoniker Id="c3a6f9d3-69ea-4fee-84dd-78eabbe9b7ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 48.7708968098958); (8.44107443490112 : 48.9619712447969 : JumpStart); (8.55892556509888 : 49.0798223749947 : JumpEnd); (8.625 : 49.1458968098958); (8.625 : 48.875); (8.62857443490112 : 48.8785744349011 : JumpStart); (8.80892556509888 : 49.0589255650989 : JumpEnd); (9 : 49.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GreenHouseDataContext/MAGAZZINI/MAGAZZINI_PRODOTTI" />
+      <nodes>
+        <classShapeMoniker Id="73f06f6c-b9cb-49ce-8060-c48b3ecf893a" />
+        <classShapeMoniker Id="83f63b2b-df4a-4709-8aa1-dc21cd9d6b47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 22.5593082682292); (5.65625 : 35.411471702474); (5.79166666666667 : 35.411471702474 : JumpStart); (5.95833333333333 : 35.411471702474 : JumpEnd); (6.25 : 35.411471702474)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/RICERCATORI/RICERCATORI_ANNOTAZIONI" />
+      <nodes>
+        <classShapeMoniker Id="c3582b3f-e2f2-4c6e-bf6c-e65f83c82357" />
+        <classShapeMoniker Id="9b880e62-dddf-4d3d-b9b7-ad2f5edb137e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 20.9046541341146); (6.34375 : 20.9046541341146); (6.34375 : 32.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/RICERCATORI/RICERCATORI_COLLABORAZIONI" />
+      <nodes>
+        <classShapeMoniker Id="c3582b3f-e2f2-4c6e-bf6c-e65f83c82357" />
+        <classShapeMoniker Id="9d68e5b9-1ff8-476d-a18e-218a7aa2b949" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 22.5577688066907); (6.125 : 22.9327688066907); (6.125 : 31.75); (5.95833333333333 : 31.75 : JumpStart); (5.79166666666667 : 31.75 : JumpEnd); (5.625 : 31.75); (5.5 : 31.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GreenHouseDataContext/RICERCATORI/RICERCATORI_ESPERIMENTI" />
+      <nodes>
+        <classShapeMoniker Id="c3582b3f-e2f2-4c6e-bf6c-e65f83c82357" />
+        <classShapeMoniker Id="d60cd677-6070-4867-b713-4806e87fe9dc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.6875025 : 22.5593082682292); (5.6875025 : 30.9006957421875); (5.79166666666667 : 30.9006957421875 : JumpStart); (5.95833333333333 : 30.9006957421875 : JumpEnd); (6.04166666666667 : 30.9006957421875 : JumpStart); (6.20833333333333 : 30.9006957421875 : JumpEnd); (6.26041666666667 : 30.9006957421875 : JumpStart); (6.42708333333333 : 30.9006957421875 : JumpEnd); (6.5 : 30.9006957421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/RICERCATORI/RICERCATORI_PERMESSI_SERRE" />
+      <nodes>
+        <classShapeMoniker Id="c3582b3f-e2f2-4c6e-bf6c-e65f83c82357" />
+        <classShapeMoniker Id="40cc2e63-3c7d-47bd-8be2-4cd3eb24d8c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 49.7681208299279); (8.44107443490112 : 49.5770463950268 : JumpStart); (8.55892556509888 : 49.459195264829 : JumpEnd); (8.69107443490112 : 49.3270463950268 : JumpStart); (8.80892556509888 : 49.209195264829 : JumpEnd); (8.9375 : 49.0806208299279); (8.9375 : 41.7604484049479); (9 : 41.7604484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/SERRE/SERRE_CLUSTER" />
+      <nodes>
+        <classShapeMoniker Id="b824a9bc-8f1d-40ef-a014-15cc4bd236b8" />
+        <classShapeMoniker Id="a9298f53-9c49-43ed-aea3-4e924a1cd08e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25150915249399 : 49.75); (6.12142556509888 : 49.6199164126049 : JumpStart); (6.00357443490112 : 49.5020652824071 : JumpEnd); (5.875 : 49.373490847506); (5.875 : 29.8854484049479); (5.77083583333333 : 29.8854484049479 : JumpStart); (5.57291666666667 : 29.8854484049479 : JumpEnd); (5.5 : 29.8854484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/SERRE/SERRE_MANUTENZIONI" />
+      <nodes>
+        <classShapeMoniker Id="b824a9bc-8f1d-40ef-a014-15cc4bd236b8" />
+        <classShapeMoniker Id="9f51972e-5b0f-4e2c-a495-6ef1ea601d00" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 49.8058746422777); (8.44107443490112 : 49.6148002073765 : JumpStart); (8.55892556509888 : 49.4969490771788 : JumpEnd); (8.6875 : 49.3683746422777); (8.6875 : 31.6554996744792); (9.12653946153846 : 31.6554996744792); (8.5 : 31.0289602129407)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GreenHouseDataContext/SERRE/SERRE_PERMESSI_SERRE" />
+      <nodes>
+        <classShapeMoniker Id="b824a9bc-8f1d-40ef-a014-15cc4bd236b8" />
+        <classShapeMoniker Id="40cc2e63-3c7d-47bd-8be2-4cd3eb24d8c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 47.8424217514022); (5.81607443490112 : 48.1584961863034 : JumpStart); (5.99642556509888 : 48.3388473165011 : JumpEnd); (6.0625 : 48.4049217514022); (6.0625 : 50.7315991210938); (6.25 : 50.7315991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/CLIMI/CLIMI_SERRE" />
+      <nodes>
+        <classShapeMoniker Id="7b519890-b973-4b58-8ac3-175fb2e60c8c" />
+        <classShapeMoniker Id="b824a9bc-8f1d-40ef-a014-15cc4bd236b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 58.5); (7.25 : 55.0881982421875); (8.5 : 55.0881982421875); (8.5 : 46); (8.60416666666667 : 46 : JumpStart); (9.02083333333333 : 46 : JumpEnd); (11.2916666666667 : 46 : JumpStart); (11.5208333333333 : 46 : JumpEnd); (11.75 : 46); (11.75 : 47.7536506816406); (12 : 47.7536506816406)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/SERRE_INCUBAZIONE/SERRE_INCUBAZIONE_ACCESSI_INVENTARIO" />
+      <nodes>
+        <classShapeMoniker Id="2827e708-3c02-48a2-a351-970119a4ac62" />
+        <classShapeMoniker Id="c26acee4-95b5-4566-8d8c-694c5d30923a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 59.4815991210938); (9 : 59.4815991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/SERRE_INCUBAZIONE/SERRE_INCUBAZIONE_CLUSTER_EMBRIONI" />
+      <nodes>
+        <classShapeMoniker Id="2827e708-3c02-48a2-a351-970119a4ac62" />
+        <classShapeMoniker Id="ba646b2b-8890-463f-aaa2-3bccfdf9d79e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 43.7817122023738); (11.40625 : 43.3754622023738); (11.40625 : 36.4297080537109); (11.4166666666667 : 36.4297080537109 : JumpStart); (11.7083333333333 : 36.4297080537109 : JumpEnd); (11.75 : 36.4297080537109)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/STRUMENTI_COMPLESSI/STRUMENTI_COMPLESSI_PERMESSI_STRUMENTI_COMPLESSI" />
+      <nodes>
+        <classShapeMoniker Id="3f5b9451-b084-4de7-af5a-fdfafca99ecb" />
+        <classShapeMoniker Id="f479cf95-d476-4c54-9b87-204f59cad4ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 47); (7.25 : 44.7315991210938); (8.60416666666667 : 44.7315991210938 : JumpStart); (8.98958333333333 : 44.7315991210938 : JumpEnd); (9 : 44.7315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/MAGAZZINI/MAGAZZINI_STRUMENTI_COMPLESSI" />
+      <nodes>
+        <classShapeMoniker Id="73f06f6c-b9cb-49ce-8060-c48b3ecf893a" />
+        <classShapeMoniker Id="3f5b9451-b084-4de7-af5a-fdfafca99ecb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 44.7787077222807); (11.2916666666667 : 44.7787077222807 : JumpStart); (11.5208333333333 : 44.7787077222807 : JumpEnd); (13.9166666666667 : 44.7787077222807 : JumpStart); (14.0833333333333 : 44.7787077222807 : JumpEnd); (18.4166666666667 : 44.7787077222807 : JumpStart); (18.5833333333333 : 44.7787077222807 : JumpEnd); (18.9479191666667 : 44.7787077222807 : JumpStart); (19.1145858333333 : 44.7787077222807 : JumpEnd); (21.25 : 44.7787077222807); (21.25 : 43.6458968098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/STRUMENTI_COMPLESSI/STRUMENTI_COMPLESSI_STRUMENTI_COMPLESSI_UTILIZZATI" />
+      <nodes>
+        <classShapeMoniker Id="3f5b9451-b084-4de7-af5a-fdfafca99ecb" />
+        <classShapeMoniker Id="3fa7b5a8-b6e6-4ddb-94a6-e710f397831b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.5 : 40.8565991210938); (21.25 : 40.8565991210938); (21.25 : 41.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/LAVORI_EFFETTUATI/LAVORI_EFFETTUATI_STRUMENTI_COMPLESSI_UTILIZZATI" />
+      <nodes>
+        <classShapeMoniker Id="5d20d2c1-7267-4815-bd69-965040be8a13" />
+        <classShapeMoniker Id="3fa7b5a8-b6e6-4ddb-94a6-e710f397831b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.46769230769231 : 49.5); (5.81607443490112 : 49.1516178727912 : JumpStart); (5.93392556509888 : 49.0337667425934 : JumpEnd); (5.9375 : 49.0301923076923); (5.9375 : 40.6286506816406); (6.25 : 40.6286506816406)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/STRUTTURE/STRUTTURE_CONTRATTI" />
+      <nodes>
+        <classShapeMoniker Id="0d56fda7-1652-4577-b62d-956729739c1f" />
+        <classShapeMoniker Id="e24cf3b7-f82a-428b-9db2-5ea257df51ee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 50.7700512695313); (2.01562625 : 50.7700512695313); (2.01562625 : 31.8189111328125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/STRUTTURE/STRUTTURE_DIPENDENTI" />
+      <nodes>
+        <classShapeMoniker Id="0d56fda7-1652-4577-b62d-956729739c1f" />
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 52.0401025390625); (4.5 : 53.8565991210938); (4.94791916666667 : 53.8565991210938 : JumpStart); (5.11458583333333 : 53.8565991210938 : JumpEnd); (6.25 : 53.8565991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/STRUTTURE/STRUTTURE_GARAGE" />
+      <nodes>
+        <classShapeMoniker Id="0d56fda7-1652-4577-b62d-956729739c1f" />
+        <classShapeMoniker Id="59a36be7-dcdf-4fe2-9319-270dc3b8108b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 49.5646143846154); (5.81607443490112 : 49.2485399497143 : JumpStart); (5.93392556509888 : 49.1306888195165 : JumpEnd); (6.00357443490112 : 49.0610399497143 : JumpStart); (6.12142556509888 : 48.9431888195165 : JumpEnd); (6.15625 : 48.9083643846154); (6.15625 : 47.8854484049479); (6.25 : 47.8854484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/STRUTTURE/STRUTTURE_MAGAZZINI" />
+      <nodes>
+        <classShapeMoniker Id="0d56fda7-1652-4577-b62d-956729739c1f" />
+        <classShapeMoniker Id="73f06f6c-b9cb-49ce-8060-c48b3ecf893a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 50.1782995605469); (5.97916666666667 : 50.1782995605469 : JumpStart); (6.14583333333333 : 50.1782995605469 : JumpEnd); (6.25 : 50.1782995605469)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/STRUTTURE/STRUTTURE_SERRE" />
+      <nodes>
+        <classShapeMoniker Id="0d56fda7-1652-4577-b62d-956729739c1f" />
+        <classShapeMoniker Id="b824a9bc-8f1d-40ef-a014-15cc4bd236b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.0312525 : 52.0401025390625); (5.0312525 : 59.4815991210938); (6.25 : 59.4815991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/STRUTTURE/STRUTTURE_SERRE_INCUBAZIONE" />
+      <nodes>
+        <classShapeMoniker Id="0d56fda7-1652-4577-b62d-956729739c1f" />
+        <classShapeMoniker Id="2827e708-3c02-48a2-a351-970119a4ac62" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.48437375 : 31.8189111328125); (1.48437375 : 50.1037731347656); (1.93229291666667 : 50.1037731347656 : JumpStart); (2.09895958333333 : 50.1037731347656 : JumpEnd); (3.5 : 50.1037731347656)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_STRUTTURE" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="0d56fda7-1652-4577-b62d-956729739c1f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.22885786508413 : 49.75); (8.44107443490112 : 49.537783430183 : JumpStart); (8.55892556509888 : 49.4199322999853 : JumpEnd); (8.69107443490112 : 49.287783430183 : JumpStart); (8.80892556509888 : 49.1699322999853 : JumpEnd); (8.90625 : 49.0726078650841); (8.90625 : 38.8854484049479); (9 : 38.8854484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/SERRE/SERRE_SUPERVISIONI" />
+      <nodes>
+        <classShapeMoniker Id="b824a9bc-8f1d-40ef-a014-15cc4bd236b8" />
+        <classShapeMoniker Id="cdd92f41-36f4-4ef1-a850-31ad74b7a45b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.95312125 : 31.8189111328125); (0.95312125 : 38.411471702474); (1.40104041666667 : 38.411471702474 : JumpStart); (1.56770708333333 : 38.411471702474 : JumpEnd); (1.66666666666667 : 38.411471702474 : JumpStart); (1.83333333333333 : 38.411471702474 : JumpEnd); (1.93229291666667 : 38.411471702474 : JumpStart); (2.09895958333333 : 38.411471702474 : JumpEnd); (5.79166666666667 : 38.411471702474 : JumpStart); (5.95833333333333 : 38.411471702474 : JumpEnd); (8.60416666666667 : 38.411471702474 : JumpStart); (8.92708333333333 : 38.411471702474 : JumpEnd); (9 : 38.411471702474)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_SUPERVISIONI" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="cdd92f41-36f4-4ef1-a850-31ad74b7a45b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 20.9239005533854); (3.75 : 20.9239005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/UNIVERSITÀ/UNIVERSITÀ_RICERCATORI" />
+      <nodes>
+        <classShapeMoniker Id="80afeb49-955f-4794-93d6-afe84eccf54b" />
+        <classShapeMoniker Id="c3582b3f-e2f2-4c6e-bf6c-e65f83c82357" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 47.7315991210938); (8.41666666666667 : 47.7315991210938 : JumpStart); (8.58333333333333 : 47.7315991210938 : JumpEnd); (8.60416666666667 : 47.7315991210938 : JumpStart); (8.98958333333333 : 47.7315991210938 : JumpEnd); (9 : 47.7315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/MAGAZZINI/MAGAZZINI_UTENSILI" />
+      <nodes>
+        <classShapeMoniker Id="73f06f6c-b9cb-49ce-8060-c48b3ecf893a" />
+        <classShapeMoniker Id="a4e5bc58-bd5a-4ae1-924b-effac9a2a338" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 28.125); (1.75 : 25.1354484049479); (3.5 : 25.1354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/DIPENDENTI/DIPENDENTI_VIAGGI_ISTRUZIONE" />
+      <nodes>
+        <classShapeMoniker Id="100f033f-fb9a-4759-a83b-88e97f1755d2" />
+        <classShapeMoniker Id="ad9a5bb2-9b99-4ea6-b1d3-39bd066b8b80" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 25.1354484049479); (5.57291666666667 : 25.1354484049479 : JumpStart); (5.77083583333333 : 25.1354484049479 : JumpEnd); (6.04166666666667 : 25.1354484049479 : JumpStart); (6.20833333333333 : 25.1354484049479 : JumpEnd); (6.26041666666667 : 25.1354484049479 : JumpStart); (6.42708333333333 : 25.1354484049479 : JumpEnd); (10 : 25.1354484049479); (10 : 35.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/VIAGGI_ISTRUZIONE/VIAGGI_ISTRUZIONE_VISITE" />
+      <nodes>
+        <classShapeMoniker Id="ad9a5bb2-9b99-4ea6-b1d3-39bd066b8b80" />
+        <classShapeMoniker Id="697e0342-6ee6-4536-93da-b7b7d8c9c7f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.22130710261418 : 49.75); (8.44107443490112 : 49.5302326677131 : JumpStart); (8.55892556509888 : 49.4123815375153 : JumpEnd); (8.62857443490112 : 49.3427326677131 : JumpStart); (8.80892556509888 : 49.1623815375153 : JumpEnd); (8.84375 : 49.1275571026142); (8.84375 : 36.0104484049479); (9 : 36.0104484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GreenHouseDataContext/SERRE/SERRE_VISITE" />
+      <nodes>
+        <classShapeMoniker Id="b824a9bc-8f1d-40ef-a014-15cc4bd236b8" />
+        <classShapeMoniker Id="697e0342-6ee6-4536-93da-b7b7d8c9c7f7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

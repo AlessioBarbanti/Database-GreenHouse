@@ -12,7 +12,7 @@ namespace GreenHouse_App
 {
     public partial class FormLavori : Form
     {
-        public ProvaGreenHouseDataContext db;
+        public GreenHouseDataContext db;
         public FormLavori()
         {
             InitializeComponent();
@@ -62,12 +62,6 @@ namespace GreenHouse_App
         }
             catch
             {
-                textBoxIDManovale.Text = "";
-                taxtBoxIDClusters.Text = "";
-                maskedTextBoxDateTimeInizio.Text = "";
-                maskedTextBoxDateTimeFine.Text = ""; ;
-                comboBox2.SelectedItem = "";
-                comboBox3.SelectedItem = "";
                 MessageBox.Show("Dati inseriti non corretti.", "Errore!",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -81,7 +75,7 @@ namespace GreenHouse_App
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox3.Enabled = true;
-            db = new ProvaGreenHouseDataContext();
+            db = new GreenHouseDataContext();
 
             if (comboBox2.SelectedItem.ToString() == "LAVORO TERRA")
             {

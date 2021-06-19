@@ -107,6 +107,11 @@
     <Compile Include="FormGestoreEsperimenti2.Designer.cs">
       <DependentUpon>FormGestoreEsperimenti2.cs</DependentUpon>
     </Compile>
+    <Compile Include="GreenHouse.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GreenHouse.dbml</DependentUpon>
+    </Compile>
     <Compile Include="GreenhouseDBDataSet.cs">
       <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
     </Compile>
@@ -136,11 +141,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProvaGreenHouse.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProvaGreenHouse.dbml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FormGuida3.resx">
       <DependentUpon>FormGuida3.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +185,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="GreenHouse.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>GreenHouse.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GreenHouse.dbml.layout">
+      <DependentUpon>GreenHouse.dbml</DependentUpon>
+    </None>
     <None Include="GreenhouseDBDataSet.xsc">
       <DependentUpon>GreenhouseDBDataSet.xsd</DependentUpon>
     </None>
@@ -218,14 +226,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ProvaGreenHouse.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>ProvaGreenHouse.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProvaGreenHouse.dbml.layout">
-      <DependentUpon>ProvaGreenHouse.dbml</DependentUpon>
-    </None>
     <None Include="Resources\GestoreStruttura.png" />
   </ItemGroup>
   <ItemGroup>
