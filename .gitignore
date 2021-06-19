@@ -13,3 +13,5 @@ GreenHouse_App/.vs/*
 *.xsc
 *.xss
 *.xsd
+*.dbml
+*.dblm.layout
