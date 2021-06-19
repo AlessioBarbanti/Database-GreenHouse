@@ -63,6 +63,16 @@ namespace GreenHouse_App.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bus {
+            get {
+                object obj = ResourceManager.GetObject("bus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap create_tour_guide {
             get {
                 object obj = ResourceManager.GetObject("create-tour-guide", resourceCulture);

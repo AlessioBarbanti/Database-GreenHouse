@@ -55,5 +55,10 @@ namespace GreenHouse_App
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Annulla_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

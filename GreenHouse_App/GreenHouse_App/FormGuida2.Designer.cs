@@ -84,6 +84,7 @@ namespace GreenHouse_App
             this.Annulla.TabStop = false;
             this.Annulla.Text = "Annulla";
             this.Annulla.UseVisualStyleBackColor = true;
+            this.Annulla.Click += new System.EventHandler(this.Annulla_Click);
             // 
             // Inserisci
             // 

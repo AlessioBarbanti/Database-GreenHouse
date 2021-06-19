@@ -24,7 +24,7 @@ namespace GreenHouse_App
         {
 
             var foo = from a in db.MACCHINARI
-                      where (a.DataRevisione - DateTime.Now).Days < 10
+                      where (a.DataRevisione - DateTime.Now).Days < 10 && (DateTime.Now - a.DataRevisione).Days < 0
                       select a;
 
             dataGridView1.DataSource = foo;

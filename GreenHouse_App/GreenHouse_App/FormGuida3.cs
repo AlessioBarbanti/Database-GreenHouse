@@ -59,9 +59,11 @@ namespace GreenHouse_App
             //}
         }
 
-        private void FormViaggio_Load(object sender, EventArgs e)
-        {
 
+
+        private void Annulla_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -145,6 +145,7 @@ namespace GreenHouse_App
             this.Annulla.TabStop = false;
             this.Annulla.Text = "Annulla";
             this.Annulla.UseVisualStyleBackColor = true;
+            this.Annulla.Click += new System.EventHandler(this.Annulla_Click);
             // 
             // Inserisci
             // 
@@ -175,7 +176,6 @@ namespace GreenHouse_App
             this.Controls.Add(this.Inserisci);
             this.Name = "FormViaggio";
             this.Text = "Inserisci Viaggio";
-            this.Load += new System.EventHandler(this.FormViaggio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
