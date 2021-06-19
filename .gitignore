@@ -15,3 +15,5 @@ GreenHouse_App/.vs/*
 *.xsd
 *.dbml
 *.dblm.layout
+GreenHouse_App/GreenHouse_App/GreenHouse.dbml.layout
+GreenHouse_App/GreenHouse_App/GreenHouse.designer.cs
