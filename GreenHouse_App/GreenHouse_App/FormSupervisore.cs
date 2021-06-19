@@ -35,30 +35,25 @@ namespace GreenHouse_App
             //          select new { b.IDDipendente, b.Nome,b.Cognome, var = from c in db.STRUMENTI_COMPLESSI
             //                                                               where c.IDStruttura == 
             //                                                               select c.Nome};
-            var ciao = from d in db.DIPENDENTI
-                       where d.IDStruttura == Convert.ToInt32(textBoxIDStrutturaDiRiferimento.Text) //Manca un and se non è presente in IDMANOVALE in permessi strumewnto complesso
+            //var ciao = from d in db.DIPENDENTI
+            //           where d.IDStruttura == Convert.ToInt32(textBoxIDStrutturaDiRiferimento.Text) //Manca un and se non è presente in IDMANOVALE in permessi strumewnto complesso
 
-                       select new
-                       {
-                           d.IDDipendente,
-                           d.Nome,
-                           d.IDStruttura,
-                           nomeacaso = String.Join(", ", (from a in db.STRUMENTI_COMPLESSI
-                                                         where (from f in db.PERMESSI_STRUMENTI_COMPLESSI where d.IDDipendente == f.IDManovale /*where d.IDStruttura == f.IDStruttura*/ select f.IDStrumentoComplesso).Contains(a.IDStrumentoComplesso)
-                                                         select a.Nome))
-                       };
+            //           select new
+            //           {
+            //               d.IDDipendente,
+            //               d.Nome,
+            //               d.IDStruttura,
+            //               nomeacaso = String.Join(", ", (from a in db.STRUMENTI_COMPLESSI
+            //                                             where (from f in db.PERMESSI_STRUMENTI_COMPLESSI where d.IDDipendente == f.IDManovale /*where d.IDStruttura == f.IDStruttura*/ select f.IDStrumentoComplesso).Contains(a.IDStrumentoComplesso)
+            //                                             select a.Nome))
+            //           };
 
-
-
-            var hello = from d in db.DIPENDENTI
-                        where d.IDStruttura == Convert.ToInt32(textBoxIDStrutturaDiRiferimento.Text) //Manca un and se non è presente in IDMANOVALE in permessi strumewnto complesso
-                        select d;
 
                        //select new
-                                //{
-                                        //    d.IDDipendente,
-                                                                //    d.Nome,
-                            //    d.IDStruttura,
+                       //{
+                       //    d.IDDipendente,
+                       //    d.Nome,
+                       //    d.IDStruttura,
                        //    nomeacaso = String.Join(", ", (from a in db.STRUMENTI_COMPLESSI
                        //                                   where (from f in db.PERMESSI_STRUMENTI_COMPLESSI where d.IDDipendente == f.IDManovale /*where d.IDStruttura == f.IDStruttura*/ select f.IDStrumentoComplesso).Contains(a.IDStrumentoComplesso)
                        //                                   select a.Nome))
@@ -75,14 +70,27 @@ namespace GreenHouse_App
             //where h.IDDipendente == ps.IDManovale && ps.IDStrumentoComplesso == s.IDStrumentoComplesso
             //select s.Nome)
 
+            var idStruttura = Convert.ToInt32(textBoxIDStrutturaDiRiferimento.Text);
+
+            var manovaliMacchinari = from permesso in db.PERMESSI_MACCHINARI
+                                     where permesso.MACCHINARI.GARAGE.IDStruttura == idStruttura
+                                     && permesso.Validità == "valido"
+                                     select new { permesso.IDManovale, permesso.DIPENDENTI.Nome,
+                                         permesso.DIPENDENTI.Cognome, Garage = permesso.MACCHINARI.IDGarage,
+                                         permesso.NumeroTelaio, permesso.MACCHINARI.Marca, permesso.MACCHINARI.Modello };
+
+            var manovaliPermessiMacchinari = from d in db.PERMESSI_STRUMENTI_COMPLESSI
+                        where d.IDStruttura == idStruttura
+                        && d.Validità == "valido"
+                        select new { d.IDManovale, d.DIPENDENTI.Nome, d.DIPENDENTI.Cognome,Magazzino = d.STRUMENTI_COMPLESSI.IDMagazzino, NomeStrumentoComplesso = d.STRUMENTI_COMPLESSI.Nome };
 
 
 
 
             try
             {
-                dataGridViewSerra.DataSource = hello;
-            dataGridViewStrumentoComplesso.DataSource = ciao;
+                dataGridViewStrumentoComplesso.DataSource = manovaliPermessiMacchinari;
+                dataGridViewMacchinario.DataSource = manovaliMacchinari;
             }
             catch {
             
@@ -90,14 +98,7 @@ namespace GreenHouse_App
 
 
 
-            //var tempFoo = from a in db.PERMESSI_MACCHINARI
-            //      select a.DIPENDENTI;
 
-            //foo =   from b in tempFoo
-            //        where Convert.ToInt32(textBoxIDStrutturaDiRiferimento.Text) == b.IDStruttura
-            //        select b;
-
-            //dataGridViewMacchinario.DataSource = foo;
 
         }
 
