@@ -31,7 +31,8 @@ namespace GreenHouse_App
                 foo = new VISITE
                 {
                     IDViaggio = Convert.ToInt32(textBoxIDViaggio.Text),
-                    DataOra = Convert.ToDateTime(Data.Text),
+                    DataOra = Convert.ToDateTime(Convert.ToString
+                        (textBoxData.Value.ToShortDateString())+ " " +maskedTextBoxTime.Text),
                     IDStruttura = Convert.ToInt32(textBoxIDStruttura.Text),
                     IDSerra = Convert.ToInt32(textBoxIDSerra.Text)
                 };
@@ -40,8 +41,8 @@ namespace GreenHouse_App
                                   where a.IDViaggio == Convert.ToInt32(textBoxIDViaggio.Text)
                                   select a.IDGuida;
 
-                foo.IDGuida = tempIDGuida.First();
-                if (Convert.ToDateTime(Data.Text) < DateTime.Now) {
+                foo.IDGuida = tempIDGuida.Single();
+                if (Convert.ToDateTime(textBoxData.Text) < DateTime.Now) {
 
                     throw new Exception();
                 }
@@ -59,6 +60,11 @@ namespace GreenHouse_App
         private void Annulla_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }
