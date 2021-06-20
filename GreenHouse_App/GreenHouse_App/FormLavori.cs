@@ -103,5 +103,12 @@ namespace GreenHouse_App
         {
 
         }
+
+        private void FormLavori_Load(object sender, EventArgs e)
+        {
+            // TODO: questa riga di codice carica i dati nella tabella 'greenHouseDatabaseDataSet.LAVORI'. È possibile spostarla o rimuoverla se necessario.
+            this.lAVORITableAdapter.Fill(this.greenHouseDatabaseDataSet.LAVORI);
+
+        }
     }
 }
