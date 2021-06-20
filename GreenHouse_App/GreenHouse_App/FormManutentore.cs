@@ -29,5 +29,10 @@ namespace GreenHouse_App
             FormManutenzioni f2 = new FormManutenzioni();
             f2.ShowDialog();
         }
+
+        private void FormManutentore_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
