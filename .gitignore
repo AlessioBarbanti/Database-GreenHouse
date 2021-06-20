@@ -18,3 +18,4 @@ GreenHouse_App/.vs/*
 GreenHouse_App/GreenHouse_App/GreenHouse.dbml.layout
 GreenHouse_App/GreenHouse_App/GreenHouse.designer.cs
 APP/
+GreenHouse_App/GreenHouse_App/GreenHouseDatabaseDataSet.Designer.cs
