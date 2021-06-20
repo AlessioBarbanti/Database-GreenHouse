@@ -22,8 +22,8 @@ namespace GreenHouse_App
         private void Inserisci_Click(object sender, EventArgs e)
         {
             MANUTENZIONI foo;
-            try
-            {
+            //try
+            //{
                 foo = new MANUTENZIONI
                 {
                     IDManutentore = Convert.ToInt32(textBoxIDManutentore.Text),
@@ -35,11 +35,11 @@ namespace GreenHouse_App
                 db.MANUTENZIONI.InsertOnSubmit(foo);
                 db.SubmitChanges();
                 Close();
-            }
-            catch {
-                MessageBox.Show("Dati inseriti non corretti.", "Errore!",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch {
+            //    MessageBox.Show("Dati inseriti non corretti.", "Errore!",
+            //    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void Annulla_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace GreenHouse_App
         {
 
             var foo = from a in db.CONTRATTI
-                      where a.IDDipendente == Convert.ToInt32(textBoxIDManutentore.Text) && a.TipoContratto == "Manutentore" // MANCA AND
+                      where a.IDDipendente == Convert.ToInt32(textBoxIDManutentore.Text) && a.TipoContratto == "Manutentore"
                       select a.IDStruttura;
 
 

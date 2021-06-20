@@ -25,7 +25,6 @@ namespace GreenHouse_App
         {
 
 
-            //TODO
             ANNOTAZIONI ord;
 
             try
@@ -47,20 +46,6 @@ namespace GreenHouse_App
                 MessageBox.Show("Dati inseriti non corretti.", "Errore!",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            //var checkMyExperiment = from esp in db.ESPERIMENTI
-            //                        where (esp.IDRicercatoreCapo == ord.IDRicercatore) || (from clo in db.COLLABORAZIONI
-            //                                                                               where clo.IDRicercatore == ord.IDRicercatore
-            //                                                                               select new { clo.IDEsperimento }).Contains(new { IDEsperimento = esp.IDEsperimento })
-            //                                                                               select esp;
-            //if (!checkMyExperiment.Any())
-            //{
-            //    throw new Exception();
-            //};
-
-
-
-
         }
 
         private void Annulla_Click(object sender, EventArgs e)
