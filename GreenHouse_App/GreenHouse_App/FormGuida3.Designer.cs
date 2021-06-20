@@ -46,7 +46,7 @@ namespace GreenHouse_App
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(120, 197);
+            this.radioButton3.Location = new System.Drawing.Point(146, 202);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(70, 17);
             this.radioButton3.TabIndex = 29;
@@ -56,7 +56,7 @@ namespace GreenHouse_App
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(120, 174);
+            this.radioButton2.Location = new System.Drawing.Point(146, 179);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(79, 17);
             this.radioButton2.TabIndex = 28;
@@ -67,7 +67,7 @@ namespace GreenHouse_App
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(120, 151);
+            this.radioButton1.Location = new System.Drawing.Point(146, 156);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(62, 17);
             this.radioButton1.TabIndex = 27;
@@ -79,7 +79,7 @@ namespace GreenHouse_App
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(56, 149);
+            this.label5.Location = new System.Drawing.Point(82, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 18);
             this.label5.TabIndex = 26;
@@ -87,24 +87,24 @@ namespace GreenHouse_App
             // 
             // textBoxNPax
             // 
-            this.textBoxNPax.Location = new System.Drawing.Point(120, 118);
+            this.textBoxNPax.Location = new System.Drawing.Point(146, 126);
             this.textBoxNPax.Name = "textBoxNPax";
-            this.textBoxNPax.Size = new System.Drawing.Size(33, 20);
+            this.textBoxNPax.Size = new System.Drawing.Size(62, 20);
             this.textBoxNPax.TabIndex = 25;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(54, 118);
+            this.label4.Location = new System.Drawing.Point(30, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 18);
+            this.label4.Size = new System.Drawing.Size(110, 18);
             this.label4.TabIndex = 24;
-            this.label4.Text = "N° Pax:";
+            this.label4.Text = "N° Partecipanti:";
             // 
             // textBoxIDGuida
             // 
-            this.textBoxIDGuida.Location = new System.Drawing.Point(120, 40);
+            this.textBoxIDGuida.Location = new System.Drawing.Point(146, 74);
             this.textBoxIDGuida.Name = "textBoxIDGuida";
             this.textBoxIDGuida.Size = new System.Drawing.Size(200, 20);
             this.textBoxIDGuida.TabIndex = 23;
@@ -113,7 +113,7 @@ namespace GreenHouse_App
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 42);
+            this.label2.Location = new System.Drawing.Point(71, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 18);
             this.label2.TabIndex = 22;
@@ -121,7 +121,7 @@ namespace GreenHouse_App
             // 
             // textBoxScuola
             // 
-            this.textBoxScuola.Location = new System.Drawing.Point(120, 92);
+            this.textBoxScuola.Location = new System.Drawing.Point(146, 100);
             this.textBoxScuola.Name = "textBoxScuola";
             this.textBoxScuola.Size = new System.Drawing.Size(200, 20);
             this.textBoxScuola.TabIndex = 21;
@@ -130,7 +130,7 @@ namespace GreenHouse_App
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(56, 91);
+            this.label3.Location = new System.Drawing.Point(82, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 18);
             this.label3.TabIndex = 20;
@@ -138,7 +138,7 @@ namespace GreenHouse_App
             // 
             // Annulla
             // 
-            this.Annulla.Location = new System.Drawing.Point(245, 246);
+            this.Annulla.Location = new System.Drawing.Point(227, 251);
             this.Annulla.Name = "Annulla";
             this.Annulla.Size = new System.Drawing.Size(75, 23);
             this.Annulla.TabIndex = 17;
@@ -149,7 +149,7 @@ namespace GreenHouse_App
             // 
             // Inserisci
             // 
-            this.Inserisci.Location = new System.Drawing.Point(120, 246);
+            this.Inserisci.Location = new System.Drawing.Point(102, 251);
             this.Inserisci.Name = "Inserisci";
             this.Inserisci.Size = new System.Drawing.Size(75, 23);
             this.Inserisci.TabIndex = 16;

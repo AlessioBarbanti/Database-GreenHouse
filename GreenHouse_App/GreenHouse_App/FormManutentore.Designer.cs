@@ -82,7 +82,8 @@ namespace GreenHouse_App
             this.Controls.Add(this.RevisioniInScadenza);
             this.MaximizeBox = false;
             this.Name = "FormManutentore";
-            this.Text = "Manutentore";
+            this.Text = "Manutentori e Manovali";
+            this.Load += new System.EventHandler(this.FormManutentore_Load);
             this.ResumeLayout(false);
 
         }

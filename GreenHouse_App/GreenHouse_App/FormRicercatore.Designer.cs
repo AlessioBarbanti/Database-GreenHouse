@@ -94,7 +94,7 @@ namespace GreenHouse_App
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRicercatore";
-            this.Text = "Form3";
+            this.Text = "Form Ricercatore";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

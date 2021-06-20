@@ -175,7 +175,7 @@ namespace GreenHouse_App
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRicercatore2";
-            this.Text = "FormRicercatore2";
+            this.Text = "Inserimento Annotazione";
             this.Load += new System.EventHandler(this.FormRicercatore2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
