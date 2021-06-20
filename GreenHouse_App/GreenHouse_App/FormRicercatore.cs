@@ -30,33 +30,21 @@ namespace GreenHouse_App
 
         private void RevisioniInScadenza_Click(object sender, EventArgs e)
         {
-            var foo = from E    in db.ESPERIMENTI
-                      from COLL in (from CO in db.COLLABORAZIONI where CO.IDRicercatore == 1 select new { CO })
-                      from CL   in db.CLUSTER_PIANTE
-                      where
-                        E.IDRicercatoreCapo == 1 && CL.IDEsperimento == E.IDEsperimento && CL.NumeroPianteMorte > 0 || E.IDEsperimento == COLL.CO.IDEsperimento
-                      group new { E, CL } by new
-                      {
-                          E.IDEsperimento,E.Descrizione
-                      } into g orderby g.Sum(p => p.CL.NumeroPianteMorte) descending
-                      select new
-                      {
-                          g.Key.IDEsperimento,
-                          g.Key.Descrizione,
-                          PianteMorte = (int)g.Sum(p => p.CL.NumeroPianteMorte)
-                      };
 
+           //TODO
+           //Creare campo nella form per inserire id del ricercatore
 
+            var deathExperiment = (from clu in db.CLUSTER_PIANTE
+                       where (clu.ESPERIMENTI.IDRicercatoreCapo == 1 || 
+                       (from clo in db.COLLABORAZIONI where clo.IDRicercatore == 1
+                        select new { clo.IDEsperimento }).Contains(new { IDEsperimento = clu.IDEsperimento })) && clu.NumeroPianteMorte >0
+                        group clu by new { clu.IDEsperimento, clu.ESPERIMENTI.Descrizione } into g
+                        orderby g.Sum(p => p.NumeroPianteMorte) descending
+                        select new { g.Key.IDEsperimento, g.Key.Descrizione, NumeroPianteMorte = g.Sum(clu => clu.NumeroPianteMorte) });
 
-            /*  SELECT E.IDEsperimento,Descrizione, SUM(CL.NumeroPianteMorte) AS PianteMorte
-                FROM ESPERIMENTI E, (SELECT * FROM COLLABORAZIONI CO WHERE  CO.IDRicercatore = 1) AS COLL,CLUSTER_PIANTE CL
-                WHERE (E.IDRicercatoreCapo = 1 OR  ) AND CL.IDEsperimento = E.IDEsperimento AND CL.NumeroPianteMorte > 0
-                GROUP BY E.IDEsperimento,Descrizione
-                ORDER BY SUM(CL.NumeroPianteMorte) DESC;
-            */
+            
 
-
-            dataGridView1.DataSource = foo;
+            dataGridView1.DataSource = deathExperiment;
         }
     }
 }
