@@ -31,17 +31,17 @@ namespace GreenHouse_App
         {
             this.Annulla = new System.Windows.Forms.Button();
             this.Inserisci = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxDescrizione = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dateTimePickerInizio = new System.Windows.Forms.DateTimePicker();
+            this.textBoxRicercatoreCapo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.IDGuida = new System.Windows.Forms.TextBox();
+            this.textBoxIDAutorizzante = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePickerFine = new System.Windows.Forms.DateTimePicker();
+            this.textBoxIDCollaboratori = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -67,13 +67,13 @@ namespace GreenHouse_App
             this.Inserisci.UseVisualStyleBackColor = true;
             this.Inserisci.Click += new System.EventHandler(this.Inserisci_Click);
             // 
-            // textBox2
+            // textBoxDescrizione
             // 
-            this.textBox2.Location = new System.Drawing.Point(177, 168);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 152);
-            this.textBox2.TabIndex = 31;
+            this.textBoxDescrizione.Location = new System.Drawing.Point(177, 168);
+            this.textBoxDescrizione.Multiline = true;
+            this.textBoxDescrizione.Name = "textBoxDescrizione";
+            this.textBoxDescrizione.Size = new System.Drawing.Size(200, 152);
+            this.textBoxDescrizione.TabIndex = 31;
             // 
             // label5
             // 
@@ -95,19 +95,19 @@ namespace GreenHouse_App
             this.label3.TabIndex = 28;
             this.label3.Text = "Data Inizio:";
             // 
-            // dateTimePicker1
+            // dateTimePickerInizio
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(177, 116);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 26;
+            this.dateTimePickerInizio.Location = new System.Drawing.Point(177, 116);
+            this.dateTimePickerInizio.Name = "dateTimePickerInizio";
+            this.dateTimePickerInizio.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerInizio.TabIndex = 26;
             // 
-            // textBox1
+            // textBoxRicercatoreCapo
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 25;
+            this.textBoxRicercatoreCapo.Location = new System.Drawing.Point(177, 53);
+            this.textBoxRicercatoreCapo.Name = "textBoxRicercatoreCapo";
+            this.textBoxRicercatoreCapo.Size = new System.Drawing.Size(200, 20);
+            this.textBoxRicercatoreCapo.TabIndex = 25;
             // 
             // label1
             // 
@@ -119,12 +119,12 @@ namespace GreenHouse_App
             this.label1.TabIndex = 24;
             this.label1.Text = "ID Ricercatore Capo:";
             // 
-            // IDGuida
+            // textBoxIDAutorizzante
             // 
-            this.IDGuida.Location = new System.Drawing.Point(177, 29);
-            this.IDGuida.Name = "IDGuida";
-            this.IDGuida.Size = new System.Drawing.Size(200, 20);
-            this.IDGuida.TabIndex = 23;
+            this.textBoxIDAutorizzante.Location = new System.Drawing.Point(177, 29);
+            this.textBoxIDAutorizzante.Name = "textBoxIDAutorizzante";
+            this.textBoxIDAutorizzante.Size = new System.Drawing.Size(200, 20);
+            this.textBoxIDAutorizzante.TabIndex = 23;
             // 
             // label2
             // 
@@ -146,19 +146,19 @@ namespace GreenHouse_App
             this.label6.TabIndex = 35;
             this.label6.Text = "Data Fine Prevista:";
             // 
-            // dateTimePicker2
+            // dateTimePickerFine
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(177, 142);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 34;
+            this.dateTimePickerFine.Location = new System.Drawing.Point(177, 142);
+            this.dateTimePickerFine.Name = "dateTimePickerFine";
+            this.dateTimePickerFine.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerFine.TabIndex = 34;
             // 
-            // textBox3
+            // textBoxIDCollaboratori
             // 
-            this.textBox3.Location = new System.Drawing.Point(177, 79);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 37;
+            this.textBoxIDCollaboratori.Location = new System.Drawing.Point(177, 79);
+            this.textBoxIDCollaboratori.Name = "textBoxIDCollaboratori";
+            this.textBoxIDCollaboratori.Size = new System.Drawing.Size(200, 20);
+            this.textBoxIDCollaboratori.TabIndex = 37;
             // 
             // label4
             // 
@@ -181,27 +181,27 @@ namespace GreenHouse_App
             this.label7.TabIndex = 38;
             this.label7.Text = "(Separare gli IDs usando ; )";
             // 
-            // FormRicercatoreCapo2
+            // FormGestoreEsperimenti2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 391);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxIDCollaboratori);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePickerFine);
             this.Controls.Add(this.Annulla);
             this.Controls.Add(this.Inserisci);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxDescrizione);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimePickerInizio);
+            this.Controls.Add(this.textBoxRicercatoreCapo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.IDGuida);
+            this.Controls.Add(this.textBoxIDAutorizzante);
             this.Controls.Add(this.label2);
-            this.Name = "FormRicercatoreCapo2";
+            this.Name = "FormGestoreEsperimenti2";
             this.Text = "Inserisci Esperimento";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,17 +212,17 @@ namespace GreenHouse_App
 
         private System.Windows.Forms.Button Annulla;
         private System.Windows.Forms.Button Inserisci;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDescrizione;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerInizio;
+        private System.Windows.Forms.TextBox textBoxRicercatoreCapo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox IDGuida;
+        private System.Windows.Forms.TextBox textBoxIDAutorizzante;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFine;
+        private System.Windows.Forms.TextBox textBoxIDCollaboratori;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
     }

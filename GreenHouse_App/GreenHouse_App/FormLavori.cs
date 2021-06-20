@@ -38,34 +38,39 @@ namespace GreenHouse_App
                     IDManovale = Convert.ToInt32(textBoxIDManovale.Text),
                     IDClusterPiante = Convert.ToInt32(taxtBoxIDClusters.Text),
                     DataOraInizio = Convert.ToDateTime(maskedTextBoxDateTimeInizio.Text),
-                    DataOraFine = Convert.ToDateTime(maskedTextBoxDateTimeFine.Text)
-                };
+                    DataOraFine = Convert.ToDateTime(maskedTextBoxDateTimeFine.Text),
+                    IDLavoro = (from a in db.LAVORI
+                            where a.Nome == comboBox3.Text
+                            select a.IDLavoro).Single()
+        };
 
 
 
-            var tempIDLavoro = from a in db.LAVORI
-                               where a.Nome == comboBox3.Text
-                               select a.IDLavoro;
-            foo.IDLavoro = tempIDLavoro.First();
+
 
             var tempIDLavoroEffettutato = from b in db.LAVORI_EFFETTUATI
                                      where b.IDLavoro == foo.IDLavoro
                                      select b.IDLavoroEffettuato;
 
-             foo.IDLavoroEffettuato = tempIDLavoroEffettutato.Max() + 1;
-
+            try
+            {
+                foo.IDLavoroEffettuato = tempIDLavoroEffettutato.Max() + 1;
+            }
+            catch {
+                foo.IDLavoroEffettuato = 1;
+            }
 
 
             db.LAVORI_EFFETTUATI.InsertOnSubmit(foo);
                 db.SubmitChanges();
                 Close();
-        }
+            }
             catch
             {
                 MessageBox.Show("Dati inseriti non corretti.", "Errore!",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-}
+        }
 
         private void Annulla_Click(object sender, EventArgs e)
         {
