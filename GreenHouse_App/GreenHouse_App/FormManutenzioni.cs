@@ -51,7 +51,7 @@ namespace GreenHouse_App
         {
 
             var foo = from a in db.CONTRATTI
-                      where a.IDDipendente == Convert.ToInt32(textBoxIDManutentore.Text)
+                      where a.IDDipendente == Convert.ToInt32(textBoxIDManutentore.Text) && a.TipoContratto == "Manutentore" // MANCA AND
                       select a.IDStruttura;
 
 
@@ -60,7 +60,7 @@ namespace GreenHouse_App
             {
                 try
                 {
-                    textBoxIDStruttura.Text = Convert.ToString(foo.First());
+                    textBoxIDStruttura.Text = Convert.ToString(foo.Single());
                     Inserisci.Enabled = true;
                 }
                 catch {

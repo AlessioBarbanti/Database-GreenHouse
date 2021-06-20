@@ -205,7 +205,6 @@ namespace GreenHouse_App
             this.MinimizeBox = false;
             this.Name = "FormLavori";
             this.Text = "Inserisci Lavoro";
-            this.Load += new System.EventHandler(this.FormLavori_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
