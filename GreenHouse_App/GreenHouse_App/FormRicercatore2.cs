@@ -26,14 +26,27 @@ namespace GreenHouse_App
 
 
             //TODO
-            ANNOTAZIONI ord = new ANNOTAZIONI
+            ANNOTAZIONI ord;
+
+            try
             {
-                IDEsperimento = Convert.ToInt32(IDEsperimentoTextBox.Text),
-                NumeroAnnotazione = LastAnnotation,
-                DataOra = Convert.ToDateTime(Convert.ToString(dateTimePicker1.Value.ToShortDateString()) + " " + maskedTextBox1.Text),
-                Testo = textBox2.Text,
-                IDRicercatore = Convert.ToInt32(IDRicercatore.Text)
-            };
+                ord = new ANNOTAZIONI
+                {
+                    IDEsperimento = Convert.ToInt32(IDEsperimentoTextBox.Text),
+                    NumeroAnnotazione = LastAnnotation,
+                    DataOra = Convert.ToDateTime(Convert.ToString(dateTimePicker1.Value.ToShortDateString()) + " " + maskedTextBox1.Text),
+                    Testo = textBox2.Text,
+                    IDRicercatore = Convert.ToInt32(IDRicercatore.Text)
+                };
+                db.ANNOTAZIONI.InsertOnSubmit(ord);
+                db.SubmitChanges();
+                Close();
+            
+            }
+            catch {
+                MessageBox.Show("Dati inseriti non corretti.", "Errore!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             //var checkMyExperiment = from esp in db.ESPERIMENTI
             //                        where (esp.IDRicercatoreCapo == ord.IDRicercatore) || (from clo in db.COLLABORAZIONI
@@ -46,11 +59,8 @@ namespace GreenHouse_App
             //};
 
 
-            Console.WriteLine(Convert.ToString(dateTimePicker1.Value));
 
-            db.ANNOTAZIONI.InsertOnSubmit(ord);
-            db.SubmitChanges();
-            Close();
+
         }
 
         private void Annulla_Click(object sender, EventArgs e)
