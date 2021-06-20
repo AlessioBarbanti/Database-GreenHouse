@@ -35,6 +35,17 @@ namespace GreenHouse_App
                 IDRicercatore = Convert.ToInt32(IDRicercatore.Text)
             };
 
+            //var checkMyExperiment = from esp in db.ESPERIMENTI
+            //                        where (esp.IDRicercatoreCapo == ord.IDRicercatore) || (from clo in db.COLLABORAZIONI
+            //                                                                               where clo.IDRicercatore == ord.IDRicercatore
+            //                                                                               select new { clo.IDEsperimento }).Contains(new { IDEsperimento = esp.IDEsperimento })
+            //                                                                               select esp;
+            //if (!checkMyExperiment.Any())
+            //{
+            //    throw new Exception();
+            //};
+
+
             Console.WriteLine(Convert.ToString(dateTimePicker1.Value));
 
             db.ANNOTAZIONI.InsertOnSubmit(ord);
@@ -51,7 +62,7 @@ namespace GreenHouse_App
         {
             var tempLastAnnotation = from foo
                                      in db.ANNOTAZIONI
-                                     where (foo.IDEsperimento == Convert.ToInt32(IDEsperimentoTextBox.Text)) 
+                                     where (Convert.ToString(foo.IDEsperimento) == IDEsperimentoTextBox.Text)
                                      select foo.NumeroAnnotazione;
 
 
