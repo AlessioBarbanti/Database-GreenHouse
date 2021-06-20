@@ -32,6 +32,8 @@ namespace GreenHouse_App
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.RevisioniInScadenza = new System.Windows.Forms.Button();
+            this.textBoxIDRicercatore = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +47,7 @@ namespace GreenHouse_App
             this.dataGridView1.Location = new System.Drawing.Point(215, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(573, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(660, 462);
             this.dataGridView1.TabIndex = 17;
             // 
             // button1
@@ -55,7 +57,7 @@ namespace GreenHouse_App
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.button1.Image = global::GreenHouse_App.Properties.Resources.notes;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(29, 237);
+            this.button1.Location = new System.Drawing.Point(29, 306);
             this.button1.Margin = new System.Windows.Forms.Padding(20);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -75,7 +77,7 @@ namespace GreenHouse_App
             this.RevisioniInScadenza.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.RevisioniInScadenza.Image = global::GreenHouse_App.Properties.Resources.skull;
             this.RevisioniInScadenza.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.RevisioniInScadenza.Location = new System.Drawing.Point(29, 29);
+            this.RevisioniInScadenza.Location = new System.Drawing.Point(29, 98);
             this.RevisioniInScadenza.Margin = new System.Windows.Forms.Padding(20);
             this.RevisioniInScadenza.Name = "RevisioniInScadenza";
             this.RevisioniInScadenza.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -88,11 +90,30 @@ namespace GreenHouse_App
             this.RevisioniInScadenza.UseVisualStyleBackColor = true;
             this.RevisioniInScadenza.Click += new System.EventHandler(this.RevisioniInScadenza_Click);
             // 
+            // textBoxIDRicercatore
+            // 
+            this.textBoxIDRicercatore.Location = new System.Drawing.Point(74, 55);
+            this.textBoxIDRicercatore.Name = "textBoxIDRicercatore";
+            this.textBoxIDRicercatore.Size = new System.Drawing.Size(67, 20);
+            this.textBoxIDRicercatore.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(56, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "ID Ricercatore:";
+            // 
             // FormRicercatore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(887, 486);
+            this.Controls.Add(this.textBoxIDRicercatore);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.RevisioniInScadenza);
@@ -102,6 +123,7 @@ namespace GreenHouse_App
             this.Text = "Form Ricercatore";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -110,5 +132,7 @@ namespace GreenHouse_App
         private System.Windows.Forms.Button RevisioniInScadenza;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBoxIDRicercatore;
+        private System.Windows.Forms.Label label1;
     }
 }

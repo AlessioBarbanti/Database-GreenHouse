@@ -31,20 +31,25 @@ namespace GreenHouse_App
         private void RevisioniInScadenza_Click(object sender, EventArgs e)
         {
 
-           //TODO
-           //Creare campo nella form per inserire id del ricercatore
+            try
+            {
+                var deathExperiment = (from clu in db.CLUSTER_PIANTE
+                                       where (Convert.ToString(clu.ESPERIMENTI.IDRicercatoreCapo) == textBoxIDRicercatore.Text ||
+                                       (from clo in db.COLLABORAZIONI
+                                        where Convert.ToString(clo.IDRicercatore) == textBoxIDRicercatore.Text
+                                        select new { clo.IDEsperimento }).Contains(new { IDEsperimento = clu.IDEsperimento })) && clu.NumeroPianteMorte > 0
+                                       group clu by new { clu.IDEsperimento, clu.ESPERIMENTI.Descrizione } into g
+                                       orderby g.Sum(p => p.NumeroPianteMorte) descending
+                                       select new { g.Key.IDEsperimento, g.Key.Descrizione, NumeroPianteMorte = g.Sum(clu => clu.NumeroPianteMorte) });
 
-            var deathExperiment = (from clu in db.CLUSTER_PIANTE
-                       where (clu.ESPERIMENTI.IDRicercatoreCapo == 1 || 
-                       (from clo in db.COLLABORAZIONI where clo.IDRicercatore == 1
-                        select new { clo.IDEsperimento }).Contains(new { IDEsperimento = clu.IDEsperimento })) && clu.NumeroPianteMorte >0
-                        group clu by new { clu.IDEsperimento, clu.ESPERIMENTI.Descrizione } into g
-                        orderby g.Sum(p => p.NumeroPianteMorte) descending
-                        select new { g.Key.IDEsperimento, g.Key.Descrizione, NumeroPianteMorte = g.Sum(clu => clu.NumeroPianteMorte) });
-
+                dataGridView1.DataSource = deathExperiment;
+            }
+            catch { 
+                //Do nothing
+            }
             
 
-            dataGridView1.DataSource = deathExperiment;
+            
         }
     }
 }
