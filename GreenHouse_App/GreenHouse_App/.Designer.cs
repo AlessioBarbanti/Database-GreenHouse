@@ -40,17 +40,16 @@ namespace GreenHouse_App
             // 
             // guida
             // 
-            this.guida.AutoEllipsis = true;
             this.guida.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.guida.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.guida.Image = global::GreenHouse_App.Properties.Resources.Guida;
             this.guida.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.guida.Location = new System.Drawing.Point(29, 339);
+            this.guida.Location = new System.Drawing.Point(29, 341);
             this.guida.Margin = new System.Windows.Forms.Padding(20);
             this.guida.Name = "guida";
             this.guida.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.guida.Size = new System.Drawing.Size(179, 270);
-            this.guida.TabIndex = 8;
+            this.guida.TabIndex = 4;
             this.guida.TabStop = false;
             this.guida.Text = "GUIDA";
             this.guida.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -60,28 +59,25 @@ namespace GreenHouse_App
             // 
             // supervisore
             // 
-            this.supervisore.AutoEllipsis = true;
             this.supervisore.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.supervisore.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.supervisore.Image = global::GreenHouse_App.Properties.Resources.Manovale;
             this.supervisore.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.supervisore.Location = new System.Drawing.Point(248, 339);
+            this.supervisore.Location = new System.Drawing.Point(248, 341);
             this.supervisore.Margin = new System.Windows.Forms.Padding(20);
             this.supervisore.Name = "supervisore";
             this.supervisore.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.supervisore.Size = new System.Drawing.Size(179, 270);
-            this.supervisore.TabIndex = 13;
+            this.supervisore.TabIndex = 5;
             this.supervisore.TabStop = false;
             this.supervisore.Text = "SUPERVISORE";
             this.supervisore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.supervisore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.supervisore.UseCompatibleTextRendering = true;
             this.supervisore.UseVisualStyleBackColor = true;
             this.supervisore.Click += new System.EventHandler(this.supervisore_Click);
             // 
             // manutentore
             // 
-            this.manutentore.AutoEllipsis = true;
             this.manutentore.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.manutentore.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.manutentore.Image = global::GreenHouse_App.Properties.Resources.Manutentore;
@@ -91,7 +87,7 @@ namespace GreenHouse_App
             this.manutentore.Name = "manutentore";
             this.manutentore.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.manutentore.Size = new System.Drawing.Size(179, 270);
-            this.manutentore.TabIndex = 12;
+            this.manutentore.TabIndex = 3;
             this.manutentore.TabStop = false;
             this.manutentore.Text = "MANUTENTORE / MANOVALE";
             this.manutentore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -101,7 +97,6 @@ namespace GreenHouse_App
             // 
             // ricercatoreCapo
             // 
-            this.ricercatoreCapo.AutoEllipsis = true;
             this.ricercatoreCapo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ricercatoreCapo.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ricercatoreCapo.Image = global::GreenHouse_App.Properties.Resources.RicercatoreCapo;
@@ -111,7 +106,7 @@ namespace GreenHouse_App
             this.ricercatoreCapo.Name = "ricercatoreCapo";
             this.ricercatoreCapo.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.ricercatoreCapo.Size = new System.Drawing.Size(179, 270);
-            this.ricercatoreCapo.TabIndex = 11;
+            this.ricercatoreCapo.TabIndex = 2;
             this.ricercatoreCapo.TabStop = false;
             this.ricercatoreCapo.Text = "GESTORE ESPERIMENTI";
             this.ricercatoreCapo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -121,7 +116,6 @@ namespace GreenHouse_App
             // 
             // gestoreStruttura
             // 
-            this.gestoreStruttura.AutoEllipsis = true;
             this.gestoreStruttura.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gestoreStruttura.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.gestoreStruttura.Image = global::GreenHouse_App.Properties.Resources.GestoreStruttura;
@@ -131,7 +125,7 @@ namespace GreenHouse_App
             this.gestoreStruttura.Name = "gestoreStruttura";
             this.gestoreStruttura.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.gestoreStruttura.Size = new System.Drawing.Size(179, 270);
-            this.gestoreStruttura.TabIndex = 10;
+            this.gestoreStruttura.TabIndex = 6;
             this.gestoreStruttura.TabStop = false;
             this.gestoreStruttura.Text = "GESTORE STRUTTURA";
             this.gestoreStruttura.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -150,7 +144,7 @@ namespace GreenHouse_App
             this.Ricercatore.Name = "Ricercatore";
             this.Ricercatore.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.Ricercatore.Size = new System.Drawing.Size(179, 270);
-            this.Ricercatore.TabIndex = 0;
+            this.Ricercatore.TabIndex = 1;
             this.Ricercatore.TabStop = false;
             this.Ricercatore.Text = "RICERCATORE";
             this.Ricercatore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -160,12 +154,12 @@ namespace GreenHouse_App
             // 
             // Form1
             // 
-            this.AcceptButton = this.guida;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(678, 640);
             this.Controls.Add(this.supervisore);
             this.Controls.Add(this.manutentore);
@@ -173,6 +167,7 @@ namespace GreenHouse_App
             this.Controls.Add(this.gestoreStruttura);
             this.Controls.Add(this.guida);
             this.Controls.Add(this.Ricercatore);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
