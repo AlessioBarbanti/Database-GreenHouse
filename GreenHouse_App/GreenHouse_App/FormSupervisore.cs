@@ -19,10 +19,7 @@ namespace GreenHouse_App
             db = new GreenHouseDataContext();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
 
         private void VisualizzaPermessiButton_Click(object sender, EventArgs e)
@@ -61,11 +58,6 @@ namespace GreenHouse_App
 
 
 
-
-        }
-
-        private void IDSerraDiRiferimento_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }

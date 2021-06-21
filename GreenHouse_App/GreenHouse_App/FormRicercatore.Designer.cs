@@ -31,7 +31,7 @@ namespace GreenHouse_App
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.RevisioniInScadenza = new System.Windows.Forms.Button();
+            this.EsperimentiFallimentari = new System.Windows.Forms.Button();
             this.textBoxIDRicercatore = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,25 +70,25 @@ namespace GreenHouse_App
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // RevisioniInScadenza
+            // EsperimentiFallimentari
             // 
-            this.RevisioniInScadenza.AutoEllipsis = true;
-            this.RevisioniInScadenza.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.RevisioniInScadenza.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.RevisioniInScadenza.Image = global::GreenHouse_App.Properties.Resources.skull;
-            this.RevisioniInScadenza.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.RevisioniInScadenza.Location = new System.Drawing.Point(29, 98);
-            this.RevisioniInScadenza.Margin = new System.Windows.Forms.Padding(20);
-            this.RevisioniInScadenza.Name = "RevisioniInScadenza";
-            this.RevisioniInScadenza.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.RevisioniInScadenza.Size = new System.Drawing.Size(163, 168);
-            this.RevisioniInScadenza.TabIndex = 15;
-            this.RevisioniInScadenza.TabStop = false;
-            this.RevisioniInScadenza.Text = "VISUALIZZA ESPERIMENTI FALLIMENTARI";
-            this.RevisioniInScadenza.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.RevisioniInScadenza.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.RevisioniInScadenza.UseVisualStyleBackColor = true;
-            this.RevisioniInScadenza.Click += new System.EventHandler(this.RevisioniInScadenza_Click);
+            this.EsperimentiFallimentari.AutoEllipsis = true;
+            this.EsperimentiFallimentari.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.EsperimentiFallimentari.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.EsperimentiFallimentari.Image = global::GreenHouse_App.Properties.Resources.skull;
+            this.EsperimentiFallimentari.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.EsperimentiFallimentari.Location = new System.Drawing.Point(29, 98);
+            this.EsperimentiFallimentari.Margin = new System.Windows.Forms.Padding(20);
+            this.EsperimentiFallimentari.Name = "EsperimentiFallimentari";
+            this.EsperimentiFallimentari.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.EsperimentiFallimentari.Size = new System.Drawing.Size(163, 168);
+            this.EsperimentiFallimentari.TabIndex = 15;
+            this.EsperimentiFallimentari.TabStop = false;
+            this.EsperimentiFallimentari.Text = "VISUALIZZA ESPERIMENTI FALLIMENTARI";
+            this.EsperimentiFallimentari.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.EsperimentiFallimentari.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EsperimentiFallimentari.UseVisualStyleBackColor = true;
+            this.EsperimentiFallimentari.Click += new System.EventHandler(this.EsperimentiFallimentari_Click);
             // 
             // textBoxIDRicercatore
             // 
@@ -116,7 +116,7 @@ namespace GreenHouse_App
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.RevisioniInScadenza);
+            this.Controls.Add(this.EsperimentiFallimentari);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRicercatore";
@@ -129,7 +129,7 @@ namespace GreenHouse_App
 
         #endregion
 
-        private System.Windows.Forms.Button RevisioniInScadenza;
+        private System.Windows.Forms.Button EsperimentiFallimentari;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBoxIDRicercatore;
