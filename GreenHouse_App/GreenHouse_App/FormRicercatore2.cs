@@ -55,23 +55,21 @@ namespace GreenHouse_App
 
         private void IDEsperimento_TextChanged(object sender, EventArgs e)
         {
-            var tempLastAnnotation = from foo
+            try
+            {
+                var tempLastAnnotation = from foo
                                      in db.ANNOTAZIONI
                                      where (Convert.ToString(foo.IDEsperimento) == IDEsperimentoTextBox.Text)
                                      select foo.NumeroAnnotazione;
-
-
-           
-            try
-            {
                 LastAnnotation = tempLastAnnotation.Max() + 1;
             }
             catch (Exception)
             {
-                //Nothing to do
+                MessageBox.Show("Errore Connessione al database, si prega di riavviare l'applicazione.", "Errore!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
-            }
+        }
 
         private void FormRicercatore2_Load(object sender, EventArgs e)
         {

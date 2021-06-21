@@ -36,16 +36,25 @@ namespace GreenHouse_App
 
         private void VisualizzaVisite_Click(object sender, EventArgs e)
         {
-            var foo = from a in db.VISITE
-                      where (DateTime.Now - a.DataOra).Days <= 10 && (DateTime.Now - a.DataOra).Days < 0 && Convert.ToString(a.IDStruttura) == textBoxIDStruttura.Text
-                      select new { Data = a.DataOra,
-                      IDGuida = a.IDGuida,
-                      IDViaggio = a.IDViaggio,
-                      Struttura = a.IDStruttura,
-                      Serra = a.IDSerra
-                      };
+            try
+            {
+                var foo = from a in db.VISITE
+                          where (DateTime.Now - a.DataOra).Days <= 10 && (DateTime.Now - a.DataOra).Days < 0 && Convert.ToString(a.IDStruttura) == textBoxIDStruttura.Text
+                          select new
+                          {
+                              Data = a.DataOra,
+                              IDGuida = a.IDGuida,
+                              IDViaggio = a.IDViaggio,
+                              Struttura = a.IDStruttura,
+                              Serra = a.IDSerra
+                          };
 
-            dataGridView1.DataSource = foo;
+                dataGridView1.DataSource = foo;
+            }
+            catch {
+                MessageBox.Show("Errore Connessione al database, si prega di riavviare l'applicazione.", "Errore!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

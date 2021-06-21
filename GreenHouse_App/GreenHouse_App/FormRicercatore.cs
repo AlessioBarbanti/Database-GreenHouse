@@ -28,7 +28,7 @@ namespace GreenHouse_App
             f2.ShowDialog();
         }
 
-        private void RevisioniInScadenza_Click(object sender, EventArgs e)
+        private void EsperimentiFallimentari_Click(object sender, EventArgs e)
         {
 
             try
@@ -44,12 +44,11 @@ namespace GreenHouse_App
 
                 dataGridView1.DataSource = deathExperiment;
             }
-            catch { 
-                //Do nothing
+            catch
+            {
+                MessageBox.Show("Errore Connessione al database, si prega di riavviare l'applicazione.", "Errore!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-
-            
         }
     }
 }

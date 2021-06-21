@@ -130,7 +130,6 @@ namespace GreenHouse_App
             this.textBoxIDStrutturaDiRiferimento.Name = "textBoxIDStrutturaDiRiferimento";
             this.textBoxIDStrutturaDiRiferimento.Size = new System.Drawing.Size(75, 20);
             this.textBoxIDStrutturaDiRiferimento.TabIndex = 17;
-            this.textBoxIDStrutturaDiRiferimento.TextChanged += new System.EventHandler(this.IDSerraDiRiferimento_TextChanged);
             // 
             // label1
             // 

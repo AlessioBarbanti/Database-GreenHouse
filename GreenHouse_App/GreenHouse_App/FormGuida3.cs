@@ -24,9 +24,9 @@ namespace GreenHouse_App
 
 
             VIAGGI_ISTRUZIONE foo;
-            //try
-            //{
-            foo = new VIAGGI_ISTRUZIONE
+            try
+            {
+                foo = new VIAGGI_ISTRUZIONE
             {
                     IDGuida = Convert.ToInt32(textBoxIDGuida.Text),
                     Scuola = textBoxScuola.Text,
@@ -51,13 +51,13 @@ namespace GreenHouse_App
                 db.VIAGGI_ISTRUZIONE.InsertOnSubmit(foo);
                 db.SubmitChanges();
                 Close();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Dati inseriti non corretti.", "Errore!",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
         }
+            catch
+            {
+                MessageBox.Show("Dati inseriti non corretti.", "Errore!",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+}
 
 
 
