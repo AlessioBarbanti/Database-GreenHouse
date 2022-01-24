@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C467E023-9E97-4877-8C72-9F0C7A562D72}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GreenHouse_App</RootNamespace>
+    <AssemblyName>GreenHouse_App</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormGuida3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGuida3.Designer.cs">
+      <DependentUpon>FormGuida3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestoreStruttura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestoreStruttura.Designer.cs">
+      <DependentUpon>FormGestoreStruttura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGuida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGuida.Designer.cs">
+      <DependentUpon>FormGuida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGuida2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGuida2.Designer.cs">
+      <DependentUpon>FormGuida2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLavori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLavori.Designer.cs">
+      <DependentUpon>FormLavori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManutentore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManutentore.Designer.cs">
+      <DependentUpon>FormManutentore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManutenzioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManutenzioni.Designer.cs">
+      <DependentUpon>FormManutenzioni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRicercatore2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRicercatore2.Designer.cs">
+      <DependentUpon>FormRicercatore2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestoreEsperimenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestoreEsperimenti.Designer.cs">
+      <DependentUpon>FormGestoreEsperimenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestoreEsperimenti2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestoreEsperimenti2.Designer.cs">
+      <DependentUpon>FormGestoreEsperimenti2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GreenHouse.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GreenHouse.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupervisore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupervisore.Designer.cs">
+      <DependentUpon>FormSupervisore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRicercatore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRicercatore.Designer.cs">
+      <DependentUpon>FormRicercatore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormGuida3.resx">
+      <DependentUpon>FormGuida3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestoreStruttura.resx">
+      <DependentUpon>FormGestoreStruttura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGuida.resx">
+      <DependentUpon>FormGuida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGuida2.resx">
+      <DependentUpon>FormGuida2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLavori.resx">
+      <DependentUpon>FormLavori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManutentore.resx">
+      <DependentUpon>FormManutentore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManutenzioni.resx">
+      <DependentUpon>FormManutenzioni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRicercatore2.resx">
+      <DependentUpon>FormRicercatore2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestoreEsperimenti.resx">
+      <DependentUpon>FormGestoreEsperimenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestoreEsperimenti2.resx">
+      <DependentUpon>FormGestoreEsperimenti2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupervisore.resx">
+      <DependentUpon>FormSupervisore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRicercatore.resx">
+      <DependentUpon>FormRicercatore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="GreenHouse.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>GreenHouse.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GreenHouse.dbml.layout">
+      <DependentUpon>GreenHouse.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GestoreStruttura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manovale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manutentore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ricercatore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RicercatoreCapo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tractor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tractor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\permission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tour-guide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create-tour-guide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <Content Include="NOTE.txt" />
+    <None Include="Resources\permission1.png" />
+    <None Include="Resources\writing.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\hoe.png" />
+    <None Include="Resources\microscope.png" />
+    <None Include="Resources\notes.png" />
+    <None Include="Resources\skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

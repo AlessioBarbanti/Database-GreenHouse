@@ -1,2 +1,21 @@
 .~lock.Diagramma ER.lun#
 .~lock.ER_Diagram_GreenHouse.lun#
+~$ROGETTO DB) Intervista con il cliente.docx
+*/*/bin/*
+*/*/obj/*
+*/*/Prova*
+*/*/Properties/Settings.*
+App.config
+Settings.*
+*/*/Properties/*
+GreenHouse_App/.vs/*
+*.suo
+*.xsc
+*.xss
+*.xsd
+*.dbml
+*.dblm.layout
+GreenHouse_App/GreenHouse_App/GreenHouse.dbml.layout
+GreenHouse_App/GreenHouse_App/GreenHouse.designer.cs
+APP/
+GreenHouse_App/GreenHouse_App/GreenHouseDatabaseDataSet.Designer.cs

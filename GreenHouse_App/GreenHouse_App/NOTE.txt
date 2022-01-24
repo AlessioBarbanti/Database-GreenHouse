@@ -1,0 +1,23 @@
+Viaggio d'istruzione
+
+ID Guida
+Data inizio
+Squola
+Numero partecipanti
+Ordine Scolastico
+
+
+Gestore Esperimenti
+
+ID Gestore Esperimenti
+ID Ricercatore Capo
+Data inizio
+Data Fine Prevista
+Descrizione
+* ID Esperimento *
+* Data Approvazione *
+
+
+Manutentore
+* ID Lavoro *
+ID Lavoro Effettuato
